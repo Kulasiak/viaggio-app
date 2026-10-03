@@ -1,0 +1,2922 @@
+{
+ "Travel as a group, safely.": {
+  "pl": "Podróżuj z grupą, bezpiecznie.",
+  "es": "Viaja en grupo, con total seguridad.",
+  "ro": "Călătorește în grup, în siguranță."
+ },
+ "Your daily route, meeting times, documents and emergency help, even without signal.": {
+  "pl": "Twoja trasa dnia, zbiórki, dokumenty i pomoc w nagłych wypadkach, nawet bez zasięgu.",
+  "es": "Tu ruta del día, tus citas, tus documentos y ayuda de emergencia, incluso sin cobertura.",
+  "ro": "Traseul zilei, întâlnirile, documentele și ajutor de urgență, chiar și fără semnal."
+ },
+ "Language": {
+  "pl": "Język",
+  "es": "Idioma",
+  "ro": "Limbă"
+ },
+ "Get started": {
+  "pl": "Zaczynamy",
+  "es": "Empezar",
+  "ro": "Începe"
+ },
+ "Continue": {
+  "pl": "Dalej",
+  "es": "Continuar",
+  "ro": "Continuă"
+ },
+ "Later": {
+  "pl": "Później",
+  "es": "Más tarde",
+  "ro": "Mai târziu"
+ },
+ "Enter the app": {
+  "pl": "Wejdź do aplikacji",
+  "es": "Entrar en la app",
+  "ro": "Intră în aplicație"
+ },
+ "Step 1 of 3": {
+  "pl": "Krok 1 z 3",
+  "es": "Paso 1 de 3",
+  "ro": "Pasul 1 din 3"
+ },
+ "Step 2 of 3": {
+  "pl": "Krok 2 z 3",
+  "es": "Paso 2 de 3",
+  "ro": "Pasul 2 din 3"
+ },
+ "Step 3 of 3": {
+  "pl": "Krok 3 z 3",
+  "es": "Paso 3 de 3",
+  "ro": "Pasul 3 din 3"
+ },
+ "You are…": {
+  "pl": "Jesteś…",
+  "es": "Eres…",
+  "ro": "Ești…"
+ },
+ "Traveller": {
+  "pl": "Turysta",
+  "es": "Turista",
+  "ro": "Turist"
+ },
+ "I follow my group's route, or explore on my own.": {
+  "pl": "Podążam trasą mojej grupy albo zwiedzam sam.",
+  "es": "Sigo la ruta de mi grupo o me muevo por mi cuenta.",
+  "ro": "Urmez traseul grupului sau mă plimb pe cont propriu."
+ },
+ "Guide": {
+  "pl": "Przewodnik",
+  "es": "Guía",
+  "ro": "Ghid"
+ },
+ "I build routes, set meeting points and run my group.": {
+  "pl": "Tworzę trasy, ustalam zbiórki i prowadzę grupę.",
+  "es": "Creo las rutas, fijo los puntos de encuentro y dirijo mi grupo.",
+  "ro": "Creez trasee, stabilesc punctele de întâlnire și conduc grupul."
+ },
+ "Group invite code": {
+  "pl": "Kod zaproszenia do grupy",
+  "es": "Código de invitación del grupo",
+  "ro": "Codul de invitație al grupului"
+ },
+ "or scan your guide's QR code": {
+  "pl": "lub zeskanuj kod QR przewodnika",
+  "es": "o escanea el código QR del guía",
+  "ro": "sau scanează codul QR al ghidului"
+ },
+ "✓ Eternal Rome · guide Julien Moreau": {
+  "pl": "✓ Wieczny Rzym · przewodnik Julien Moreau",
+  "es": "✓ Roma Eterna · guía Julien Moreau",
+  "ro": "✓ Roma Eternă · ghid Julien Moreau"
+ },
+ "20 travellers · 24 to 30 September": {
+  "pl": "20 podróżnych · 24–30 września",
+  "es": "20 viajeros · del 24 al 30 de septiembre",
+  "ro": "20 de călători · 24–30 septembrie"
+ },
+ "Your data, your choice": {
+  "pl": "Twoje dane, Twój wybór",
+  "es": "Tus datos, tu elección",
+  "ro": "Datele tale, alegerea ta"
+ },
+ "Three separate consents. Change them anytime in More.": {
+  "pl": "Trzy osobne zgody. Zmienisz je w każdej chwili w zakładce Więcej.",
+  "es": "Tres consentimientos separados. Puedes cambiarlos cuando quieras en Más.",
+  "ro": "Trei consimțăminte separate. Le poți schimba oricând în Mai mult."
+ },
+ "Location": {
+  "pl": "Lokalizacja",
+  "es": "Ubicación",
+  "ro": "Locație"
+ },
+ "Shared with your guide during group activities. Always sent during an SOS.": {
+  "pl": "Udostępniana przewodnikowi podczas zajęć grupowych. Zawsze wysyłana przy SOS.",
+  "es": "Compartida con tu guía durante las actividades del grupo. Siempre enviada en caso de SOS.",
+  "ro": "Partajată cu ghidul în timpul activităților de grup. Trimisă mereu în caz de SOS."
+ },
+ "Documents": {
+  "pl": "Dokumenty",
+  "es": "Documentos",
+  "ro": "Documente"
+ },
+ "Encrypted on your phone and on the server. Your guide never has access.": {
+  "pl": "Szyfrowane w telefonie i na serwerze. Przewodnik nigdy nie ma do nich dostępu.",
+  "es": "Cifrados en tu teléfono y en el servidor. Tu guía nunca tiene acceso.",
+  "ro": "Criptate pe telefon și pe server. Ghidul nu are niciodată acces."
+ },
+ "Health": {
+  "pl": "Zdrowie",
+  "es": "Salud",
+  "ro": "Sănătate"
+ },
+ "Sensitive data. Shared with your guide only if you turn it on.": {
+  "pl": "Dane wrażliwe. Udostępniane przewodnikowi tylko, jeśli to włączysz.",
+  "es": "Datos sensibles. Compartidos con tu guía solo si lo activas.",
+  "ro": "Date sensibile. Partajate cu ghidul doar dacă activezi opțiunea."
+ },
+ "Trip data is deleted after you return. Export or delete your account from the app.": {
+  "pl": "Dane z podróży są usuwane po powrocie. Eksport i usunięcie konta w aplikacji.",
+  "es": "Los datos del viaje se borran a tu regreso. Exporta o elimina tu cuenta desde la app.",
+  "ro": "Datele călătoriei se șterg după întoarcere. Exportă sau șterge contul din aplicație."
+ },
+ "Scan your passport": {
+  "pl": "Zeskanuj paszport",
+  "es": "Escanea tu pasaporte",
+  "ro": "Scanează pașaportul"
+ },
+ "The MRZ strip is read automatically. Encrypted copy, available offline.": {
+  "pl": "Pasek MRZ jest odczytywany automatycznie. Zaszyfrowana kopia, dostępna offline.",
+  "es": "La banda MRZ se lee automáticamente. Copia cifrada, disponible sin conexión.",
+  "ro": "Banda MRZ se citește automat. Copie criptată, disponibilă offline."
+ },
+ "Frame the photo page": {
+  "pl": "Ustaw stronę ze zdjęciem w kadrze",
+  "es": "Encuadra la página con la foto",
+  "ro": "Încadrează pagina cu fotografia"
+ },
+ "Reading the MRZ strip…": {
+  "pl": "Odczyt paska MRZ…",
+  "es": "Leyendo la banda MRZ…",
+  "ro": "Se citește banda MRZ…"
+ },
+ "Scan": {
+  "pl": "Skanuj",
+  "es": "Escanear",
+  "ro": "Scanează"
+ },
+ "Passport protected": {
+  "pl": "Paszport chroniony",
+  "es": "Pasaporte protegido",
+  "ro": "Pașaport protejat"
+ },
+ "Encrypted · Available offline": {
+  "pl": "Zaszyfrowany · Dostępny offline",
+  "es": "Cifrado · Disponible sin conexión",
+  "ro": "Criptat · Disponibil offline"
+ },
+ "Name": {
+  "pl": "Imię i nazwisko",
+  "es": "Nombre",
+  "ro": "Nume"
+ },
+ "Nationality": {
+  "pl": "Obywatelstwo",
+  "es": "Nacionalidad",
+  "ro": "Cetățenie"
+ },
+ "Number": {
+  "pl": "Numer",
+  "es": "Número",
+  "ro": "Număr"
+ },
+ "Expiry": {
+  "pl": "Ważny do",
+  "es": "Caducidad",
+  "ro": "Expiră"
+ },
+ "Your guide never has access to your documents. Opens with Face ID, fingerprint or passcode.": {
+  "pl": "Przewodnik nigdy nie ma dostępu do Twoich dokumentów. Otwierasz je przez Face ID, odcisk palca lub kod.",
+  "es": "Tu guía nunca tiene acceso a tus documentos. Se abren con Face ID, huella o código.",
+  "ro": "Ghidul nu are niciodată acces la documentele tale. Se deschid cu Face ID, amprentă sau cod."
+ },
+ "FRI 25 SEPT · ROME · 24°": {
+  "pl": "PT 25 WRZ · RZYM · 24°",
+  "es": "VIE 25 SEPT · ROMA · 24°",
+  "ro": "VIN 25 SEPT · ROMA · 24°"
+ },
+ "Day 2 of 7 · Eternal Rome": {
+  "pl": "Dzień 2 z 7 · Wieczny Rzym",
+  "es": "Día 2 de 7 · Roma Eterna",
+  "ro": "Ziua 2 din 7 · Roma Eternă"
+ },
+ "Next meeting": {
+  "pl": "Następna zbiórka",
+  "es": "Próximo encuentro",
+  "ro": "Următoarea întâlnire"
+ },
+ "3 min walk from where you are": {
+  "pl": "3 min pieszo od Ciebie",
+  "es": "A 3 min a pie de donde estás",
+  "ro": "La 3 min de mers de tine"
+ },
+ "On my way": {
+  "pl": "Już idę",
+  "es": "Voy para allá",
+  "ro": "Vin acum"
+ },
+ "Running late": {
+  "pl": "Spóźnię się",
+  "es": "Llego tarde",
+  "ro": "Întârzii"
+ },
+ "Change": {
+  "pl": "Zmień",
+  "es": "Cambiar",
+  "ro": "Schimbă"
+ },
+ "Replies: 12 on their way · 2 late · 6 no reply": {
+  "pl": "Odpowiedzi: 12 w drodze · 2 spóźnieni · 6 bez odpowiedzi",
+  "es": "Respuestas: 12 en camino · 2 tarde · 6 sin respuesta",
+  "ro": "Răspunsuri: 12 vin · 2 întârzie · 6 fără răspuns"
+ },
+ "Pinned · Julien, guide": {
+  "pl": "Przypięte · Julien, przewodnik",
+  "es": "Fijado · Julien, guía",
+  "ro": "Fixat · Julien, ghid"
+ },
+ "I can't see the group": {
+  "pl": "Nie widzę grupy",
+  "es": "No veo al grupo",
+  "ro": "Nu văd grupul"
+ },
+ "Today's plan": {
+  "pl": "Plan na dziś",
+  "es": "Plan de hoy",
+  "ro": "Programul de azi"
+ },
+ "Edit": {
+  "pl": "Edytuj",
+  "es": "Editar",
+  "ro": "Editează"
+ },
+ "On the map": {
+  "pl": "Na mapie",
+  "es": "En el mapa",
+  "ro": "Pe hartă"
+ },
+ "Now": {
+  "pl": "Teraz",
+  "es": "Ahora",
+  "ro": "Acum"
+ },
+ "Tip of the day": {
+  "pl": "Porada dnia",
+  "es": "Consejo del día",
+  "ro": "Sfatul zilei"
+ },
+ "All Rome tips →": {
+  "pl": "Wszystkie porady o Rzymie →",
+  "es": "Todos los consejos de Roma →",
+  "ro": "Toate sfaturile despre Roma →"
+ },
+ "Roll call": {
+  "pl": "Lista obecności",
+  "es": "Pasar lista",
+  "ro": "Prezența"
+ },
+ "See group": {
+  "pl": "Zobacz grupę",
+  "es": "Ver grupo",
+  "ro": "Vezi grupul"
+ },
+ "present": {
+  "pl": "obecnych",
+  "es": "presentes",
+  "ro": "prezenți"
+ },
+ "Take roll call": {
+  "pl": "Sprawdź obecność",
+  "es": "Pasar lista",
+  "ro": "Fă prezența"
+ },
+ "Alert the group": {
+  "pl": "Powiadom grupę",
+  "es": "Avisar al grupo",
+  "ro": "Alertează grupul"
+ },
+ "Today": {
+  "pl": "Dziś",
+  "es": "Hoy",
+  "ro": "Azi"
+ },
+ "Map": {
+  "pl": "Mapa",
+  "es": "Mapa",
+  "ro": "Hartă"
+ },
+ "Book": {
+  "pl": "Rezerwuj",
+  "es": "Reservar",
+  "ro": "Rezervă"
+ },
+ "More": {
+  "pl": "Więcej",
+  "es": "Más",
+  "ro": "Mai mult"
+ },
+ "Group": {
+  "pl": "Grupa",
+  "es": "Grupo",
+  "ro": "Grup"
+ },
+ "Walk": {
+  "pl": "Pieszo",
+  "es": "A pie",
+  "ro": "Pe jos"
+ },
+ "Meeting point": {
+  "pl": "Punkt zbiórki",
+  "es": "Punto de encuentro",
+  "ro": "Punct de întâlnire"
+ },
+ "Meeting points": {
+  "pl": "Punkty zbiórki",
+  "es": "Puntos de encuentro",
+  "ro": "Puncte de întâlnire"
+ },
+ "Caution zones": {
+  "pl": "Strefy ostrożności",
+  "es": "Zonas de precaución",
+  "ro": "Zone de atenție"
+ },
+ "Location sent to Julien": {
+  "pl": "Lokalizacja wysłana do Juliena",
+  "es": "Ubicación enviada a Julien",
+  "ro": "Locație trimisă lui Julien"
+ },
+ "Head to": {
+  "pl": "Idź do",
+  "es": "Dirígete a",
+  "ro": "Mergi spre"
+ },
+ "Nearest meeting point · 4 min walk · offline map": {
+  "pl": "Najbliższy punkt zbiórki · 4 min pieszo · mapa offline",
+  "es": "Punto de encuentro más cercano · 4 min a pie · mapa sin conexión",
+  "ro": "Cel mai apropiat punct de întâlnire · 4 min pe jos · hartă offline"
+ },
+ "Call Julien": {
+  "pl": "Zadzwoń do Juliena",
+  "es": "Llamar a Julien",
+  "ro": "Sună-l pe Julien"
+ },
+ "I found the group": {
+  "pl": "Znalazłem grupę",
+  "es": "Encontré al grupo",
+  "ro": "Am găsit grupul"
+ },
+ "The group": {
+  "pl": "Grupa",
+  "es": "El grupo",
+  "ro": "Grupul"
+ },
+ "in the zone": {
+  "pl": "w strefie",
+  "es": "en la zona",
+  "ro": "în zonă"
+ },
+ "My hotel": {
+  "pl": "Mój hotel",
+  "es": "Mi hotel",
+  "ro": "Hotelul meu"
+ },
+ "1.1 km": {
+  "pl": "1,1 km",
+  "es": "1,1 km",
+  "ro": "1,1 km"
+ },
+ "Show this screen to the driver": {
+  "pl": "Pokaż ten ekran kierowcy",
+  "es": "Muestra esta pantalla al conductor",
+  "ro": "Arată acest ecran șoferului"
+ },
+ "Call the hotel": {
+  "pl": "Zadzwoń do hotelu",
+  "es": "Llamar al hotel",
+  "ro": "Sună la hotel"
+ },
+ "Directions": {
+  "pl": "Trasa",
+  "es": "Cómo llegar",
+  "ro": "Indicații"
+ },
+ "Transport": {
+  "pl": "Transport",
+  "es": "Transporte",
+  "ro": "Transport"
+ },
+ "Museums": {
+  "pl": "Muzea",
+  "es": "Museos",
+  "ro": "Muzee"
+ },
+ "My tickets": {
+  "pl": "Moje bilety",
+  "es": "Mis billetes",
+  "ro": "Biletele mele"
+ },
+ "Buy in the app": {
+  "pl": "Kup w aplikacji",
+  "es": "Comprar en la app",
+  "ro": "Cumpără în aplicație"
+ },
+ "Bought through the official ticket office. Your ticket is stored in Documents. Indicative 2026 prices.": {
+  "pl": "Kupione w oficjalnej kasie. Bilet jest zapisany w Dokumentach. Ceny orientacyjne 2026.",
+  "es": "Comprado en la taquilla oficial. Tu billete se guarda en Documentos. Precios orientativos 2026.",
+  "ro": "Cumpărat de la casa oficială. Biletul e salvat în Documente. Prețuri orientative 2026."
+ },
+ "No tickets yet. Your purchases will appear here and in Documents.": {
+  "pl": "Brak biletów. Twoje zakupy pojawią się tutaj i w Dokumentach.",
+  "es": "Aún no hay billetes. Tus compras aparecerán aquí y en Documentos.",
+  "ro": "Încă nu ai bilete. Cumpărăturile tale vor apărea aici și în Documente."
+ },
+ "In Documents": {
+  "pl": "W Dokumentach",
+  "es": "En Documentos",
+  "ro": "În Documente"
+ },
+ "Your documents are encrypted. Only you can open them, even offline.": {
+  "pl": "Twoje dokumenty są zaszyfrowane. Tylko Ty możesz je otworzyć, nawet offline.",
+  "es": "Tus documentos están cifrados. Solo tú puedes abrirlos, incluso sin conexión.",
+  "ro": "Documentele tale sunt criptate. Doar tu le poți deschide, chiar și offline."
+ },
+ "Unlock with Face ID": {
+  "pl": "Odblokuj przez Face ID",
+  "es": "Desbloquear con Face ID",
+  "ro": "Deblochează cu Face ID"
+ },
+ "Checking…": {
+  "pl": "Sprawdzanie…",
+  "es": "Verificando…",
+  "ro": "Se verifică…"
+ },
+ "Encrypted · Offline": {
+  "pl": "Zaszyfrowane · Offline",
+  "es": "Cifrado · Sin conexión",
+  "ro": "Criptat · Offline"
+ },
+ "Read via MRZ · valid copy for police and embassy": {
+  "pl": "Odczyt MRZ · ważna kopia dla policji i ambasady",
+  "es": "Leído por MRZ · copia válida para policía y embajada",
+  "ro": "Citit prin MRZ · copie valabilă pentru poliție și ambasadă"
+ },
+ "Export as PDF": {
+  "pl": "Eksportuj do PDF",
+  "es": "Exportar en PDF",
+  "ro": "Exportă PDF"
+ },
+ "Offline": {
+  "pl": "Offline",
+  "es": "Sin conexión",
+  "ro": "Offline"
+ },
+ "Scan a document": {
+  "pl": "Zeskanuj dokument",
+  "es": "Escanear un documento",
+  "ro": "Scanează un document"
+ },
+ "A PDF of your documents, ready to send or show.": {
+  "pl": "PDF z Twoimi dokumentami, gotowy do wysłania lub okazania.",
+  "es": "Un PDF de tus documentos, listo para enviar o mostrar.",
+  "ro": "Un PDF cu documentele tale, gata de trimis sau de arătat."
+ },
+ "For the police": {
+  "pl": "Dla policji",
+  "es": "Para la policía",
+  "ro": "Pentru poliție"
+ },
+ "For the embassy": {
+  "pl": "Dla ambasady",
+  "es": "Para la embajada",
+  "ro": "Pentru ambasadă"
+ },
+ "Share…": {
+  "pl": "Udostępnij…",
+  "es": "Compartir…",
+  "ro": "Partajează…"
+ },
+ "Eternal Rome · 20 travellers · 24–30 Sept": {
+  "pl": "Wieczny Rzym · 20 podróżnych · 24–30 wrz",
+  "es": "Roma Eterna · 20 viajeros · 24–30 sept",
+  "ro": "Roma Eternă · 20 de călători · 24–30 sept"
+ },
+ "Invite": {
+  "pl": "Zaproś",
+  "es": "Invitar",
+  "ro": "Invită"
+ },
+ "tap an avatar to mark": {
+  "pl": "dotknij awatara, aby zaznaczyć",
+  "es": "toca un avatar para marcar",
+  "ro": "atinge un avatar pentru a marca"
+ },
+ "Call": {
+  "pl": "Zadzwoń",
+  "es": "Llamar",
+  "ro": "Sună"
+ },
+ "+ 12 other travellers present": {
+  "pl": "+ 12 innych obecnych podróżnych",
+  "es": "+ 12 viajeros más presentes",
+  "ro": "+ alți 12 călători prezenți"
+ },
+ "Route meeting points": {
+  "pl": "Punkty zbiórki na trasie",
+  "es": "Puntos de encuentro de la ruta",
+  "ro": "Punctele de întâlnire ale traseului"
+ },
+ "Present": {
+  "pl": "Obecny",
+  "es": "Presente",
+  "ro": "Prezent"
+ },
+ "Absent": {
+  "pl": "Nieobecny",
+  "es": "Ausente",
+  "ro": "Absent"
+ },
+ "Chat with Julien and the group": {
+  "pl": "Czat z Julienem i grupą",
+  "es": "Chat con Julien y el grupo",
+  "ro": "Chat cu Julien și grupul"
+ },
+ "Tips & advice": {
+  "pl": "Porady i wskazówki",
+  "es": "Consejos y trucos",
+  "ro": "Sfaturi și recomandări"
+ },
+ "Customs, scams, tipping, churches": {
+  "pl": "Zwyczaje, oszustwa, napiwki, kościoły",
+  "es": "Costumbres, estafas, propinas, iglesias",
+  "ro": "Obiceiuri, înșelătorii, bacșiș, biserici"
+ },
+ "Currency converter": {
+  "pl": "Przelicznik walut",
+  "es": "Conversor de divisas",
+  "ro": "Convertor valutar"
+ },
+ "Tax Free": {
+  "pl": "Tax Free",
+  "es": "Tax Free",
+  "ro": "Tax Free"
+ },
+ "VAT refund · Italy": {
+  "pl": "Zwrot VAT · Włochy",
+  "es": "Devolución del IVA · Italia",
+  "ro": "Rambursare TVA · Italia"
+ },
+ "Health profile & emergency contact": {
+  "pl": "Profil zdrowotny i kontakt awaryjny",
+  "es": "Perfil de salud y contacto de emergencia",
+  "ro": "Profil medical și contact de urgență"
+ },
+ "Shared with guide": {
+  "pl": "Udostępniony przewodnikowi",
+  "es": "Compartido con el guía",
+  "ro": "Partajat cu ghidul"
+ },
+ "Location sharing & notifications": {
+  "pl": "Udostępnianie lokalizacji i powiadomienia",
+  "es": "Ubicación compartida y notificaciones",
+  "ro": "Partajarea locației și notificări"
+ },
+ "Route library": {
+  "pl": "Biblioteka tras",
+  "es": "Biblioteca de rutas",
+  "ro": "Biblioteca de trasee"
+ },
+ "3 saved templates": {
+  "pl": "3 zapisane szablony",
+  "es": "3 plantillas guardadas",
+  "ro": "3 șabloane salvate"
+ },
+ "Number for the group": {
+  "pl": "Numer dla grupy",
+  "es": "Número para el grupo",
+  "ro": "Număr pentru grup"
+ },
+ "+39 333 204 1187": {
+  "pl": "+39 333 204 1187",
+  "es": "+39 333 204 1187",
+  "ro": "+39 333 204 1187"
+ },
+ "Group · Eternal Rome": {
+  "pl": "Grupa · Wieczny Rzym",
+  "es": "Grupo · Roma Eterna",
+  "ro": "Grup · Roma Eternă"
+ },
+ "Tips & advice · Rome": {
+  "pl": "Porady i wskazówki · Rzym",
+  "es": "Consejos y trucos · Roma",
+  "ro": "Sfaturi și recomandări · Roma"
+ },
+ "Converter": {
+  "pl": "Przelicznik",
+  "es": "Conversor",
+  "ro": "Convertor"
+ },
+ "Tax Free · Italy": {
+  "pl": "Tax Free · Włochy",
+  "es": "Tax Free · Italia",
+  "ro": "Tax Free · Italia"
+ },
+ "Health profile": {
+  "pl": "Profil zdrowotny",
+  "es": "Perfil de salud",
+  "ro": "Profil medical"
+ },
+ "Location & notifications": {
+  "pl": "Lokalizacja i powiadomienia",
+  "es": "Ubicación y notificaciones",
+  "ro": "Locație și notificări"
+ },
+ "Today's route": {
+  "pl": "Trasa na dziś",
+  "es": "Ruta de hoy",
+  "ro": "Traseul de azi"
+ },
+ "Group alert": {
+  "pl": "Alert dla grupy",
+  "es": "Alerta al grupo",
+  "ro": "Alertă pentru grup"
+ },
+ "Invite travellers": {
+  "pl": "Zaproś podróżnych",
+  "es": "Invitar a viajeros",
+  "ro": "Invită călători"
+ },
+ "Health card": {
+  "pl": "Karta zdrowia",
+  "es": "Ficha de salud",
+  "ro": "Fișă medicală"
+ },
+ "Waiting for signal": {
+  "pl": "Czekam na zasięg",
+  "es": "Esperando cobertura",
+  "ro": "Se așteaptă semnal"
+ },
+ "Write a message…": {
+  "pl": "Napisz wiadomość…",
+  "es": "Escribe un mensaje…",
+  "ro": "Scrie un mesaj…"
+ },
+ "All tips are readable offline.": {
+  "pl": "Wszystkie porady są dostępne offline.",
+  "es": "Todos los consejos se pueden leer sin conexión.",
+  "ro": "Toate sfaturile se pot citi offline."
+ },
+ "My currency": {
+  "pl": "Moja waluta",
+  "es": "Mi divisa",
+  "ro": "Moneda mea"
+ },
+ "The rules in Italy": {
+  "pl": "Zasady we Włoszech",
+  "es": "Las reglas en Italia",
+  "ro": "Regulile în Italia"
+ },
+ "My purchases": {
+  "pl": "Moje zakupy",
+  "es": "Mis compras",
+  "ro": "Cumpărăturile mele"
+ },
+ "Estimated refund": {
+  "pl": "Szacowany zwrot",
+  "es": "Devolución estimada",
+  "ro": "Rambursare estimată"
+ },
+ "Indicative rules, check with Italian customs.": {
+  "pl": "Zasady orientacyjne, sprawdź w urzędzie celnym.",
+  "es": "Reglas orientativas, consulta con la aduana italiana.",
+  "ro": "Reguli orientative, verifică la vama italiană."
+ },
+ "Share with my guide": {
+  "pl": "Udostępnij przewodnikowi",
+  "es": "Compartir con mi guía",
+  "ro": "Partajează cu ghidul"
+ },
+ "Julien sees this only during the trip.": {
+  "pl": "Julien widzi to tylko w trakcie podróży.",
+  "es": "Julien solo lo ve durante el viaje.",
+  "ro": "Julien vede asta doar în timpul călătoriei."
+ },
+ "Emergency contact": {
+  "pl": "Kontakt awaryjny",
+  "es": "Contacto de emergencia",
+  "ro": "Contact de urgență"
+ },
+ "Brother": {
+  "pl": "Brat",
+  "es": "Hermano",
+  "ro": "Frate"
+ },
+ "Sensitive data (GDPR art. 9): encrypted, access limited to your group guide, deleted after the trip.": {
+  "pl": "Dane wrażliwe (RODO art. 9): szyfrowane, dostęp tylko dla przewodnika grupy, usuwane po podróży.",
+  "es": "Datos sensibles (RGPD art. 9): cifrados, acceso limitado al guía del grupo, borrados tras el viaje.",
+  "ro": "Date sensibile (GDPR art. 9): criptate, acces limitat la ghidul grupului, șterse după călătorie."
+ },
+ "Location sharing": {
+  "pl": "Udostępnianie lokalizacji",
+  "es": "Compartir ubicación",
+  "ro": "Partajarea locației"
+ },
+ "Reminders before meetings": {
+  "pl": "Przypomnienia przed zbiórkami",
+  "es": "Recordatorios antes de los encuentros",
+  "ro": "Mementouri înainte de întâlniri"
+ },
+ "Continuous tracking only during an SOS or \"I can't see the group\", to save battery.": {
+  "pl": "Ciągłe śledzenie tylko podczas SOS lub „Nie widzę grupy”, aby oszczędzać baterię.",
+  "es": "Seguimiento continuo solo durante un SOS o «No veo al grupo», para ahorrar batería.",
+  "ro": "Urmărire continuă doar în timpul unui SOS sau „Nu văd grupul”, pentru a economisi bateria."
+ },
+ "Add a stop": {
+  "pl": "Dodaj punkt",
+  "es": "Añadir una parada",
+  "ro": "Adaugă o oprire"
+ },
+ "Tap a time to shift it by 15 min.": {
+  "pl": "Dotknij godziny, aby przesunąć ją o 15 min.",
+  "es": "Toca una hora para moverla 15 min.",
+  "ro": "Atinge o oră pentru a o muta cu 15 min."
+ },
+ "Save as template": {
+  "pl": "Zapisz jako szablon",
+  "es": "Guardar como plantilla",
+  "ro": "Salvează ca șablon"
+ },
+ "Reuse it for another group": {
+  "pl": "Użyj ponownie dla innej grupy",
+  "es": "Reutilízala para otro grupo",
+  "ro": "Refolosește-l pentru alt grup"
+ },
+ "Send the change to 20 travellers": {
+  "pl": "Wyślij zmianę do 20 podróżnych",
+  "es": "Enviar el cambio a 20 viajeros",
+  "ro": "Trimite modificarea celor 20 de călători"
+ },
+ "Drop a point on the map": {
+  "pl": "Wstaw punkt na mapie",
+  "es": "Colocar un punto en el mapa",
+  "ro": "Pune un punct pe hartă"
+ },
+ "Priority message: sound alert for everyone, with read receipts per person.": {
+  "pl": "Wiadomość priorytetowa: alert dźwiękowy dla wszystkich, z potwierdzeniem odczytu.",
+  "es": "Mensaje prioritario: alerta sonora para todos, con confirmación de lectura por persona.",
+  "ro": "Mesaj prioritar: alertă sonoră pentru toți, cu confirmare de citire pentru fiecare."
+ },
+ "Send to the whole group": {
+  "pl": "Wyślij do całej grupy",
+  "es": "Enviar a todo el grupo",
+  "ro": "Trimite întregului grup"
+ },
+ "Share the link": {
+  "pl": "Udostępnij link",
+  "es": "Compartir el enlace",
+  "ro": "Partajează linkul"
+ },
+ "Travellers scan this QR code or enter the code when they sign up.": {
+  "pl": "Podróżni skanują ten kod QR lub wpisują kod przy rejestracji.",
+  "es": "Los viajeros escanean este código QR o introducen el código al registrarse.",
+  "ro": "Călătorii scanează acest cod QR sau introduc codul la înscriere."
+ },
+ "Shared with you": {
+  "pl": "Udostępnione Tobie",
+  "es": "Compartido contigo",
+  "ro": "Partajat cu tine"
+ },
+ "View only. Visible because the traveller allowed it.": {
+  "pl": "Tylko do odczytu. Widoczne, bo podróżny na to zezwolił.",
+  "es": "Solo lectura. Visible porque el viajero lo autorizó.",
+  "ro": "Doar citire. Vizibil pentru că și-a dat acordul călătorul."
+ },
+ "SOS": {
+  "pl": "SOS",
+  "es": "SOS",
+  "ro": "SOS"
+ },
+ "What's happening? Your guide will be alerted with your location.": {
+  "pl": "Co się dzieje? Przewodnik zostanie powiadomiony wraz z Twoją lokalizacją.",
+  "es": "¿Qué ocurre? Tu guía será avisado con tu ubicación.",
+  "ro": "Ce se întâmplă? Ghidul va fi alertat cu locația ta."
+ },
+ "Cancel": {
+  "pl": "Anuluj",
+  "es": "Cancelar",
+  "ro": "Anulează"
+ },
+ "Call 112": {
+  "pl": "Zadzwoń pod 112",
+  "es": "Llamar al 112",
+  "ro": "Sună la 112"
+ },
+ "Medical": {
+  "pl": "Medyczne",
+  "es": "Médico",
+  "ro": "Medical"
+ },
+ "Feeling unwell, injury": {
+  "pl": "Złe samopoczucie, uraz",
+  "es": "Malestar, lesión",
+  "ro": "Rău, accidentare"
+ },
+ "Theft": {
+  "pl": "Kradzież",
+  "es": "Robo",
+  "ro": "Furt"
+ },
+ "Bag, phone, card": {
+  "pl": "Torba, telefon, karta",
+  "es": "Bolso, teléfono, tarjeta",
+  "ro": "Geantă, telefon, card"
+ },
+ "Lost document": {
+  "pl": "Zgubiony dokument",
+  "es": "Documento perdido",
+  "ro": "Document pierdut"
+ },
+ "Passport, ticket": {
+  "pl": "Paszport, bilet",
+  "es": "Pasaporte, billete",
+  "ro": "Pașaport, bilet"
+ },
+ "Lost from group": {
+  "pl": "Zgubiłem grupę",
+  "es": "Perdido del grupo",
+  "ro": "Pierdut de grup"
+ },
+ "I can't see anyone": {
+  "pl": "Nikogo nie widzę",
+  "es": "No veo a nadie",
+  "ro": "Nu văd pe nimeni"
+ },
+ "Other": {
+  "pl": "Inne",
+  "es": "Otro",
+  "ro": "Altceva"
+ },
+ "Another emergency": {
+  "pl": "Inny nagły wypadek",
+  "es": "Otra emergencia",
+  "ro": "Altă urgență"
+ },
+ "Julien has been alerted": {
+  "pl": "Julien został powiadomiony",
+  "es": "Julien ha sido avisado",
+  "ro": "Julien a fost alertat"
+ },
+ "Your location is shared continuously until the alert ends.": {
+  "pl": "Twoja lokalizacja jest udostępniana na bieżąco do końca alertu.",
+  "es": "Tu ubicación se comparte de forma continua hasta que termine la alerta.",
+  "ro": "Locația ta e partajată continuu până la încheierea alertei."
+ },
+ "What to do now": {
+  "pl": "Co robić teraz",
+  "es": "Qué hacer ahora",
+  "ro": "Ce faci acum"
+ },
+ "End the alert": {
+  "pl": "Zakończ alert",
+  "es": "Terminar la alerta",
+  "ro": "Încheie alerta"
+ },
+ "Emergency number": {
+  "pl": "Numer alarmowy",
+  "es": "Número de emergencia",
+  "ro": "Număr de urgență"
+ },
+ "Police, ambulance, fire · English spoken": {
+  "pl": "Policja, pogotowie, straż · mówią po angielsku",
+  "es": "Policía, ambulancia, bomberos · hablan inglés",
+  "ro": "Poliție, ambulanță, pompieri · se vorbește engleza"
+ },
+ "Embassy of Canada": {
+  "pl": "Ambasada Kanady",
+  "es": "Embajada de Canadá",
+  "ro": "Ambasada Canadei"
+ },
+ "Via Zara 30 · 2.6 km": {
+  "pl": "Via Zara 30 · 2,6 km",
+  "es": "Via Zara 30 · 2,6 km",
+  "ro": "Via Zara 30 · 2,6 km"
+ },
+ "Julien, your guide": {
+  "pl": "Julien, Twój przewodnik",
+  "es": "Julien, tu guía",
+  "ro": "Julien, ghidul tău"
+ },
+ "Alerted · location shared": {
+  "pl": "Powiadomiony · lokalizacja udostępniona",
+  "es": "Avisado · ubicación compartida",
+  "ro": "Alertat · locație partajată"
+ },
+ "SOS received · 20 s ago": {
+  "pl": "Odebrano SOS · 20 s temu",
+  "es": "SOS recibido · hace 20 s",
+  "ro": "SOS primit · acum 20 s"
+ },
+ "Medical emergency": {
+  "pl": "Nagły wypadek medyczny",
+  "es": "Emergencia médica",
+  "ro": "Urgență medicală"
+ },
+ "Roman Forum, Via Sacra · 180 m from you": {
+  "pl": "Forum Romanum, Via Sacra · 180 m od Ciebie",
+  "es": "Foro Romano, Via Sacra · a 180 m de ti",
+  "ro": "Forumul Roman, Via Sacra · la 180 m de tine"
+ },
+ "Shared health card: peanut allergy, adrenaline pen in his bag.": {
+  "pl": "Udostępniona karta zdrowia: alergia na orzeszki, adrenalina w plecaku.",
+  "es": "Ficha de salud compartida: alergia al cacahuete, pluma de adrenalina en su bolsa.",
+  "ro": "Fișă medicală partajată: alergie la arahide, stilou cu adrenalină în geantă."
+ },
+ "Sound alert even in silent mode.": {
+  "pl": "Alert dźwiękowy nawet w trybie cichym.",
+  "es": "Alerta sonora incluso en modo silencio.",
+  "ro": "Alertă sonoră chiar și în modul silențios."
+ },
+ "Call Marc": {
+  "pl": "Zadzwoń do Marca",
+  "es": "Llamar a Marc",
+  "ro": "Sună-l pe Marc"
+ },
+ "See on map": {
+  "pl": "Pokaż na mapie",
+  "es": "Ver en el mapa",
+  "ro": "Vezi pe hartă"
+ },
+ "Offline · messages send when signal returns": {
+  "pl": "Offline · wiadomości wyślą się po odzyskaniu zasięgu",
+  "es": "Sin conexión · los mensajes se envían al volver la cobertura",
+  "ro": "Offline · mesajele pleacă atunci când revine semnalul"
+ },
+ "Synced 10:12": {
+  "pl": "Zsynchronizowano 10:12",
+  "es": "Sincronizado 10:12",
+  "ro": "Sincronizat 10:12"
+ },
+ "NOW": {
+  "pl": "TERAZ",
+  "es": "AHORA",
+  "ro": "ACUM"
+ },
+ "Meeting in 10 min": {
+  "pl": "Zbiórka za 10 min",
+  "es": "Encuentro en 10 min",
+  "ro": "Întâlnire în 10 min"
+ },
+ "Arch of Constantine · 11:00 · 3 min walk": {
+  "pl": "Łuk Konstantyna · 11:00 · 3 min pieszo",
+  "es": "Arco de Constantino · 11:00 · 3 min a pie",
+  "ro": "Arcul lui Constantin · 11:00 · 3 min pe jos"
+ },
+ "Priority message · Julien": {
+  "pl": "Wiadomość priorytetowa · Julien",
+  "es": "Mensaje prioritario · Julien",
+  "ro": "Mesaj prioritar · Julien"
+ },
+ "Change: meeting at 11:15 instead of 11:00, same place.": {
+  "pl": "Zmiana: zbiórka o 11:15 zamiast 11:00, to samo miejsce.",
+  "es": "Cambio: encuentro a las 11:15 en vez de a las 11:00, mismo lugar.",
+  "ro": "Modificare: întâlnire la 11:15 în loc de 11:00, același loc."
+ },
+ "Read": {
+  "pl": "Przeczytane",
+  "es": "Leído",
+  "ro": "Citit"
+ },
+ "Open": {
+  "pl": "Otwórz",
+  "es": "Abrir",
+  "ro": "Deschide"
+ },
+ "in 20 min": {
+  "pl": "za 20 min",
+  "es": "en 20 min",
+  "ro": "în 20 min"
+ },
+ "Roll call sent to 20 travellers": {
+  "pl": "Lista obecności wysłana do 20 podróżnych",
+  "es": "Lista enviada a 20 viajeros",
+  "ro": "Prezența trimisă celor 20 de călători"
+ },
+ "Camera ready for the QR code": {
+  "pl": "Aparat gotowy do kodu QR",
+  "es": "Cámara lista para el código QR",
+  "ro": "Camera e gata pentru codul QR"
+ },
+ "Calling (demo)": {
+  "pl": "Dzwonię (demo)",
+  "es": "Llamando (demo)",
+  "ro": "Se apelează (demo)"
+ },
+ "Directions started": {
+  "pl": "Nawigacja uruchomiona",
+  "es": "Ruta iniciada",
+  "ro": "Navigare pornită"
+ },
+ "Ticket bought · stored in Documents": {
+  "pl": "Bilet kupiony · zapisany w Dokumentach",
+  "es": "Billete comprado · guardado en Documentos",
+  "ro": "Bilet cumpărat · salvat în Documente"
+ },
+ "PDF ready · shared": {
+  "pl": "PDF gotowy · udostępniony",
+  "es": "PDF listo · compartido",
+  "ro": "PDF gata · partajat"
+ },
+ "Change sent · 20 notifications": {
+  "pl": "Zmiana wysłana · 20 powiadomień",
+  "es": "Cambio enviado · 20 notificaciones",
+  "ro": "Modificare trimisă · 20 de notificări"
+ },
+ "Point added: Piazza Venezia": {
+  "pl": "Dodano punkt: Piazza Venezia",
+  "es": "Punto añadido: Piazza Venezia",
+  "ro": "Punct adăugat: Piazza Venezia"
+ },
+ "Link copied": {
+  "pl": "Link skopiowany",
+  "es": "Enlace copiado",
+  "ro": "Link copiat"
+ },
+ "Edit (demo)": {
+  "pl": "Edycja (demo)",
+  "es": "Editar (demo)",
+  "ro": "Editare (demo)"
+ },
+ "Back with the group · Julien notified": {
+  "pl": "Znów z grupą · Julien powiadomiony",
+  "es": "De vuelta con el grupo · Julien avisado",
+  "ro": "Din nou cu grupul · Julien anunțat"
+ },
+ "Offline map to download (demo)": {
+  "pl": "Mapa offline do pobrania (demo)",
+  "es": "Mapa sin conexión para descargar (demo)",
+  "ro": "Hartă offline de descărcat (demo)"
+ },
+ "Alert ended · Julien notified": {
+  "pl": "Alert zakończony · Julien powiadomiony",
+  "es": "Alerta terminada · Julien avisado",
+  "ro": "Alertă încheiată · Julien anunțat"
+ },
+ "Camera ready": {
+  "pl": "Aparat gotowy",
+  "es": "Cámara lista",
+  "ro": "Camera e gata"
+ },
+ "Day by day": {
+  "pl": "Dzień po dniu",
+  "es": "Día a día",
+  "ro": "Zi cu zi"
+ },
+ "Tomorrow": {
+  "pl": "Jutro",
+  "es": "Mañana",
+  "ro": "Mâine"
+ },
+ "What to bring": {
+  "pl": "Co zabrać",
+  "es": "Qué llevar",
+  "ro": "Ce să iei"
+ },
+ "Free day": {
+  "pl": "Dzień wolny",
+  "es": "Día libre",
+  "ro": "Zi liberă"
+ },
+ "No group activity. Plan your day around your time, your tastes and your shopping time.": {
+  "pl": "Brak zajęć grupowych. Zaplanuj dzień według swojego czasu, gustu i zakupów.",
+  "es": "Sin actividad de grupo. Organiza tu día según tu tiempo, tus gustos y tus compras.",
+  "ro": "Nicio activitate de grup. Planifică-ți ziua după timpul, gusturile și cumpărăturile tale."
+ },
+ "Plan my free day": {
+  "pl": "Zaplanuj wolny dzień",
+  "es": "Planificar mi día libre",
+  "ro": "Planifică-mi ziua liberă"
+ },
+ "Group vote": {
+  "pl": "Głosowanie grupy",
+  "es": "Votación del grupo",
+  "ro": "Votul grupului"
+ },
+ "Closes tonight 18:00": {
+  "pl": "Koniec dziś o 18:00",
+  "es": "Cierra esta tarde a las 18:00",
+  "ro": "Se închide diseară la 18:00"
+ },
+ "Vote saved ✓": {
+  "pl": "Głos zapisany ✓",
+  "es": "Voto guardado ✓",
+  "ro": "Vot salvat ✓"
+ },
+ "Close the vote and add it to the plan": {
+  "pl": "Zamknij głosowanie i dodaj do planu",
+  "es": "Cerrar la votación y añadirla al plan",
+  "ro": "Închide votul și adaugă-l în program"
+ },
+ "votes": {
+  "pl": "głosów",
+  "es": "votos",
+  "ro": "voturi"
+ },
+ "diets & allergies": {
+  "pl": "diety i alergie",
+  "es": "dietas y alergias",
+  "ro": "diete și alergii"
+ },
+ "Diets & allergies": {
+  "pl": "Diety i alergie",
+  "es": "Dietas y alergias",
+  "ro": "Diete și alergii"
+ },
+ "Send the list to the restaurant (no names)": {
+  "pl": "Wyślij listę do restauracji (bez nazwisk)",
+  "es": "Enviar la lista al restaurante (sin nombres)",
+  "ro": "Trimite lista la restaurant (fără nume)"
+ },
+ "Only travellers who agreed to share their health card appear.": {
+  "pl": "Widoczni są tylko podróżni, którzy zgodzili się udostępnić kartę zdrowia.",
+  "es": "Solo aparecen los viajeros que aceptaron compartir su ficha de salud.",
+  "ro": "Apar doar călătorii care au acceptat să-și partajeze fișa medicală."
+ },
+ "Choose a point": {
+  "pl": "Wybierz punkt",
+  "es": "Elige un punto",
+  "ro": "Alege un punct"
+ },
+ "No meeting point": {
+  "pl": "Brak punktu zbiórki",
+  "es": "Sin punto de encuentro",
+  "ro": "Fără punct de întâlnire"
+ },
+ "Drop a custom point on the map": {
+  "pl": "Wstaw własny punkt na mapie",
+  "es": "Colocar un punto personalizado en el mapa",
+  "ro": "Pune un punct personalizat pe hartă"
+ },
+ "One meeting point per place. Tap a place to choose its point": {
+  "pl": "Jeden punkt zbiórki na miejsce. Dotknij miejsca, aby wybrać punkt",
+  "es": "Un punto de encuentro por lugar. Toca un lugar para elegir su punto",
+  "ro": "Un punct de întâlnire pe loc. Atinge un loc pentru a-i alege punctul"
+ },
+ "Julien (private)": {
+  "pl": "Julien (prywatnie)",
+  "es": "Julien (privado)",
+  "ro": "Julien (privat)"
+ },
+ "Claire (private)": {
+  "pl": "Claire (prywatnie)",
+  "es": "Claire (privado)",
+  "ro": "Claire (privat)"
+ },
+ "The guide keeps the group chat for announcements. You can message him privately.": {
+  "pl": "Przewodnik zostawia czat grupy na ogłoszenia. Możesz napisać do niego prywatnie.",
+  "es": "El guía reserva el chat del grupo para avisos. Puedes escribirle en privado.",
+  "ro": "Ghidul păstrează chatul grupului pentru anunțuri. Îi poți scrie în privat."
+ },
+ "Let travellers write to the group": {
+  "pl": "Pozwól podróżnym pisać do grupy",
+  "es": "Permitir que los viajeros escriban al grupo",
+  "ro": "Permite călătorilor să scrie în grup"
+ },
+ "My free day · Mon 28": {
+  "pl": "Mój wolny dzień · pon 28",
+  "es": "Mi día libre · lun 28",
+  "ro": "Ziua mea liberă · lun 28"
+ },
+ "Available time": {
+  "pl": "Dostępny czas",
+  "es": "Tiempo disponible",
+  "ro": "Timp disponibil"
+ },
+ "What I like": {
+  "pl": "Co lubię",
+  "es": "Lo que me gusta",
+  "ro": "Ce îmi place"
+ },
+ "Shopping time": {
+  "pl": "Czas na zakupy",
+  "es": "Tiempo de compras",
+  "ro": "Timp pentru cumpărături"
+ },
+ "Relaxed": {
+  "pl": "Spokojnie",
+  "es": "Tranquilo",
+  "ro": "Relaxat"
+ },
+ "Brisk": {
+  "pl": "Szybko",
+  "es": "Ágil",
+  "ro": "Alert"
+ },
+ "Your plan": {
+  "pl": "Twój plan",
+  "es": "Tu plan",
+  "ro": "Planul tău"
+ },
+ "Save for day 5": {
+  "pl": "Zapisz na dzień 5",
+  "es": "Guardar para el día 5",
+  "ro": "Salvează pentru ziua 5"
+ },
+ "Back with the group: dinner at 20:00 in the hotel lobby.": {
+  "pl": "Powrót do grupy: kolacja o 20:00 w holu hotelu.",
+  "es": "De vuelta con el grupo: cena a las 20:00 en el vestíbulo del hotel.",
+  "ro": "Înapoi la grup: cina la 20:00 în holul hotelului."
+ },
+ "Share my location with Julien during the day": {
+  "pl": "Udostępniaj Julienowi lokalizację w ciągu dnia",
+  "es": "Compartir mi ubicación con Julien durante el día",
+  "ro": "Partajează-mi locația cu Julien în timpul zilei"
+ },
+ "Estimated budget": {
+  "pl": "Szacowany budżet",
+  "es": "Presupuesto estimado",
+  "ro": "Buget estimat"
+ },
+ "Widen your time or your tastes to add activities.": {
+  "pl": "Zwiększ czas lub zainteresowania, by dodać atrakcje.",
+  "es": "Amplía tu tiempo o tus gustos para añadir actividades.",
+  "ro": "Mărește timpul sau gusturile pentru a adăuga activități."
+ },
+ "Receipts": {
+  "pl": "Paragony",
+  "es": "Tickets",
+  "ro": "Bonuri"
+ },
+ "Form": {
+  "pl": "Formularz",
+  "es": "Formulario",
+  "ro": "Formular"
+ },
+ "Airport": {
+  "pl": "Lotnisko",
+  "es": "Aeropuerto",
+  "ro": "Aeroport"
+ },
+ "Scan a receipt": {
+  "pl": "Zeskanuj paragon",
+  "es": "Escanear un ticket",
+  "ro": "Scanează un bon"
+ },
+ "Total purchases": {
+  "pl": "Suma zakupów",
+  "es": "Total de compras",
+  "ro": "Total cumpărături"
+ },
+ "VAT paid": {
+  "pl": "Zapłacony VAT",
+  "es": "IVA pagado",
+  "ro": "TVA plătit"
+ },
+ "Prefilled from your passport and flight": {
+  "pl": "Wypełnione danymi z paszportu i lotu",
+  "es": "Rellenado con tu pasaporte y tu vuelo",
+  "ro": "Precompletat din pașaport și zbor"
+ },
+ "Refund to my Visa •••• 4417": {
+  "pl": "Zwrot na moją kartę Visa •••• 4417",
+  "es": "Reembolso en mi Visa •••• 4417",
+  "ro": "Rambursare pe Visa mea •••• 4417"
+ },
+ "Otherwise, cash at the operator's desk": {
+  "pl": "Albo gotówką w okienku operatora",
+  "es": "O en efectivo en el mostrador del operador",
+  "ro": "Altfel, numerar la ghișeul operatorului"
+ },
+ "Show this QR code at the till: the shop loads your form, no retyping.": {
+  "pl": "Pokaż ten kod QR przy kasie: sklep wczyta formularz, bez przepisywania.",
+  "es": "Muestra este código QR en caja: la tienda carga tu formulario, sin volver a escribir nada.",
+  "ro": "Arată acest cod QR la casă: magazinul îți încarcă formularul, fără să rescrii nimic."
+ },
+ "Used in 2 shops": {
+  "pl": "Użyty w 2 sklepach",
+  "es": "Usado en 2 tiendas",
+  "ro": "Folosit în 2 magazine"
+ },
+ "Fiumicino · Terminal 3": {
+  "pl": "Fiumicino · Terminal 3",
+  "es": "Fiumicino · Terminal 3",
+  "ro": "Fiumicino · Terminal 3"
+ },
+ "Wed 30 · before check-in · allow 45 min": {
+  "pl": "Śr 30 · przed odprawą · zarezerwuj 45 min",
+  "es": "Mié 30 · antes de facturar · calcula 45 min",
+  "ro": "Mie 30 · înainte de check-in · rezervă 45 min"
+ },
+ "map · Fiumicino T3, departures": {
+  "pl": "mapa · Fiumicino T3, odloty",
+  "es": "mapa · Fiumicino T3, salidas",
+  "ro": "hartă · Fiumicino T3, plecări"
+ },
+ "Terminal 3 departures: 'Dogana – Tax Refund' desk, before the check-in counters.": {
+  "pl": "Terminal 3, odloty: stanowisko „Dogana – Tax Refund”, przed stanowiskami odprawy.",
+  "es": "Terminal 3, salidas: mostrador «Dogana – Tax Refund», antes de los mostradores de facturación.",
+  "ro": "Terminal 3, plecări: ghișeul „Dogana – Tax Refund”, înainte de ghișeele de check-in."
+ },
+ "Show your passport, boarding pass, unused purchases and this QR code.": {
+  "pl": "Pokaż paszport, kartę pokładową, nieużywane zakupy i ten kod QR.",
+  "es": "Muestra tu pasaporte, tarjeta de embarque, compras sin usar y este código QR.",
+  "ro": "Arată pașaportul, cartea de îmbarcare, cumpărăturile nefolosite și acest cod QR."
+ },
+ "Digital customs validation (OTELLO system), then refund to your card or at the operator's desk.": {
+  "pl": "Cyfrowe potwierdzenie celne (system OTELLO), potem zwrot na kartę lub w okienku operatora.",
+  "es": "Validación aduanera digital (sistema OTELLO) y luego reembolso en tu tarjeta o en el mostrador del operador.",
+  "ro": "Validare vamală digitală (sistemul OTELLO), apoi rambursare pe card sau la ghișeul operatorului."
+ },
+ "Location and hours to be checked before launch.": {
+  "pl": "Miejsce i godziny do sprawdzenia przed startem.",
+  "es": "Ubicación y horarios a verificar antes del lanzamiento.",
+  "ro": "Locul și programul trebuie verificate înainte de lansare."
+ },
+ "Eligible · loaded on the form": {
+  "pl": "Kwalifikuje się · dodano do formularza",
+  "es": "Elegible · añadido al formulario",
+  "ro": "Eligibil · încărcat în formular"
+ },
+ "Below the €70 threshold": {
+  "pl": "Poniżej progu 70 €",
+  "es": "Por debajo del umbral de 70 €",
+  "ro": "Sub pragul de 70 €"
+ },
+ "Residence": {
+  "pl": "Miejsce zamieszkania",
+  "es": "Residencia",
+  "ro": "Reședință"
+ },
+ "Departure flight": {
+  "pl": "Lot powrotny",
+  "es": "Vuelo de salida",
+  "ro": "Zbor de plecare"
+ },
+ "EU exit": {
+  "pl": "Wyjazd z UE",
+  "es": "Salida de la UE",
+  "ro": "Ieșire din UE"
+ },
+ "Vote saved": {
+  "pl": "Głos zapisany",
+  "es": "Voto guardado",
+  "ro": "Vot salvat"
+ },
+ "Added to day 4: ": {
+  "pl": "Dodano do dnia 4: ",
+  "es": "Añadido al día 4: ",
+  "ro": "Adăugat în ziua 4: "
+ },
+ "List sent to the restaurant": {
+  "pl": "Lista wysłana do restauracji",
+  "es": "Lista enviada al restaurante",
+  "ro": "Listă trimisă la restaurant"
+ },
+ "Free day saved": {
+  "pl": "Wolny dzień zapisany",
+  "es": "Día libre guardado",
+  "ro": "Zi liberă salvată"
+ },
+ "Receipt added · form updated": {
+  "pl": "Paragon dodany · formularz zaktualizowany",
+  "es": "Ticket añadido · formulario actualizado",
+  "ro": "Bon adăugat · formular actualizat"
+ },
+ "Meeting point updated · travellers notified": {
+  "pl": "Punkt zbiórki zmieniony · podróżni powiadomieni",
+  "es": "Punto de encuentro actualizado · viajeros avisados",
+  "ro": "Punct de întâlnire actualizat · călători anunțați"
+ },
+ "Canadian dollar": {
+  "pl": "Dolar kanadyjski",
+  "es": "Dólar canadiense",
+  "ro": "Dolar canadian"
+ },
+ "US dollar": {
+  "pl": "Dolar amerykański",
+  "es": "Dólar estadounidense",
+  "ro": "Dolar american"
+ },
+ "Pound sterling": {
+  "pl": "Funt szterling",
+  "es": "Libra esterlina",
+  "ro": "Liră sterlină"
+ },
+ "Swiss franc": {
+  "pl": "Frank szwajcarski",
+  "es": "Franco suizo",
+  "ro": "Franc elvețian"
+ },
+ "Yen": {
+  "pl": "Jen",
+  "es": "Yen",
+  "ro": "Yen"
+ },
+ "Brazilian real": {
+  "pl": "Real brazylijski",
+  "es": "Real brasileño",
+  "ro": "Real brazilian"
+ },
+ "Yuan": {
+  "pl": "Juan",
+  "es": "Yuan",
+  "ro": "Yuan"
+ },
+ "Colosseum & Palatine": {
+  "pl": "Koloseum i Palatyn",
+  "es": "Coliseo y Palatino",
+  "ro": "Colosseumul și Palatinul"
+ },
+ "Roman Forum": {
+  "pl": "Forum Romanum",
+  "es": "Foro Romano",
+  "ro": "Forumul Roman"
+ },
+ "Lunch in Monti": {
+  "pl": "Obiad w Monti",
+  "es": "Almuerzo en Monti",
+  "ro": "Prânz în Monti"
+ },
+ "Trevi Fountain": {
+  "pl": "Fontanna di Trevi",
+  "es": "Fontana de Trevi",
+  "ro": "Fântâna Trevi"
+ },
+ "Pantheon": {
+  "pl": "Panteon",
+  "es": "Panteón",
+  "ro": "Panteonul"
+ },
+ "Vatican Museums": {
+  "pl": "Muzea Watykańskie",
+  "es": "Museos Vaticanos",
+  "ro": "Muzeele Vaticanului"
+ },
+ "Borghese Gallery": {
+  "pl": "Galeria Borghese",
+  "es": "Galería Borghese",
+  "ro": "Galeria Borghese"
+ },
+ "Castel Sant'Angelo": {
+  "pl": "Zamek Świętego Anioła",
+  "es": "Castillo de Sant'Angelo",
+  "ro": "Castelul Sant'Angelo"
+ },
+ "St Peter's Basilica": {
+  "pl": "Bazylika św. Piotra",
+  "es": "Basílica de San Pedro",
+  "ro": "Bazilica Sfântul Petru"
+ },
+ "Lunch · Borgo Pio": {
+  "pl": "Obiad · Borgo Pio",
+  "es": "Almuerzo · Borgo Pio",
+  "ro": "Prânz · Borgo Pio"
+ },
+ "Spanish Steps": {
+  "pl": "Schody Hiszpańskie",
+  "es": "Plaza de España",
+  "ro": "Treptele Spaniole"
+ },
+ "Lunch · Via della Croce": {
+  "pl": "Obiad · Via della Croce",
+  "es": "Almuerzo · Via della Croce",
+  "ro": "Prânz · Via della Croce"
+ },
+ "Shopping · Via dei Condotti": {
+  "pl": "Zakupy · Via dei Condotti",
+  "es": "Compras · Via dei Condotti",
+  "ro": "Cumpărături · Via dei Condotti"
+ },
+ "Campo de' Fiori market": {
+  "pl": "Targ na Campo de' Fiori",
+  "es": "Mercado de Campo de' Fiori",
+  "ro": "Piața Campo de' Fiori"
+ },
+ "Lunch · Trastevere trattoria": {
+  "pl": "Obiad · trattoria na Zatybrzu",
+  "es": "Almuerzo · trattoria del Trastevere",
+  "ro": "Prânz · trattoria din Trastevere"
+ },
+ "Trastevere stroll": {
+  "pl": "Spacer po Zatybrzu",
+  "es": "Paseo por el Trastevere",
+  "ro": "Plimbare prin Trastevere"
+ },
+ "Testaccio Market": {
+  "pl": "Targ Testaccio",
+  "es": "Mercado de Testaccio",
+  "ro": "Piața Testaccio"
+ },
+ "Farewell dinner": {
+  "pl": "Kolacja pożegnalna",
+  "es": "Cena de despedida",
+  "ro": "Cina de rămas-bun"
+ },
+ "Welcome dinner · Monti": {
+  "pl": "Kolacja powitalna · Monti",
+  "es": "Cena de bienvenida · Monti",
+  "ro": "Cina de bun venit · Monti"
+ },
+ "Fiumicino Airport": {
+  "pl": "Lotnisko Fiumicino",
+  "es": "Aeropuerto de Fiumicino",
+  "ro": "Aeroportul Fiumicino"
+ },
+ "Tax-free validation · customs": {
+  "pl": "Potwierdzenie Tax Free · urząd celny",
+  "es": "Validación tax free · aduana",
+  "ro": "Validare Tax Free · vamă"
+ },
+ "Flight AC 893 → Montreal": {
+  "pl": "Lot AC 893 → Montreal",
+  "es": "Vuelo AC 893 → Montreal",
+  "ro": "Zbor AC 893 → Montreal"
+ },
+ "Sunset at the Pincio": {
+  "pl": "Zachód słońca na Pincio",
+  "es": "Atardecer en el Pincio",
+  "ro": "Apus pe Pincio"
+ },
+ "Shopping on Via del Corso": {
+  "pl": "Zakupy na Via del Corso",
+  "es": "Compras en Via del Corso",
+  "ro": "Cumpărături pe Via del Corso"
+ },
+ "Ara Pacis Museum": {
+  "pl": "Muzeum Ara Pacis",
+  "es": "Museo del Ara Pacis",
+  "ro": "Muzeul Ara Pacis"
+ },
+ "Arch of Constantine": {
+  "pl": "Łuk Konstantyna",
+  "es": "Arco de Constantino",
+  "ro": "Arcul lui Constantin"
+ },
+ "Open space, visible from afar": {
+  "pl": "Otwarta przestrzeń, widoczna z daleka",
+  "es": "Espacio abierto, visible desde lejos",
+  "ro": "Spațiu deschis, vizibil de departe"
+ },
+ "Colosseo metro exit": {
+  "pl": "Wyjście z metra Colosseo",
+  "es": "Salida del metro Colosseo",
+  "ro": "Ieșirea de la metroul Colosseo"
+ },
+ "Handy for the metro": {
+  "pl": "Wygodne, by wrócić metrem",
+  "es": "Práctico para volver en metro",
+  "ro": "Practic pentru metrou"
+ },
+ "Capitol Square": {
+  "pl": "Plac Kapitoliński",
+  "es": "Plaza del Capitolio",
+  "ro": "Piața Capitoliului"
+ },
+ "Marcus Aurelius statue in the centre": {
+  "pl": "Pomnik Marka Aureliusza pośrodku",
+  "es": "Estatua de Marco Aurelio en el centro",
+  "ro": "Statuia lui Marcus Aurelius în centru"
+ },
+ "Arch of Titus": {
+  "pl": "Łuk Tytusa",
+  "es": "Arco de Tito",
+  "ro": "Arcul lui Titus"
+ },
+ "Inside the Forum, near the exit": {
+  "pl": "Na Forum, przy wyjściu",
+  "es": "Dentro del Foro, cerca de la salida",
+  "ro": "În Forum, lângă ieșire"
+ },
+ "Madonna dei Monti fountain": {
+  "pl": "Fontanna Madonna dei Monti",
+  "es": "Fuente de la Madonna dei Monti",
+  "ro": "Fântâna Madonna dei Monti"
+ },
+ "Small shaded square": {
+  "pl": "Mały zacieniony plac",
+  "es": "Pequeña plaza con sombra",
+  "ro": "Piațetă mică, la umbră"
+ },
+ "Trevi, Via delle Muratte side": {
+  "pl": "Trevi, od strony Via delle Muratte",
+  "es": "Trevi, lado de Via delle Muratte",
+  "ro": "Trevi, pe partea Via delle Muratte"
+ },
+ "Less crowded than the front": {
+  "pl": "Mniej tłoczno niż z przodu",
+  "es": "Menos gente que delante",
+  "ro": "Mai puțină lume decât în față"
+ },
+ "Quiet, 1 min away": {
+  "pl": "Spokojnie, 1 min dalej",
+  "es": "Tranquila, a 1 min",
+  "ro": "Liniștit, la 1 min"
+ },
+ "Pantheon fountain": {
+  "pl": "Fontanna przed Panteonem",
+  "es": "Fuente del Panteón",
+  "ro": "Fântâna Panteonului"
+ },
+ "In front of the portico": {
+  "pl": "Przed portykiem",
+  "es": "Delante del pórtico",
+  "ro": "În fața porticului"
+ },
+ "Minerva elephant": {
+  "pl": "Słoń Minerwy",
+  "es": "El elefante de la Minerva",
+  "ro": "Elefantul Minervei"
+ },
+ "Behind the Pantheon, quieter": {
+  "pl": "Za Panteonem, spokojniej",
+  "es": "Detrás del Panteón, más tranquilo",
+  "ro": "În spatele Panteonului, mai liniștit"
+ },
+ "Fountain of the Four Rivers": {
+  "pl": "Fontanna Czterech Rzek",
+  "es": "Fuente de los Cuatro Ríos",
+  "ro": "Fântâna celor Patru Râuri"
+ },
+ "Centre of the square": {
+  "pl": "Środek placu",
+  "es": "Centro de la plaza",
+  "ro": "Centrul pieței"
+ },
+ "Neptune fountain": {
+  "pl": "Fontanna Neptuna",
+  "es": "Fuente de Neptuno",
+  "ro": "Fântâna lui Neptun"
+ },
+ "North end": {
+  "pl": "Północny kraniec",
+  "es": "Extremo norte",
+  "ro": "Capătul nordic"
+ },
+ "Museums entrance": {
+  "pl": "Wejście do Muzeów",
+  "es": "Entrada de los Museos",
+  "ro": "Intrarea Muzeelor"
+ },
+ "Group line on the right": {
+  "pl": "Kolejka dla grup po prawej",
+  "es": "Fila de grupos a la derecha",
+  "ro": "Coada pentru grupuri pe dreapta"
+ },
+ "Bus stop, wide space": {
+  "pl": "Przystanek autobusowy, dużo miejsca",
+  "es": "Parada de autobús, espacio amplio",
+  "ro": "Stație de autobuz, spațiu larg"
+ },
+ "The obelisk, St Peter's Square": {
+  "pl": "Obelisk, plac św. Piotra",
+  "es": "El obelisco, plaza de San Pedro",
+  "ro": "Obeliscul, Piața Sfântul Petru"
+ },
+ "Impossible to miss": {
+  "pl": "Nie da się go przeoczyć",
+  "es": "Imposible no verlo",
+  "ro": "Imposibil de ratat"
+ },
+ "Colonnade, Porta Angelica side": {
+  "pl": "Kolumnada, od strony Porta Angelica",
+  "es": "Columnata, lado de Porta Angelica",
+  "ro": "Colonada, pe partea Porta Angelica"
+ },
+ "In the shade": {
+  "pl": "W cieniu",
+  "es": "A la sombra",
+  "ro": "La umbră"
+ },
+ "Ponte Sant'Angelo": {
+  "pl": "Most Świętego Anioła",
+  "es": "Puente de Sant'Angelo",
+  "ro": "Podul Sant'Angelo"
+ },
+ "Castle side": {
+  "pl": "Od strony zamku",
+  "es": "Lado del castillo",
+  "ro": "Pe partea castelului"
+ },
+ "Gallery entrance": {
+  "pl": "Wejście do galerii",
+  "es": "Entrada de la galería",
+  "ro": "Intrarea galeriei"
+ },
+ "15 min before your slot": {
+  "pl": "15 min przed Twoją godziną",
+  "es": "15 min antes de tu turno",
+  "ro": "Cu 15 min înainte de intervalul tău"
+ },
+ "The obelisk": {
+  "pl": "Obelisk",
+  "es": "El obelisco",
+  "ro": "Obeliscul"
+ },
+ "Barcaccia fountain": {
+  "pl": "Fontanna Barcaccia",
+  "es": "Fuente de la Barcaccia",
+  "ro": "Fântâna Barcaccia"
+ },
+ "At the foot of the Steps": {
+  "pl": "U stóp schodów",
+  "es": "Al pie de la escalinata",
+  "ro": "La baza treptelor"
+ },
+ "Giordano Bruno statue": {
+  "pl": "Pomnik Giordana Bruna",
+  "es": "Estatua de Giordano Bruno",
+  "ro": "Statuia lui Giordano Bruno"
+ },
+ "Middle of the market": {
+  "pl": "Środek targu",
+  "es": "En medio del mercado",
+  "ro": "În mijlocul pieței"
+ },
+ "Santa Maria in Trastevere fountain": {
+  "pl": "Fontanna Santa Maria in Trastevere",
+  "es": "Fuente de Santa Maria in Trastevere",
+  "ro": "Fântâna Santa Maria in Trastevere"
+ },
+ "On the fountain steps": {
+  "pl": "Na stopniach fontanny",
+  "es": "En los escalones de la fuente",
+  "ro": "Pe treptele fântânii"
+ },
+ "Market entrance": {
+  "pl": "Wejście na targ",
+  "es": "Entrada del mercado",
+  "ro": "Intrarea în piață"
+ },
+ "Via Galvani side": {
+  "pl": "Od strony Via Galvani",
+  "es": "Lado de Via Galvani",
+  "ro": "Pe partea Via Galvani"
+ },
+ "Peanut allergy · severe": {
+  "pl": "Alergia na orzeszki · ciężka",
+  "es": "Alergia al cacahuete · grave",
+  "ro": "Alergie la arahide · severă"
+ },
+ "Adrenaline pen in his bag. Tell the kitchen.": {
+  "pl": "Adrenalina w plecaku. Uprzedzić kuchnię.",
+  "es": "Pluma de adrenalina en su bolsa. Avisar a la cocina.",
+  "ro": "Stilou cu adrenalină în geantă. Anunțați bucătăria."
+ },
+ "Gluten-free (coeliac)": {
+  "pl": "Bezglutenowa (celiakia)",
+  "es": "Sin gluten (celiaquía)",
+  "ro": "Fără gluten (celiachie)"
+ },
+ "Avoid any cross-contamination.": {
+  "pl": "Unikać zanieczyszczenia krzyżowego.",
+  "es": "Evitar cualquier contaminación cruzada.",
+  "ro": "Evitați orice contaminare încrucișată."
+ },
+ "Type 1 diabetes": {
+  "pl": "Cukrzyca typu 1",
+  "es": "Diabetes tipo 1",
+  "ro": "Diabet de tip 1"
+ },
+ "Meals on time, fast sugar at hand.": {
+  "pl": "Posiłki o stałej porze, cukier pod ręką.",
+  "es": "Comidas a su hora, azúcar rápido a mano.",
+  "ro": "Mese la ore fixe, zahăr rapid la îndemână."
+ },
+ "Halal": {
+  "pl": "Halal",
+  "es": "Halal",
+  "ro": "Halal"
+ },
+ "No pork or alcohol in cooking.": {
+  "pl": "Bez wieprzowiny i alkoholu w kuchni.",
+  "es": "Sin cerdo ni alcohol en la cocina.",
+  "ro": "Fără carne de porc sau alcool în bucătărie."
+ },
+ "Vegetarian": {
+  "pl": "Wegetarianin",
+  "es": "Vegetariano",
+  "ro": "Vegetarian"
+ },
+ "What should we do on Sunday 27, 16:30–18:30?": {
+  "pl": "Co robimy w niedzielę 27, 16:30–18:30?",
+  "es": "¿Qué hacemos el domingo 27, de 16:30 a 18:30?",
+  "ro": "Ce facem duminică 27, între 16:30 și 18:30?"
+ },
+ "Walk and aperitivo · free": {
+  "pl": "Spacer i aperitivo · za darmo",
+  "es": "Paseo y aperitivo · gratis",
+  "ro": "Plimbare și aperitivo · gratuit"
+ },
+ "Free time · tax free from €70": {
+  "pl": "Czas wolny · tax free od 70 €",
+  "es": "Tiempo libre · tax free desde 70 €",
+  "ro": "Timp liber · tax free de la 70 €"
+ },
+ "Guided visit · €14": {
+  "pl": "Zwiedzanie z przewodnikiem · 14 €",
+  "es": "Visita guiada · 14 €",
+  "ro": "Vizită ghidată · 14 €"
+ },
+ "Art": {
+  "pl": "Sztuka",
+  "es": "Arte",
+  "ro": "Artă"
+ },
+ "Ancient history": {
+  "pl": "Historia starożytna",
+  "es": "Historia antigua",
+  "ro": "Istorie antică"
+ },
+ "Churches": {
+  "pl": "Kościoły",
+  "es": "Iglesias",
+  "ro": "Biserici"
+ },
+ "Food": {
+  "pl": "Kuchnia",
+  "es": "Gastronomía",
+  "ro": "Gastronomie"
+ },
+ "Viewpoints": {
+  "pl": "Panoramy",
+  "es": "Miradores",
+  "ro": "Panorame"
+ },
+ "Neighbourhoods": {
+  "pl": "Dzielnice",
+  "es": "Barrios",
+  "ro": "Cartiere"
+ },
+ "Capitoline Museums": {
+  "pl": "Muzea Kapitolińskie",
+  "es": "Museos Capitolinos",
+  "ro": "Muzeele Capitoline"
+ },
+ "Baths of Caracalla": {
+  "pl": "Termy Karakalli",
+  "es": "Termas de Caracalla",
+  "ro": "Termele lui Caracalla"
+ },
+ "Largo Argentina, where Caesar died": {
+  "pl": "Largo Argentina, gdzie zginął Cezar",
+  "es": "Largo Argentina, donde murió César",
+  "ro": "Largo Argentina, unde a murit Cezar"
+ },
+ "St Clement Basilica and its underground": {
+  "pl": "Bazylika św. Klemensa i jej podziemia",
+  "es": "Basílica de San Clemente y su subsuelo",
+  "ro": "Bazilica Sfântul Clement și subteranele ei"
+ },
+ "St Mary Major": {
+  "pl": "Bazylika Santa Maria Maggiore",
+  "es": "Santa María la Mayor",
+  "ro": "Santa Maria Maggiore"
+ },
+ "Fresh pasta class": {
+  "pl": "Kurs świeżego makaronu",
+  "es": "Clase de pasta fresca",
+  "ro": "Curs de paste proaspete"
+ },
+ "Orange Garden and the Aventine keyhole": {
+  "pl": "Ogród Pomarańczowy i dziurka od klucza na Awentynie",
+  "es": "Jardín de los Naranjos y la cerradura del Aventino",
+  "ro": "Grădina Portocalilor și gaura cheii de pe Aventin"
+ },
+ "Janiculum terrace": {
+  "pl": "Taras na Janikulum",
+  "es": "Terraza del Janículo",
+  "ro": "Terasa Janiculum"
+ },
+ "Stroll through Monti": {
+  "pl": "Spacer po Monti",
+  "es": "Paseo por Monti",
+  "ro": "Plimbare prin Monti"
+ },
+ "Jewish Ghetto and Portico of Octavia": {
+  "pl": "Getto żydowskie i Portyk Oktawii",
+  "es": "Gueto judío y Pórtico de Octavia",
+  "ro": "Ghetoul evreiesc și Porticul Octaviei"
+ },
+ "Metro": {
+  "pl": "Metro",
+  "es": "Metro",
+  "ro": "Metrou"
+ },
+ "Bus": {
+  "pl": "Autobus",
+  "es": "Autobús",
+  "ro": "Autobuz"
+ },
+ "Train": {
+  "pl": "Pociąg",
+  "es": "Tren",
+  "ro": "Tren"
+ },
+ "Tram": {
+  "pl": "Tramwaj",
+  "es": "Tranvía",
+  "ro": "Tramvai"
+ },
+ "Thu 24": {
+  "pl": "Czw 24",
+  "es": "Jue 24",
+  "ro": "Joi 24"
+ },
+ "Arrival": {
+  "pl": "Przyjazd",
+  "es": "Llegada",
+  "ro": "Sosire"
+ },
+ "Bags collected, follow \"Treni\".": {
+  "pl": "Bagaże odebrane, idź za znakami „Treni”.",
+  "es": "Equipaje recogido, sigue «Treni».",
+  "ro": "Bagaje ridicate, urmează „Treni”."
+ },
+ "Leonardo Express → Termini + 9 min walk": {
+  "pl": "Leonardo Express → Termini + 9 min pieszo",
+  "es": "Leonardo Express → Termini + 9 min a pie",
+  "ro": "Leonardo Express → Termini + 9 min pe jos"
+ },
+ "Check-in from 14:00.": {
+  "pl": "Zameldowanie od 14:00.",
+  "es": "Check-in desde las 14:00.",
+  "ro": "Check-in de la 14:00."
+ },
+ "Passport and boarding pass": {
+  "pl": "Paszport i karta pokładowa",
+  "es": "Pasaporte y tarjeta de embarque",
+  "ro": "Pașaport și carte de îmbarcare"
+ },
+ "Plug adapter (type L or C)": {
+  "pl": "Przejściówka do gniazdka (typ L lub C)",
+  "es": "Adaptador de enchufe (tipo L o C)",
+  "ro": "Adaptor de priză (tip L sau C)"
+ },
+ "Leonardo Express ticket, in Documents": {
+  "pl": "Bilet Leonardo Express, w Dokumentach",
+  "es": "Billete Leonardo Express, en Documentos",
+  "ro": "Bilet Leonardo Express, în Documente"
+ },
+ "A few euros in cash": {
+  "pl": "Trochę euro w gotówce",
+  "es": "Algunos euros en efectivo",
+  "ro": "Câțiva euro numerar"
+ },
+ "Fri 25": {
+  "pl": "Pt 25",
+  "es": "Vie 25",
+  "ro": "Vin 25"
+ },
+ "Ancient Rome": {
+  "pl": "Starożytny Rzym",
+  "es": "Roma antigua",
+  "ro": "Roma antică"
+ },
+ "Line B · Cavour → Colosseo": {
+  "pl": "Linia B · Cavour → Colosseo",
+  "es": "Línea B · Cavour → Colosseo",
+  "ro": "Linia B · Cavour → Colosseo"
+ },
+ "Named ticket: keep your passport in Documents.": {
+  "pl": "Bilet imienny: trzymaj paszport w Dokumentach.",
+  "es": "Billete nominativo: guarda tu pasaporte en Documentos.",
+  "ro": "Bilet nominal: păstrează pașaportul în Documente."
+ },
+ "Included": {
+  "pl": "W cenie",
+  "es": "Incluido",
+  "ro": "Inclus"
+ },
+ "Very crowded: bag zipped, in front of you.": {
+  "pl": "Duży tłok: torba zamknięta, z przodu.",
+  "es": "Mucha gente: bolso cerrado, delante de ti.",
+  "ro": "Foarte aglomerat: geanta închisă, în fața ta."
+ },
+ "Passport (named Colosseum ticket)": {
+  "pl": "Paszport (imienny bilet do Koloseum)",
+  "es": "Pasaporte (entrada nominativa al Coliseo)",
+  "ro": "Pașaport (bilet nominal la Colosseum)"
+ },
+ "Water bottle: \"nasoni\" fountains on the way": {
+  "pl": "Butelka na wodę: po drodze fontanny „nasoni”",
+  "es": "Botella de agua: fuentes «nasoni» por el camino",
+  "ro": "Sticlă de apă: fântâni „nasoni” pe drum"
+ },
+ "Hat and sunscreen": {
+  "pl": "Kapelusz i krem z filtrem",
+  "es": "Sombrero y protector solar",
+  "ro": "Pălărie și cremă de soare"
+ },
+ "Comfy shoes · 9 km on foot": {
+  "pl": "Wygodne buty · 9 km pieszo",
+  "es": "Calzado cómodo · 9 km a pie",
+  "ro": "Încălțăminte comodă · 9 km pe jos"
+ },
+ "Sat 26": {
+  "pl": "Sob 26",
+  "es": "Sáb 26",
+  "ro": "Sâm 26"
+ },
+ "Vatican": {
+  "pl": "Watykan",
+  "es": "Vaticano",
+  "ro": "Vatican"
+ },
+ "Line B then A · Cavour → Ottaviano": {
+  "pl": "Linia B, potem A · Cavour → Ottaviano",
+  "es": "Línea B y luego A · Cavour → Ottaviano",
+  "ro": "Linia B apoi A · Cavour → Ottaviano"
+ },
+ "Shoulders and knees covered.": {
+  "pl": "Zakryte ramiona i kolana.",
+  "es": "Hombros y rodillas cubiertos.",
+  "ro": "Umeri și genunchi acoperiți."
+ },
+ "Security check: no large bags.": {
+  "pl": "Kontrola bezpieczeństwa: bez dużych toreb.",
+  "es": "Control de seguridad: nada de bolsos grandes.",
+  "ro": "Control de securitate: fără genți mari."
+ },
+ "Shoulders and knees covered, or a scarf": {
+  "pl": "Zakryte ramiona i kolana albo chusta",
+  "es": "Hombros y rodillas cubiertos, o un pañuelo",
+  "ro": "Umeri și genunchi acoperiți sau o eșarfă"
+ },
+ "Vatican Museums ticket, in Documents": {
+  "pl": "Bilet do Muzeów Watykańskich, w Dokumentach",
+  "es": "Entrada a los Museos Vaticanos, en Documentos",
+  "ro": "Bilet la Muzeele Vaticanului, în Documente"
+ },
+ "Small bag only (security check)": {
+  "pl": "Tylko mała torba (kontrola bezpieczeństwa)",
+  "es": "Solo un bolso pequeño (control de seguridad)",
+  "ro": "Doar geantă mică (control de securitate)"
+ },
+ "Water bottle": {
+  "pl": "Butelka na wodę",
+  "es": "Botella de agua",
+  "ro": "Sticlă de apă"
+ },
+ "24h metro pass": {
+  "pl": "Bilet 24h na metro",
+  "es": "Bono de metro 24 h",
+  "ro": "Abonament metrou 24 h"
+ },
+ "Sun 27": {
+  "pl": "Nd 27",
+  "es": "Dom 27",
+  "ro": "Dum 27"
+ },
+ "Art & shopping": {
+  "pl": "Sztuka i zakupy",
+  "es": "Arte y compras",
+  "ro": "Artă și cumpărături"
+ },
+ "9:30 slot: arrive 15 min early.": {
+  "pl": "Wejście 9:30: bądź 15 min wcześniej.",
+  "es": "Turno de 9:30: llega 15 min antes.",
+  "ro": "Intervalul de 9:30: vino cu 15 min mai devreme."
+ },
+ "Villa Borghese and the Pincio terrace": {
+  "pl": "Villa Borghese i taras Pincio",
+  "es": "Villa Borghese y la terraza del Pincio",
+  "ro": "Villa Borghese și terasa Pincio"
+ },
+ "Sitting on the Steps is banned.": {
+  "pl": "Siadanie na Schodach jest zabronione.",
+  "es": "Está prohibido sentarse en la escalinata.",
+  "ro": "E interzis să stai pe trepte."
+ },
+ "Free time · tax free from €70 per receipt.": {
+  "pl": "Czas wolny · tax free od 70 € na paragon.",
+  "es": "Tiempo libre · tax free desde 70 € por ticket.",
+  "ro": "Timp liber · tax free de la 70 € pe bon."
+ },
+ "Line A then B · Spagna → Cavour": {
+  "pl": "Linia A, potem B · Spagna → Cavour",
+  "es": "Línea A y luego B · Spagna → Cavour",
+  "ro": "Linia A apoi B · Spagna → Cavour"
+ },
+ "Borghese ticket, 9:30 slot": {
+  "pl": "Bilet do Borghese, wejście 9:30",
+  "es": "Entrada Borghese, turno de 9:30",
+  "ro": "Bilet Borghese, intervalul de 9:30"
+ },
+ "Small bag (cloakroom required)": {
+  "pl": "Mała torba (szatnia obowiązkowa)",
+  "es": "Bolso pequeño (consigna obligatoria)",
+  "ro": "Geantă mică (garderobă obligatorie)"
+ },
+ "Passport for tax free in shops": {
+  "pl": "Paszport do tax free w sklepach",
+  "es": "Pasaporte para el tax free en tiendas",
+  "ro": "Pașaport pentru tax free în magazine"
+ },
+ "Bank card": {
+  "pl": "Karta płatnicza",
+  "es": "Tarjeta bancaria",
+  "ro": "Card bancar"
+ },
+ "Mon 28": {
+  "pl": "Pon 28",
+  "es": "Lun 28",
+  "ro": "Lun 28"
+ },
+ "Free": {
+  "pl": "Wolne",
+  "es": "Libre",
+  "ro": "Liber"
+ },
+ "Depends on your free plan": {
+  "pl": "Zależnie od Twojego planu",
+  "es": "Según tu plan libre",
+  "ro": "În funcție de planul tău liber"
+ },
+ "Julien's number, in More": {
+  "pl": "Numer Juliena, w zakładce Więcej",
+  "es": "El número de Julien, en Más",
+  "ro": "Numărul lui Julien, în Mai mult"
+ },
+ "Power bank": {
+  "pl": "Powerbank",
+  "es": "Batería externa",
+  "ro": "Baterie externă"
+ },
+ "Tue 29": {
+  "pl": "Wt 29",
+  "es": "Mar 29",
+  "ro": "Mar 29"
+ },
+ "Bus 64 · Nazionale → Argentina": {
+  "pl": "Autobus 64 · Nazionale → Argentina",
+  "es": "Autobús 64 · Nazionale → Argentina",
+  "ro": "Autobuzul 64 · Nazionale → Argentina"
+ },
+ "Bus 64 is crowded: bag in front of you.": {
+  "pl": "Autobus 64 bywa zatłoczony: torba z przodu.",
+  "es": "El autobús 64 va lleno: bolso delante de ti.",
+  "ro": "Autobuzul 64 e aglomerat: geanta în față."
+ },
+ "Tram 8 + 10 min walk": {
+  "pl": "Tramwaj 8 + 10 min pieszo",
+  "es": "Tranvía 8 + 10 min a pie",
+  "ro": "Tramvaiul 8 + 10 min pe jos"
+ },
+ "Metro B + walk": {
+  "pl": "Metro B + pieszo",
+  "es": "Metro B + a pie",
+  "ro": "Metrou B + pe jos"
+ },
+ "Cash for the market": {
+  "pl": "Gotówka na targ",
+  "es": "Efectivo para el mercado",
+  "ro": "Numerar pentru piață"
+ },
+ "An appetite!": {
+  "pl": "Apetyt!",
+  "es": "¡Apetito!",
+  "ro": "Poftă bună!"
+ },
+ "Smart-ish outfit for the farewell dinner": {
+  "pl": "Nieco elegancki strój na kolację pożegnalną",
+  "es": "Ropa algo arreglada para la cena de despedida",
+  "ro": "Ținută ceva mai elegantă pentru cina de rămas-bun"
+ },
+ "Wed 30": {
+  "pl": "Śr 30",
+  "es": "Mié 30",
+  "ro": "Mie 30"
+ },
+ "Departure": {
+  "pl": "Wyjazd",
+  "es": "Salida",
+  "ro": "Plecare"
+ },
+ "Check-out · tax-free purchases in hand luggage.": {
+  "pl": "Wymeldowanie · zakupy tax free w bagażu podręcznym.",
+  "es": "Check-out · compras tax free en el equipaje de mano.",
+  "ro": "Check-out · cumpărăturile tax free în bagajul de mână."
+ },
+ "Tax-free customs before check-in.": {
+  "pl": "Odprawa celna tax free przed odprawą bagażową.",
+  "es": "Aduana tax free antes de facturar.",
+  "ro": "Vama tax free înainte de check-in."
+ },
+ "Terminal 3, departures": {
+  "pl": "Terminal 3, odloty",
+  "es": "Terminal 3, salidas",
+  "ro": "Terminal 3, plecări"
+ },
+ "E gates": {
+  "pl": "Bramki E",
+  "es": "Puertas E",
+  "ro": "Porțile E"
+ },
+ "Passport": {
+  "pl": "Paszport",
+  "es": "Pasaporte",
+  "ro": "Pașaport"
+ },
+ "Tax-free receipts and unused items, in hand luggage": {
+  "pl": "Paragony tax free i nieużywane rzeczy w bagażu podręcznym",
+  "es": "Tickets tax free y artículos sin usar, en el equipaje de mano",
+  "ro": "Bonuri tax free și articole nefolosite, în bagajul de mână"
+ },
+ "Tax-free QR code, in More › Tax Free": {
+  "pl": "Kod QR tax free, w Więcej › Tax Free",
+  "es": "Código QR tax free, en Más › Tax Free",
+  "ro": "Cod QR tax free, în Mai mult › Tax Free"
+ },
+ "Arrive 3h before the flight": {
+  "pl": "Bądź 3 h przed lotem",
+  "es": "Llega 3 h antes del vuelo",
+  "ro": "Ajungi cu 3 h înainte de zbor"
+ },
+ "Diabetes": {
+  "pl": "Cukrzyca",
+  "es": "Diabetes",
+  "ro": "Diabet"
+ },
+ "Type 1": {
+  "pl": "Typ 1",
+  "es": "Tipo 1",
+  "ro": "Tip 1"
+ },
+ "Treatment": {
+  "pl": "Leczenie",
+  "es": "Tratamiento",
+  "ro": "Tratament"
+ },
+ "Insulin (pen)": {
+  "pl": "Insulina (pen)",
+  "es": "Insulina (pluma)",
+  "ro": "Insulină (stilou)"
+ },
+ "Allergies": {
+  "pl": "Alergie",
+  "es": "Alergias",
+  "ro": "Alergii"
+ },
+ "None": {
+  "pl": "Brak",
+  "es": "Ninguna",
+  "ro": "Niciuna"
+ },
+ "Blood type": {
+  "pl": "Grupa krwi",
+  "es": "Grupo sanguíneo",
+  "ro": "Grupă sanguină"
+ },
+ "Roman Forum · 4 min ago": {
+  "pl": "Forum Romanum · 4 min temu",
+  "es": "Foro Romano · hace 4 min",
+  "ro": "Forumul Roman · acum 4 min"
+ },
+ "Peanuts (severe)": {
+  "pl": "Orzeszki ziemne (ciężka)",
+  "es": "Cacahuetes (grave)",
+  "ro": "Arahide (severă)"
+ },
+ "Adrenaline pen": {
+  "pl": "Adrenalina (pen)",
+  "es": "Pluma de adrenalina",
+  "ro": "Stilou cu adrenalină"
+ },
+ "Via dei Fori Imperiali · 9 min ago": {
+  "pl": "Via dei Fori Imperiali · 9 min temu",
+  "es": "Via dei Fori Imperiali · hace 9 min",
+  "ro": "Via dei Fori Imperiali · acum 9 min"
+ },
+ "Asthma": {
+  "pl": "Astma",
+  "es": "Asma",
+  "ro": "Astm"
+ },
+ "Yes (inhaler)": {
+  "pl": "Tak (inhalator)",
+  "es": "Sí (inhalador)",
+  "ro": "Da (inhalator)"
+ },
+ "Coffee is drunk at the bar": {
+  "pl": "Kawę pije się przy barze",
+  "es": "El café se toma en la barra",
+  "ro": "Cafeaua se bea la bar"
+ },
+ "At the counter an espresso costs about €1.20. Seated on a terrace near the sights it can cost three times as much.": {
+  "pl": "Przy barze espresso kosztuje ok. 1,20 €. Na tarasie przy zabytkach może kosztować trzy razy więcej.",
+  "es": "En la barra, un espresso cuesta unos 1,20 €. Sentado en una terraza cerca de los monumentos puede costar el triple.",
+  "ro": "La tejghea un espresso costă cam 1,20 €. Pe o terasă lângă monumente poate costa de trei ori mai mult."
+ },
+ "The \"coperto\" is normal": {
+  "pl": "„Coperto” to norma",
+  "es": "El «coperto» es normal",
+  "ro": "„Coperto” e normal"
+ },
+ "A cover charge of €2–4 per person is common. It must be printed on the menu.": {
+  "pl": "Opłata za nakrycie 2–4 € od osoby jest powszechna. Musi być podana w menu.",
+  "es": "Un cubierto de 2 a 4 € por persona es habitual. Debe figurar en la carta.",
+  "ro": "O taxă de serviciu de 2–4 € de persoană e obișnuită. Trebuie să fie scrisă în meniu."
+ },
+ "Fake centurions and \"free\" bracelets": {
+  "pl": "Fałszywi centurioni i „darmowe” bransoletki",
+  "es": "Falsos centuriones y pulseras «regaladas»",
+  "ro": "Centurioni falși și brățări „gratuite”"
+ },
+ "A photo or a bracelet, then they ask for €10–20. Politely refuse and keep walking.": {
+  "pl": "Zdjęcie albo bransoletka, a potem żądają 10–20 €. Grzecznie odmów i idź dalej.",
+  "es": "Una foto o una pulsera y luego te piden 10–20 €. Rechaza con educación y sigue andando.",
+  "ro": "O poză sau o brățară, apoi ți se cer 10–20 €. Refuză politicos și mergi mai departe."
+ },
+ "Pickpockets: Termini, Trevi, bus 64": {
+  "pl": "Kieszonkowcy: Termini, Trevi, autobus 64",
+  "es": "Carteristas: Termini, Trevi, autobús 64",
+  "ro": "Hoți de buzunare: Termini, Trevi, autobuzul 64"
+ },
+ "Bag zipped and worn in front, phone in an inside pocket. Beware of unrequested help at ticket machines.": {
+  "pl": "Torba zamknięta i noszona z przodu, telefon w wewnętrznej kieszeni. Uważaj na nieproszoną pomoc przy biletomatach.",
+  "es": "Bolso cerrado y llevado delante, móvil en un bolsillo interior. Desconfía de la ayuda no pedida en las máquinas de billetes.",
+  "ro": "Geanta închisă și purtată în față, telefonul într-un buzunar interior. Atenție la ajutorul necerut la automatele de bilete."
+ },
+ "Tipping: not required": {
+  "pl": "Napiwek: nieobowiązkowy",
+  "es": "Propina: no obligatoria",
+  "ro": "Bacșiș: nu e obligatoriu"
+ },
+ "Service is included. Round up or leave €1–2; 5–10% for outstanding service.": {
+  "pl": "Obsługa jest wliczona. Zaokrągla się lub zostawia 1–2 €; 5–10% za wyjątkową obsługę.",
+  "es": "El servicio está incluido. Se redondea o se dejan 1–2 €; 5–10 % por un servicio excepcional.",
+  "ro": "Serviciul e inclus. Se rotunjește sau se lasă 1–2 €; 5–10% pentru un serviciu excepțional."
+ },
+ "Shoulders and knees covered": {
+  "pl": "Zakryte ramiona i kolana",
+  "es": "Hombros y rodillas cubiertos",
+  "ro": "Umeri și genunchi acoperiți"
+ },
+ "Required at the Vatican and in basilicas. A light scarf in your bag is enough.": {
+  "pl": "Obowiązkowe w Watykanie i bazylikach. Wystarczy lekka chusta w torbie.",
+  "es": "Obligatorio en el Vaticano y en las basílicas. Basta un pañuelo ligero en el bolso.",
+  "ro": "Obligatoriu la Vatican și în bazilici. Ajunge o eșarfă ușoară în geantă."
+ },
+ "Free water at the \"nasoni\"": {
+  "pl": "Darmowa woda z „nasoni”",
+  "es": "Agua gratis en los «nasoni»",
+  "ro": "Apă gratuită la „nasoni”"
+ },
+ "Rome's street fountains give fresh drinking water. Refill your bottle.": {
+  "pl": "Uliczne fontanny w Rzymie dają świeżą wodę pitną. Napełnij butelkę.",
+  "es": "Las fuentes callejeras de Roma dan agua potable y fresca. Rellena tu botella.",
+  "ro": "Fântânile de stradă din Roma au apă potabilă și rece. Umple-ți sticla."
+ },
+ "All": {
+  "pl": "Wszystkie",
+  "es": "Todos",
+  "ro": "Toate"
+ },
+ "Customs": {
+  "pl": "Zwyczaje",
+  "es": "Costumbres",
+  "ro": "Obiceiuri"
+ },
+ "Scams": {
+  "pl": "Oszustwa",
+  "es": "Estafas",
+  "ro": "Înșelătorii"
+ },
+ "Tipping": {
+  "pl": "Napiwki",
+  "es": "Propinas",
+  "ro": "Bacșiș"
+ },
+ "Metro, bus, tram · BIT": {
+  "pl": "Metro, autobus, tramwaj · BIT",
+  "es": "Metro, autobús, tranvía · BIT",
+  "ro": "Metrou, autobuz, tramvai · BIT"
+ },
+ "Valid 100 min · 1 metro ride": {
+  "pl": "Ważny 100 min · 1 przejazd metrem",
+  "es": "Válido 100 min · 1 viaje en metro",
+  "ro": "Valabil 100 min · o singură călătorie cu metroul"
+ },
+ "Buy in the app or at a tobacconist (T). Validate on boarding or risk a fine.": {
+  "pl": "Kup w aplikacji lub w trafice (T). Skasuj przy wejściu, inaczej mandat.",
+  "es": "Cómpralo en la app o en un estanco (T). Valídalo al subir o te arriesgas a una multa.",
+  "ro": "Cumpără în aplicație sau la tutungerie (T). Validează la urcare, altfel riști amendă."
+ },
+ "24h pass": {
+  "pl": "Bilet 24 h",
+  "es": "Bono 24 h",
+  "ro": "Abonament 24 h"
+ },
+ "Unlimited metro, bus and tram": {
+  "pl": "Nielimitowane metro, autobus i tramwaj",
+  "es": "Metro, autobús y tranvía ilimitados",
+  "ro": "Metrou, autobuz și tramvai nelimitat"
+ },
+ "Validate it once: it runs for 24h from then.": {
+  "pl": "Skasuj go raz: działa 24 h od tej chwili.",
+  "es": "Valídalo una vez: dura 24 h desde ese momento.",
+  "ro": "Validează-l o dată: e valabil 24 h din acel moment."
+ },
+ "Validate on the platform before boarding if paper ticket.": {
+  "pl": "Skasuj na peronie przed wejściem, jeśli bilet papierowy.",
+  "es": "Valídalo en el andén antes de subir si es de papel.",
+  "ro": "Validează pe peron înainte de urcare, dacă biletul e pe hârtie."
+ },
+ "Airport flat-fare taxi": {
+  "pl": "Taksówka z lotniska, stała cena",
+  "es": "Taxi con tarifa fija al aeropuerto",
+  "ro": "Taxi aeroport cu tarif fix"
+ },
+ "Fiumicino → historic centre": {
+  "pl": "Fiumicino → centrum historyczne",
+  "es": "Fiumicino → centro histórico",
+  "ro": "Fiumicino → centrul istoric"
+ },
+ "Only white taxis at the official rank. Flat fare shown on the door.": {
+  "pl": "Tylko białe taksówki z oficjalnego postoju. Stała cena na drzwiach.",
+  "es": "Solo taxis blancos en la parada oficial. Tarifa fija indicada en la puerta.",
+  "ro": "Doar taxiuri albe de la stația oficială. Tariful fix e afișat pe portieră."
+ },
+ "Named ticket, timed entry.": {
+  "pl": "Bilet imienny, wejście o określonej godzinie.",
+  "es": "Entrada nominativa, con hora.",
+  "ro": "Bilet nominal, intrare cu oră fixă."
+ },
+ "Mon–Sat 8:00–19:00": {
+  "pl": "Pon–Sob 8:00–19:00",
+  "es": "Lun–Sáb 8:00–19:00",
+  "ro": "Lun–Sâm 8:00–19:00"
+ },
+ "+€5 online booking. Covered clothing.": {
+  "pl": "+5 € za rezerwację online. Zakryty strój.",
+  "es": "+5 € de reserva online. Ropa que cubra.",
+  "ro": "+5 € rezervare online. Ținută decentă."
+ },
+ "Tue–Sun 9:00–19:00": {
+  "pl": "Wt–Nd 9:00–19:00",
+  "es": "Mar–Dom 9:00–19:00",
+  "ro": "Mar–Dum 9:00–19:00"
+ },
+ "Booking required, entry every 2 hours.": {
+  "pl": "Rezerwacja obowiązkowa, wejścia co 2 godziny.",
+  "es": "Reserva obligatoria, entradas cada 2 horas.",
+  "ro": "Rezervare obligatorie, intrări la fiecare 2 ore."
+ },
+ "Tue–Sun 9:00–19:30": {
+  "pl": "Wt–Nd 9:00–19:30",
+  "es": "Mar–Dom 9:00–19:30",
+  "ro": "Mar–Dum 9:00–19:30"
+ },
+ "Leather goods · Via dei Coronari": {
+  "pl": "Wyroby skórzane · Via dei Coronari",
+  "es": "Marroquinería · Via dei Coronari",
+  "ro": "Marochinărie · Via dei Coronari"
+ },
+ "Sunglasses · Via del Corso": {
+  "pl": "Okulary przeciwsłoneczne · Via del Corso",
+  "es": "Gafas de sol · Via del Corso",
+  "ro": "Ochelari de soare · Via del Corso"
+ },
+ "Souvenirs · Piazza Navona": {
+  "pl": "Pamiątki · Piazza Navona",
+  "es": "Recuerdos · Piazza Navona",
+  "ro": "Suveniruri · Piazza Navona"
+ },
+ "Morning all! Meet at 11:00 at the Arch of Constantine, by the Colosseum exit.": {
+  "pl": "Dzień dobry wszystkim! Zbiórka o 11:00 przy Łuku Konstantyna, przy wyjściu z Koloseum.",
+  "es": "¡Buenos días a todos! Encuentro a las 11:00 en el Arco de Constantino, junto a la salida del Coliseo.",
+  "ro": "Bună dimineața tuturor! Întâlnire la 11:00 la Arcul lui Constantin, lângă ieșirea de la Colosseum."
+ },
+ "Thanks! Time for a coffee before?": {
+  "pl": "Dzięki! Zdążymy na kawę wcześniej?",
+  "es": "¡Gracias! ¿Da tiempo a un café antes?",
+  "ro": "Mulțumesc! Avem timp de o cafea înainte?"
+ },
+ "Yes, Bar Oppio opposite, 10 minutes max.": {
+  "pl": "Tak, Bar Oppio naprzeciwko, maks. 10 minut.",
+  "es": "Sí, el Bar Oppio de enfrente, 10 minutos como mucho.",
+  "ro": "Da, Bar Oppio vizavi, maximum 10 minute."
+ },
+ "Claire, snack break at 11:00 at the Forum, as planned for you.": {
+  "pl": "Claire, przerwa na przekąskę o 11:00 na Forum, tak jak dla Ciebie zaplanowano.",
+  "es": "Claire, pausa para picar algo a las 11:00 en el Foro, como estaba previsto para ti.",
+  "ro": "Claire, pauză de gustare la 11:00 în Forum, cum era planificat pentru tine."
+ },
+ "Thanks Julien, perfect!": {
+  "pl": "Dzięki, Julien, idealnie!",
+  "es": "¡Gracias, Julien, perfecto!",
+  "ro": "Mulțumesc, Julien, perfect!"
+ },
+ "15 min delay: meet at 11:15, same place.": {
+  "pl": "15 min opóźnienia: zbiórka o 11:15, to samo miejsce.",
+  "es": "15 min de retraso: encuentro a las 11:15, mismo lugar.",
+  "ro": "Întârziere de 15 min: întâlnire la 11:15, același loc."
+ },
+ "Change of place: meet at Capitol Square.": {
+  "pl": "Zmiana miejsca: zbiórka na Placu Kapitolińskim.",
+  "es": "Cambio de lugar: encuentro en la plaza del Capitolio.",
+  "ro": "Schimbare de loc: întâlnire în Piața Capitoliului."
+ },
+ "Meeting moved to 10:50, please hurry.": {
+  "pl": "Zbiórka przesunięta na 10:50, pospieszcie się.",
+  "es": "Encuentro adelantado a las 10:50, daos prisa.",
+  "ro": "Întâlnire mutată la 10:50, grăbiți-vă."
+ },
+ "3 min walk": {
+  "pl": "3 min pieszo",
+  "es": "3 min a pie",
+  "ro": "3 min pe jos"
+ },
+ "Boarding pass": {
+  "pl": "Karta pokładowa",
+  "es": "Tarjeta de embarque",
+  "ro": "Carte de îmbarcare"
+ },
+ "Travel insurance": {
+  "pl": "Ubezpieczenie podróżne",
+  "es": "Seguro de viaje",
+  "ro": "Asigurare de călătorie"
+ },
+ "Policy no. 88213 · 24/7 assistance": {
+  "pl": "Polisa nr 88213 · pomoc 24/7",
+  "es": "Póliza n.º 88213 · asistencia 24/7",
+  "ro": "Polița nr. 88213 · asistență 24/7"
+ },
+ "Hotel booking": {
+  "pl": "Rezerwacja hotelu",
+  "es": "Reserva de hotel",
+  "ro": "Rezervare hotel"
+ },
+ "on": {
+  "pl": "wł.",
+  "es": "activado",
+  "ro": "activat"
+ },
+ "off": {
+  "pl": "wył.",
+  "es": "desactivado",
+  "ro": "dezactivat"
+ },
+ " · rate of 25/09 07:00 · kept offline": {
+  "pl": " · kurs z 25/09 07:00 · zapisany offline",
+  "es": " · cambio del 25/09 07:00 · guardado sin conexión",
+  "ro": " · curs din 25/09 07:00 · salvat offline"
+ },
+ "Leather bag · Via dei Coronari": {
+  "pl": "Skórzana torba · Via dei Coronari",
+  "es": "Bolso de piel · Via dei Coronari",
+  "ro": "Geantă din piele · Via dei Coronari"
+ },
+ "Sunglasses": {
+  "pl": "Okulary przeciwsłoneczne",
+  "es": "Gafas de sol",
+  "ro": "Ochelari de soare"
+ },
+ "Souvenirs": {
+  "pl": "Pamiątki",
+  "es": "Recuerdos",
+  "ro": "Suveniruri"
+ },
+ "Eligible · form done": {
+  "pl": "Kwalifikuje się · formularz gotowy",
+  "es": "Elegible · formulario hecho",
+  "ro": "Eligibil · formular completat"
+ },
+ "Below €70 threshold": {
+  "pl": "Poniżej progu 70 €",
+  "es": "Por debajo del umbral de 70 €",
+  "ro": "Sub pragul de 70 €"
+ },
+ "Say \"ambulanza\" and give the address shown by the app. The operator speaks English.": {
+  "pl": "Powiedz „ambulanza” i podaj adres z aplikacji. Operator mówi po angielsku.",
+  "es": "Di «ambulanza» y da la dirección que muestra la app. El operador habla inglés.",
+  "ro": "Spune „ambulanza” și dă adresa afișată de aplicație. Operatorul vorbește engleză."
+ },
+ "Your health card is ready": {
+  "pl": "Twoja karta zdrowia jest gotowa",
+  "es": "Tu ficha de salud está lista",
+  "ro": "Fișa ta medicală e gata"
+ },
+ "Type 1 diabetes · insulin. Shared with Julien as you chose.": {
+  "pl": "Cukrzyca typu 1 · insulina. Udostępniona Julienowi, zgodnie z Twoim wyborem.",
+  "es": "Diabetes tipo 1 · insulina. Compartida con Julien según tu elección.",
+  "ro": "Diabet de tip 1 · insulină. Partajată cu Julien, așa cum ai ales."
+ },
+ "Nearest hospital": {
+  "pl": "Najbliższy szpital",
+  "es": "Hospital más cercano",
+  "ro": "Cel mai apropiat spital"
+ },
+ "Ospedale Fatebenefratelli, Tiber Island · 1.4 km · 24h emergency.": {
+  "pl": "Ospedale Fatebenefratelli, Wyspa Tyberyjska · 1,4 km · SOR 24h.",
+  "es": "Ospedale Fatebenefratelli, isla Tiberina · 1,4 km · urgencias 24 h.",
+  "ro": "Ospedale Fatebenefratelli, Insula Tiberina · 1,4 km · urgențe 24 h."
+ },
+ "Block your card": {
+  "pl": "Zablokuj kartę",
+  "es": "Bloquea tu tarjeta",
+  "ro": "Blochează cardul"
+ },
+ "Call your bank: the number is in Documents › Insurance.": {
+  "pl": "Zadzwoń do banku: numer jest w Dokumenty › Ubezpieczenie.",
+  "es": "Llama a tu banco: el número está en Documentos › Seguro.",
+  "ro": "Sună la bancă: numărul e în Documente › Asigurare."
+ },
+ "Report the theft": {
+  "pl": "Zgłoś kradzież",
+  "es": "Denuncia el robo",
+  "ro": "Raportează furtul"
+ },
+ "At the nearest police or Carabinieri station. The report (\"denuncia\") is needed for insurance.": {
+  "pl": "Na najbliższym posterunku policji lub Carabinieri. Zgłoszenie („denuncia”) jest potrzebne do ubezpieczenia.",
+  "es": "En la comisaría o cuartel de Carabinieri más cercano. La denuncia es necesaria para el seguro.",
+  "ro": "La cea mai apropiată secție de poliție sau de Carabinieri. Plângerea („denuncia”) e necesară pentru asigurare."
+ },
+ "Tell your insurer": {
+  "pl": "Powiadom ubezpieczyciela",
+  "es": "Avisa a tu aseguradora",
+  "ro": "Anunță asigurătorul"
+ },
+ "Within 48h, with a copy of the report.": {
+  "pl": "W ciągu 48 h, z kopią zgłoszenia.",
+  "es": "En 48 h, con una copia de la denuncia.",
+  "ro": "În 48 h, cu o copie a plângerii."
+ },
+ "Report the loss": {
+  "pl": "Zgłoś zgubienie",
+  "es": "Denuncia la pérdida",
+  "ro": "Raportează pierderea"
+ },
+ "At the nearest police station, with the PDF copy of your passport.": {
+  "pl": "Na najbliższym posterunku policji, z kopią PDF paszportu.",
+  "es": "En la comisaría más cercana, con la copia en PDF de tu pasaporte.",
+  "ro": "La cea mai apropiată secție de poliție, cu copia PDF a pașaportului."
+ },
+ "Contact the Embassy of Canada": {
+  "pl": "Skontaktuj się z Ambasadą Kanady",
+  "es": "Contacta con la Embajada de Canadá",
+  "ro": "Contactează Ambasada Canadei"
+ },
+ "Via Zara 30 · temporary passport with the report and a photo.": {
+  "pl": "Via Zara 30 · paszport tymczasowy na podstawie zgłoszenia i zdjęcia.",
+  "es": "Via Zara 30 · pasaporte provisional con la denuncia y una foto.",
+  "ro": "Via Zara 30 · pașaport temporar pe baza plângerii și a unei fotografii."
+ },
+ "Export your backup copy": {
+  "pl": "Eksportuj kopię zapasową",
+  "es": "Exporta tu copia de seguridad",
+  "ro": "Exportă copia de rezervă"
+ },
+ "It proves your identity until the new document arrives.": {
+  "pl": "Potwierdza Twoją tożsamość do czasu otrzymania nowego dokumentu.",
+  "es": "Acredita tu identidad hasta que llegue el nuevo documento.",
+  "ro": "Îți dovedește identitatea până sosește noul document."
+ },
+ "Call 112 if needed": {
+  "pl": "W razie potrzeby dzwoń pod 112",
+  "es": "Llama al 112 si hace falta",
+  "ro": "Sună la 112 dacă e nevoie"
+ },
+ "Single number for any emergency in Italy.": {
+  "pl": "Jeden numer na każdy nagły wypadek we Włoszech.",
+  "es": "Número único para cualquier emergencia en Italia.",
+  "ro": "Număr unic pentru orice urgență în Italia."
+ },
+ "Stay where you are": {
+  "pl": "Zostań tam, gdzie jesteś",
+  "es": "Quédate donde estás",
+  "ro": "Rămâi unde ești"
+ },
+ "Julien sees your location and will call you back.": {
+  "pl": "Julien widzi Twoją lokalizację i oddzwoni.",
+  "es": "Julien ve tu ubicación y te llamará.",
+  "ro": "Julien îți vede locația și te sună înapoi."
+ },
+ "Covered clothing for the Vatican tomorrow: shoulders and knees. Today, comfy shoes, we walk 9 km.": {
+  "pl": "Jutro zakryty strój do Watykanu: ramiona i kolana. Dziś wygodne buty, przejdziemy 9 km.",
+  "es": "Mañana, ropa que cubra para el Vaticano: hombros y rodillas. Hoy, calzado cómodo, caminamos 9 km.",
+  "ro": "Mâine ținută decentă pentru Vatican: umeri și genunchi acoperiți. Azi încălțăminte comodă, mergem 9 km."
+ },
+ "Canadian": {
+  "pl": "Kanadyjka",
+  "es": "Canadiense",
+  "ro": "Canadiană"
+ },
+ "Hello, ": {
+  "pl": "Dzień dobry, ",
+  "es": "Hola, ",
+  "ro": "Bună, "
+ },
+ "Everyone is here.": {
+  "pl": "Wszyscy są na miejscu.",
+  "es": "Están todos.",
+  "ro": "Toată lumea e aici."
+ },
+ "Alert sent · read by ": {
+  "pl": "Alert wysłany · przeczytało ",
+  "es": "Alerta enviada · leída por ",
+  "ro": "Alertă trimisă · citită de "
+ },
+ "in 35 min": {
+  "pl": "za 35 min",
+  "es": "en 35 min",
+  "ro": "în 35 min"
+ },
+ "Sent to Julien: ": {
+  "pl": "Wysłano do Juliena: ",
+  "es": "Enviado a Julien: ",
+  "ro": "Trimis lui Julien: "
+ },
+ "Walk up Via di San Gregorio towards the Colosseum": {
+  "pl": "Idź Via di San Gregorio w stronę Koloseum",
+  "es": "Sube por Via di San Gregorio hacia el Coliseo",
+  "ro": "Urcă pe Via di San Gregorio spre Colosseum"
+ },
+ "The Arch of Constantine is on your left": {
+  "pl": "Łuk Konstantyna jest po Twojej lewej",
+  "es": "El Arco de Constantino está a tu izquierda",
+  "ro": "Arcul lui Constantin e pe stânga ta"
+ },
+ "Julien is waiting on the Colosseum side": {
+  "pl": "Julien czeka od strony Koloseum",
+  "es": "Julien te espera del lado del Coliseo",
+  "ro": "Julien te așteaptă pe partea Colosseumului"
+ },
+ "Phone": {
+  "pl": "Telefon",
+  "es": "Teléfono",
+  "ro": "Telefon"
+ },
+ "Walking": {
+  "pl": "Pieszo",
+  "es": "A pie",
+  "ro": "Pe jos"
+ },
+ "Official tickets · ": {
+  "pl": "Oficjalne bilety · ",
+  "es": "Entradas oficiales · ",
+  "ro": "Bilete oficiale · "
+ },
+ "Passport · Canada": {
+  "pl": "Paszport · Kanada",
+  "es": "Pasaporte · Canadá",
+  "ro": "Pașaport · Canada"
+ },
+ "Location shared · ": {
+  "pl": "Lokalizacja udostępniona · ",
+  "es": "Ubicación compartida · ",
+  "ro": "Locație partajată · "
+ },
+ "Delay": {
+  "pl": "Opóźnienie",
+  "es": "Retraso",
+  "ro": "Întârziere"
+ },
+ "Change of place": {
+  "pl": "Zmiana miejsca",
+  "es": "Cambio de lugar",
+  "ro": "Schimbare de loc"
+ },
+ "Earlier meeting": {
+  "pl": "Wcześniejsza zbiórka",
+  "es": "Encuentro adelantado",
+  "ro": "Întâlnire mai devreme"
+ },
+ "D": {
+  "pl": "D",
+  "es": "D",
+  "ro": "Z"
+ },
+ "Day ": {
+  "pl": "Dzień ",
+  "es": "Día ",
+  "ro": "Ziua "
+ },
+ " things to bring · leave at 08:00": {
+  "pl": " rzeczy do zabrania · wyjście o 08:00",
+  "es": " cosas que llevar · salida a las 08:00",
+  "ro": " lucruri de luat · plecare la 08:00"
+ },
+ "Closed · ": {
+  "pl": "Zamknięte · ",
+  "es": "Cerrado · ",
+  "ro": "Închis · "
+ },
+ "health": {
+  "pl": "zdrowie",
+  "es": "salud",
+  "ro": "sănătate"
+ },
+ "diets": {
+  "pl": "diety",
+  "es": "dietas",
+  "ro": "diete"
+ },
+ "Start: ": {
+  "pl": "Start: ",
+  "es": "Inicio: ",
+  "ro": "Început: "
+ },
+ "End: ": {
+  "pl": "Koniec: ",
+  "es": "Fin: ",
+  "ro": "Sfârșit: "
+ },
+ "Shoes · Via dei Condotti": {
+  "pl": "Buty · Via dei Condotti",
+  "es": "Zapatos · Via dei Condotti",
+  "ro": "Pantofi · Via dei Condotti"
+ },
+ "Always": {
+  "pl": "Zawsze",
+  "es": "Siempre",
+  "ro": "Mereu"
+ },
+ "Your guide always sees your location.": {
+  "pl": "Przewodnik zawsze widzi Twoją lokalizację.",
+  "es": "Tu guía siempre ve tu ubicación.",
+  "ro": "Ghidul îți vede mereu locația."
+ },
+ "During group activities": {
+  "pl": "Podczas zajęć grupowych",
+  "es": "Durante las actividades del grupo",
+  "ro": "În timpul activităților de grup"
+ },
+ "Only during scheduled activities.": {
+  "pl": "Tylko podczas zaplanowanych zajęć.",
+  "es": "Solo durante las actividades programadas.",
+  "ro": "Doar în timpul activităților programate."
+ },
+ "Never (except SOS)": {
+  "pl": "Nigdy (poza SOS)",
+  "es": "Nunca (salvo SOS)",
+  "ro": "Niciodată (în afară de SOS)"
+ },
+ "Only sent if you trigger an SOS.": {
+  "pl": "Wysyłana tylko, gdy uruchomisz SOS.",
+  "es": "Solo se envía si activas un SOS.",
+  "ro": "Trimisă doar dacă declanșezi un SOS."
+ },
+ " · free": {
+  "pl": " · za darmo",
+  "es": " · gratis",
+  "ro": " · gratuit"
+ },
+ "Lunch": {
+  "pl": "Obiad",
+  "es": "Almuerzo",
+  "ro": "Prânz"
+ },
+ "Shopping · Via del Corso and Via dei Condotti": {
+  "pl": "Zakupy · Via del Corso i Via dei Condotti",
+  "es": "Compras · Via del Corso y Via dei Condotti",
+  "ro": "Cumpărături · Via del Corso și Via dei Condotti"
+ },
+ " · tax free from €70": {
+  "pl": " · tax free od 70 €",
+  "es": " · tax free desde 70 €",
+  "ro": " · tax free de la 70 €"
+ },
+ "Back to the hotel": {
+  "pl": "Powrót do hotelu",
+  "es": "Vuelta al hotel",
+  "ro": "Înapoi la hotel"
+ },
+ "Bus or metro · €1.50": {
+  "pl": "Autobus lub metro · 1,50 €",
+  "es": "Autobús o metro · 1,50 €",
+  "ro": "Autobuz sau metrou · 1,50 €"
+ },
+ "Only for non-EU residents, with your passport.": {
+  "pl": "Tylko dla osób spoza UE, za okazaniem paszportu.",
+  "es": "Solo para residentes fuera de la UE, con tu pasaporte.",
+  "ro": "Doar pentru rezidenți din afara UE, cu pașaportul."
+ },
+ "At least €70 per receipt, same shop, same day.": {
+  "pl": "Co najmniej 70 € na paragon, w tym samym sklepie, tego samego dnia.",
+  "es": "Al menos 70 € por ticket, en la misma tienda y el mismo día.",
+  "ro": "Minimum 70 € pe bon, același magazin, aceeași zi."
+ },
+ "The shop fills in the Tax Free form when you buy.": {
+  "pl": "Sklep wypełnia formularz Tax Free przy zakupie.",
+  "es": "La tienda rellena el formulario Tax Free al comprar.",
+  "ro": "Magazinul completează formularul Tax Free la cumpărare."
+ },
+ "At the airport, get it stamped at customs before check-in, items unused.": {
+  "pl": "Na lotnisku potwierdź w urzędzie celnym przed odprawą, rzeczy nieużywane.",
+  "es": "En el aeropuerto, valídalo en aduana antes de facturar, artículos sin usar.",
+  "ro": "La aeroport, validează la vamă înainte de check-in, cu articolele nefolosite."
+ },
+ "Currency detected: {c}. Euro prices will also show in {c} (change it in More).": {
+  "pl": "Wykryta waluta: {c}. Ceny w euro będą też pokazywane w {c} (zmienisz to w Więcej).",
+  "es": "Divisa detectada: {c}. Los precios en euros también se mostrarán en {c} (puedes cambiarlo en Más).",
+  "ro": "Monedă detectată: {c}. Prețurile în euro vor apărea și în {c} (o poți schimba în Mai mult)."
+ }
+}
