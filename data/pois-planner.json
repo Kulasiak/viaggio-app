@@ -1,0 +1,842 @@
+[
+ {
+  "city": "roma",
+  "local_name": "Colosseo e Palatino",
+  "name": {
+   "fr": "Colisée & Palatin",
+   "en": "Colosseum & Palatine",
+   "pl": "Koloseum i Palatyn",
+   "es": "Coliseo y Palatino",
+   "ro": "Colosseumul și Palatinul"
+  },
+  "category": "history",
+  "duration_min": 150,
+  "price_eur": 18
+ },
+ {
+  "city": "roma",
+  "local_name": "Foro Romano",
+  "name": {
+   "fr": "Forum romain",
+   "en": "Roman Forum",
+   "pl": "Forum Romanum",
+   "es": "Foro Romano",
+   "ro": "Forumul Roman"
+  },
+  "category": "history",
+  "duration_min": 75,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Musei Vaticani",
+  "name": {
+   "fr": "Musées du Vatican",
+   "en": "Vatican Museums",
+   "pl": "Muzea Watykańskie",
+   "es": "Museos Vaticanos",
+   "ro": "Muzeele Vaticanului"
+  },
+  "category": "art",
+  "duration_min": 180,
+  "price_eur": 25
+ },
+ {
+  "city": "roma",
+  "local_name": "Basilica di San Pietro",
+  "name": {
+   "fr": "Basilique Saint-Pierre",
+   "en": "St Peter's Basilica",
+   "pl": "Bazylika św. Piotra",
+   "es": "Basílica de San Pedro",
+   "ro": "Bazilica Sfântul Petru"
+  },
+  "category": "church",
+  "duration_min": 75,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Galleria Borghese",
+  "name": {
+   "fr": "Galerie Borghèse",
+   "en": "Borghese Gallery",
+   "pl": "Galeria Borghese",
+   "es": "Galería Borghese",
+   "ro": "Galeria Borghese"
+  },
+  "category": "art",
+  "duration_min": 120,
+  "price_eur": 17
+ },
+ {
+  "city": "roma",
+  "local_name": "Castel Sant'Angelo",
+  "name": {
+   "fr": "Château Saint-Ange",
+   "en": "Castel Sant'Angelo",
+   "pl": "Zamek Świętego Anioła",
+   "es": "Castillo de Sant'Angelo",
+   "ro": "Castelul Sant'Angelo"
+  },
+  "category": "history",
+  "duration_min": 90,
+  "price_eur": 16
+ },
+ {
+  "city": "roma",
+  "local_name": "Pantheon",
+  "name": {
+   "fr": "Panthéon",
+   "en": "Pantheon",
+   "pl": "Panteon",
+   "es": "Panteón",
+   "ro": "Panteonul"
+  },
+  "category": "church",
+  "duration_min": 40,
+  "price_eur": 5
+ },
+ {
+  "city": "roma",
+  "local_name": "Fontana di Trevi",
+  "name": {
+   "fr": "Fontaine de Trevi",
+   "en": "Trevi Fountain",
+   "pl": "Fontanna di Trevi",
+   "es": "Fontana de Trevi",
+   "ro": "Fântâna Trevi"
+  },
+  "category": "panorama",
+  "duration_min": 30,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Piazza Navona",
+  "name": {
+   "fr": "Piazza Navona",
+   "en": "Piazza Navona",
+   "pl": "Piazza Navona",
+   "es": "Piazza Navona",
+   "ro": "Piazza Navona"
+  },
+  "category": "hood",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Piazza di Spagna",
+  "name": {
+   "fr": "Place d'Espagne",
+   "en": "Spanish Steps",
+   "pl": "Schody Hiszpańskie",
+   "es": "Plaza de España",
+   "ro": "Treptele Spaniole"
+  },
+  "category": "panorama",
+  "duration_min": 30,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Trastevere",
+  "name": {
+   "fr": "Balade dans le Trastevere",
+   "en": "Trastevere stroll",
+   "pl": "Spacer po Zatybrzu",
+   "es": "Paseo por el Trastevere",
+   "ro": "Plimbare prin Trastevere"
+  },
+  "category": "hood",
+  "duration_min": 90,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Campo de' Fiori",
+  "name": {
+   "fr": "Marché de Campo de' Fiori",
+   "en": "Campo de' Fiori market",
+   "pl": "Targ na Campo de' Fiori",
+   "es": "Mercado de Campo de' Fiori",
+   "ro": "Piața Campo de' Fiori"
+  },
+  "category": "food",
+  "duration_min": 45,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Mercato di Testaccio",
+  "name": {
+   "fr": "Marché de Testaccio",
+   "en": "Testaccio Market",
+   "pl": "Targ Testaccio",
+   "es": "Mercado de Testaccio",
+   "ro": "Piața Testaccio"
+  },
+  "category": "food",
+  "duration_min": 75,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Terrazza del Pincio",
+  "name": {
+   "fr": "Coucher de soleil au Pincio",
+   "en": "Sunset at the Pincio",
+   "pl": "Zachód słońca na Pincio",
+   "es": "Atardecer en el Pincio",
+   "ro": "Apus pe Pincio"
+  },
+  "category": "panorama",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "San Giovanni in Laterano",
+  "name": {
+   "fr": "Saint-Jean-de-Latran",
+   "en": "St John Lateran",
+   "pl": "Bazylika św. Jana na Lateranie",
+   "es": "San Juan de Letrán",
+   "ro": "San Giovanni in Laterano"
+  },
+  "category": "church",
+  "duration_min": 50,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Santa Maria Maggiore",
+  "name": {
+   "fr": "Sainte-Marie-Majeure",
+   "en": "St Mary Major",
+   "pl": "Bazylika Santa Maria Maggiore",
+   "es": "Santa María la Mayor",
+   "ro": "Santa Maria Maggiore"
+  },
+  "category": "church",
+  "duration_min": 45,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Scala Santa",
+  "name": {
+   "fr": "Escalier saint (Scala Santa)",
+   "en": "Holy Stairs (Scala Santa)",
+   "pl": "Święte Schody (Scala Santa)",
+   "es": "Escalera Santa",
+   "ro": "Scara Sfântă"
+  },
+  "category": "church",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "roma",
+  "local_name": "Catacombe di San Callisto",
+  "name": {
+   "fr": "Catacombes de Saint-Calixte",
+   "en": "Catacombs of St Callixtus",
+   "pl": "Katakumby św. Kaliksta",
+   "es": "Catacumbas de San Calixto",
+   "ro": "Catacombele Sfântului Calist"
+  },
+  "category": "church",
+  "duration_min": 75,
+  "price_eur": 10
+ },
+ {
+  "city": "milano",
+  "local_name": "Duomo di Milano",
+  "name": {
+   "fr": "Duomo et terrasses",
+   "en": "Duomo and rooftop terraces",
+   "pl": "Katedra i tarasy",
+   "es": "Duomo y terrazas",
+   "ro": "Domul și terasele"
+  },
+  "category": "church",
+  "duration_min": 75,
+  "price_eur": 16
+ },
+ {
+  "city": "milano",
+  "local_name": "Cenacolo Vinciano",
+  "name": {
+   "fr": "La Cène de Léonard",
+   "en": "Leonardo's Last Supper",
+   "pl": "Ostatnia Wieczerza Leonarda",
+   "es": "La Última Cena de Leonardo",
+   "ro": "Cina cea de Taină a lui Leonardo"
+  },
+  "category": "art",
+  "duration_min": 45,
+  "price_eur": 17
+ },
+ {
+  "city": "milano",
+  "local_name": "Pinacoteca di Brera",
+  "name": {
+   "fr": "Pinacothèque de Brera",
+   "en": "Brera Art Gallery",
+   "pl": "Pinakoteka Brera",
+   "es": "Pinacoteca de Brera",
+   "ro": "Pinacoteca Brera"
+  },
+  "category": "art",
+  "duration_min": 100,
+  "price_eur": 15
+ },
+ {
+  "city": "milano",
+  "local_name": "Galleria Vittorio Emanuele II",
+  "name": {
+   "fr": "Galerie Victor-Emmanuel II",
+   "en": "Galleria Vittorio Emanuele II",
+   "pl": "Galeria Wiktora Emanuela II",
+   "es": "Galería Vittorio Emanuele II",
+   "ro": "Galeria Vittorio Emanuele II"
+  },
+  "category": "hood",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "milano",
+  "local_name": "Castello Sforzesco",
+  "name": {
+   "fr": "Château des Sforza",
+   "en": "Sforza Castle",
+   "pl": "Zamek Sforzów",
+   "es": "Castillo Sforzesco",
+   "ro": "Castelul Sforzesco"
+  },
+  "category": "history",
+  "duration_min": 75,
+  "price_eur": 5
+ },
+ {
+  "city": "milano",
+  "local_name": "Navigli",
+  "name": {
+   "fr": "Les Navigli et l’aperitivo",
+   "en": "Navigli canals and aperitivo",
+   "pl": "Kanały Navigli i aperitivo",
+   "es": "Los Navigli y aperitivo",
+   "ro": "Canalele Navigli și aperitivo"
+  },
+  "category": "food",
+  "duration_min": 90,
+  "price_eur": 0
+ },
+ {
+  "city": "milano",
+  "local_name": "Sant'Ambrogio",
+  "name": {
+   "fr": "Basilique Saint-Ambroise",
+   "en": "Sant'Ambrogio Basilica",
+   "pl": "Bazylika św. Ambrożego",
+   "es": "Basílica de San Ambrosio",
+   "ro": "Bazilica Sant’Ambrogio"
+  },
+  "category": "church",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "firenze",
+  "local_name": "Galleria degli Uffizi",
+  "name": {
+   "fr": "Galerie des Offices",
+   "en": "Uffizi Gallery",
+   "pl": "Galeria Uffizi",
+   "es": "Galería Uffizi",
+   "ro": "Galeria Uffizi"
+  },
+  "category": "art",
+  "duration_min": 150,
+  "price_eur": 29
+ },
+ {
+  "city": "firenze",
+  "local_name": "Galleria dell'Accademia",
+  "name": {
+   "fr": "Galerie de l'Académie (David)",
+   "en": "Accademia Gallery (David)",
+   "pl": "Galeria Akademii (Dawid)",
+   "es": "Galería de la Academia (David)",
+   "ro": "Galeria Accademia (David)"
+  },
+  "category": "art",
+  "duration_min": 75,
+  "price_eur": 20
+ },
+ {
+  "city": "firenze",
+  "local_name": "Cupola del Brunelleschi",
+  "name": {
+   "fr": "Coupole de Brunelleschi",
+   "en": "Brunelleschi's Dome",
+   "pl": "Kopuła Brunelleschiego",
+   "es": "Cúpula de Brunelleschi",
+   "ro": "Cupola lui Brunelleschi"
+  },
+  "category": "church",
+  "duration_min": 90,
+  "price_eur": 30
+ },
+ {
+  "city": "firenze",
+  "local_name": "Ponte Vecchio",
+  "name": {
+   "fr": "Ponte Vecchio",
+   "en": "Ponte Vecchio",
+   "pl": "Ponte Vecchio",
+   "es": "Ponte Vecchio",
+   "ro": "Ponte Vecchio"
+  },
+  "category": "hood",
+  "duration_min": 30,
+  "price_eur": 0
+ },
+ {
+  "city": "firenze",
+  "local_name": "Piazzale Michelangelo",
+  "name": {
+   "fr": "Piazzale Michelangelo",
+   "en": "Piazzale Michelangelo",
+   "pl": "Piazzale Michelangelo",
+   "es": "Piazzale Michelangelo",
+   "ro": "Piazzale Michelangelo"
+  },
+  "category": "panorama",
+  "duration_min": 45,
+  "price_eur": 0
+ },
+ {
+  "city": "firenze",
+  "local_name": "Mercato Centrale",
+  "name": {
+   "fr": "Marché central",
+   "en": "Central Market",
+   "pl": "Targ Centralny",
+   "es": "Mercado Central",
+   "ro": "Piața Centrală"
+  },
+  "category": "food",
+  "duration_min": 60,
+  "price_eur": 0
+ },
+ {
+  "city": "firenze",
+  "local_name": "Basilica di Santa Croce",
+  "name": {
+   "fr": "Basilique Santa Croce",
+   "en": "Santa Croce Basilica",
+   "pl": "Bazylika Santa Croce",
+   "es": "Basílica de Santa Croce",
+   "ro": "Bazilica Santa Croce"
+  },
+  "category": "church",
+  "duration_min": 60,
+  "price_eur": 10
+ },
+ {
+  "city": "venezia",
+  "local_name": "Basilica di San Marco",
+  "name": {
+   "fr": "Basilique Saint-Marc",
+   "en": "St Mark's Basilica",
+   "pl": "Bazylika św. Marka",
+   "es": "Basílica de San Marcos",
+   "ro": "Bazilica San Marco"
+  },
+  "category": "church",
+  "duration_min": 60,
+  "price_eur": 6
+ },
+ {
+  "city": "venezia",
+  "local_name": "Palazzo Ducale",
+  "name": {
+   "fr": "Palais des Doges",
+   "en": "Doge's Palace",
+   "pl": "Pałac Dożów",
+   "es": "Palacio Ducal",
+   "ro": "Palatul Dogilor"
+  },
+  "category": "history",
+  "duration_min": 120,
+  "price_eur": 30
+ },
+ {
+  "city": "venezia",
+  "local_name": "Gallerie dell'Accademia",
+  "name": {
+   "fr": "Galeries de l'Académie",
+   "en": "Accademia Galleries",
+   "pl": "Galerie Akademii",
+   "es": "Galerías de la Academia",
+   "ro": "Galeriile Accademia"
+  },
+  "category": "art",
+  "duration_min": 90,
+  "price_eur": 15
+ },
+ {
+  "city": "venezia",
+  "local_name": "Ponte di Rialto e mercato",
+  "name": {
+   "fr": "Pont du Rialto et marché",
+   "en": "Rialto Bridge and market",
+   "pl": "Most Rialto i targ",
+   "es": "Puente de Rialto y mercado",
+   "ro": "Podul Rialto și piața"
+  },
+  "category": "food",
+  "duration_min": 60,
+  "price_eur": 0
+ },
+ {
+  "city": "venezia",
+  "local_name": "Piazza San Marco",
+  "name": {
+   "fr": "Place Saint-Marc",
+   "en": "St Mark's Square",
+   "pl": "Plac św. Marka",
+   "es": "Plaza de San Marcos",
+   "ro": "Piața San Marco"
+  },
+  "category": "panorama",
+  "duration_min": 30,
+  "price_eur": 0
+ },
+ {
+  "city": "venezia",
+  "local_name": "Frari",
+  "name": {
+   "fr": "Basilique des Frari",
+   "en": "Frari Basilica",
+   "pl": "Bazylika Frari",
+   "es": "Basílica de los Frari",
+   "ro": "Bazilica Frari"
+  },
+  "category": "church",
+  "duration_min": 45,
+  "price_eur": 5
+ },
+ {
+  "city": "venezia",
+  "local_name": "Burano",
+  "name": {
+   "fr": "Île de Burano",
+   "en": "Burano island",
+   "pl": "Wyspa Burano",
+   "es": "Isla de Burano",
+   "ro": "Insula Burano"
+  },
+  "category": "hood",
+  "duration_min": 180,
+  "price_eur": 0
+ },
+ {
+  "city": "napoli",
+  "local_name": "MANN",
+  "name": {
+   "fr": "Musée archéologique national",
+   "en": "National Archaeological Museum",
+   "pl": "Narodowe Muzeum Archeologiczne",
+   "es": "Museo Arqueológico Nacional",
+   "ro": "Muzeul Național de Arheologie"
+  },
+  "category": "history",
+  "duration_min": 120,
+  "price_eur": 22
+ },
+ {
+  "city": "napoli",
+  "local_name": "Parco archeologico di Pompei",
+  "name": {
+   "fr": "Pompéi · parc archéologique",
+   "en": "Pompeii · archaeological park",
+   "pl": "Pompeje · park archeologiczny",
+   "es": "Pompeya · parque arqueológico",
+   "ro": "Pompei · parc arheologic"
+  },
+  "category": "history",
+  "duration_min": 240,
+  "price_eur": 22
+ },
+ {
+  "city": "napoli",
+  "local_name": "Cappella Sansevero",
+  "name": {
+   "fr": "Chapelle Sansevero (Christ voilé)",
+   "en": "Sansevero Chapel (Veiled Christ)",
+   "pl": "Kaplica Sansevero (Chrystus w całunie)",
+   "es": "Capilla Sansevero (Cristo velado)",
+   "ro": "Capela Sansevero (Hristosul acoperit)"
+  },
+  "category": "art",
+  "duration_min": 40,
+  "price_eur": 12
+ },
+ {
+  "city": "napoli",
+  "local_name": "Spaccanapoli",
+  "name": {
+   "fr": "Spaccanapoli",
+   "en": "Spaccanapoli",
+   "pl": "Spaccanapoli",
+   "es": "Spaccanapoli",
+   "ro": "Spaccanapoli"
+  },
+  "category": "hood",
+  "duration_min": 60,
+  "price_eur": 0
+ },
+ {
+  "city": "napoli",
+  "local_name": "Pizza napoletana",
+  "name": {
+   "fr": "Pizza napolitaine",
+   "en": "Neapolitan pizza",
+   "pl": "Pizza neapolitańska",
+   "es": "Pizza napolitana",
+   "ro": "Pizza napoletană"
+  },
+  "category": "food",
+  "duration_min": 60,
+  "price_eur": 0
+ },
+ {
+  "city": "napoli",
+  "local_name": "Lungomare e Castel dell'Ovo",
+  "name": {
+   "fr": "Front de mer et Castel dell'Ovo",
+   "en": "Seafront and Castel dell'Ovo",
+   "pl": "Nadmorski bulwar i Castel dell'Ovo",
+   "es": "Paseo marítimo y Castel dell'Ovo",
+   "ro": "Faleza și Castel dell'Ovo"
+  },
+  "category": "panorama",
+  "duration_min": 60,
+  "price_eur": 0
+ },
+ {
+  "city": "napoli",
+  "local_name": "Duomo di San Gennaro",
+  "name": {
+   "fr": "Cathédrale Saint-Janvier",
+   "en": "San Gennaro Cathedral",
+   "pl": "Katedra św. Januarego",
+   "es": "Catedral de San Genaro",
+   "ro": "Catedrala San Gennaro"
+  },
+  "category": "church",
+  "duration_min": 45,
+  "price_eur": 0
+ },
+ {
+  "city": "bologna",
+  "local_name": "Archiginnasio",
+  "name": {
+   "fr": "Archiginnasio · théâtre anatomique",
+   "en": "Archiginnasio · anatomical theatre",
+   "pl": "Archiginnasio · teatr anatomiczny",
+   "es": "Archiginnasio · teatro anatómico",
+   "ro": "Archiginnasio · teatrul anatomic"
+  },
+  "category": "history",
+  "duration_min": 45,
+  "price_eur": 3
+ },
+ {
+  "city": "bologna",
+  "local_name": "Pinacoteca Nazionale",
+  "name": {
+   "fr": "Pinacothèque nationale",
+   "en": "National Art Gallery",
+   "pl": "Pinakoteka Narodowa",
+   "es": "Pinacoteca Nacional",
+   "ro": "Pinacoteca Națională"
+  },
+  "category": "art",
+  "duration_min": 90,
+  "price_eur": 8
+ },
+ {
+  "city": "bologna",
+  "local_name": "Piazza Maggiore e San Petronio",
+  "name": {
+   "fr": "Piazza Maggiore et San Petronio",
+   "en": "Piazza Maggiore and San Petronio",
+   "pl": "Piazza Maggiore i San Petronio",
+   "es": "Piazza Maggiore y San Petronio",
+   "ro": "Piazza Maggiore și San Petronio"
+  },
+  "category": "church",
+  "duration_min": 45,
+  "price_eur": 0
+ },
+ {
+  "city": "bologna",
+  "local_name": "Quadrilatero",
+  "name": {
+   "fr": "Marché du Quadrilatero",
+   "en": "Quadrilatero food market",
+   "pl": "Targ Quadrilatero",
+   "es": "Mercado del Quadrilatero",
+   "ro": "Piața Quadrilatero"
+  },
+  "category": "food",
+  "duration_min": 60,
+  "price_eur": 0
+ },
+ {
+  "city": "bologna",
+  "local_name": "Santuario di San Luca",
+  "name": {
+   "fr": "Sanctuaire de San Luca",
+   "en": "San Luca Sanctuary",
+   "pl": "Sanktuarium San Luca",
+   "es": "Santuario de San Luca",
+   "ro": "Sanctuarul San Luca"
+  },
+  "category": "church",
+  "duration_min": 120,
+  "price_eur": 0
+ },
+ {
+  "city": "torino",
+  "local_name": "Museo Egizio",
+  "name": {
+   "fr": "Musée égyptien",
+   "en": "Egyptian Museum",
+   "pl": "Muzeum Egipskie",
+   "es": "Museo Egipcio",
+   "ro": "Muzeul Egiptean"
+  },
+  "category": "history",
+  "duration_min": 150,
+  "price_eur": 18
+ },
+ {
+  "city": "torino",
+  "local_name": "Museo Nazionale del Cinema",
+  "name": {
+   "fr": "Mole Antonelliana · musée du cinéma",
+   "en": "Mole Antonelliana · Cinema Museum",
+   "pl": "Mole Antonelliana · Muzeum Kina",
+   "es": "Mole Antonelliana · Museo del Cine",
+   "ro": "Mole Antonelliana · Muzeul Cinematografiei"
+  },
+  "category": "art",
+  "duration_min": 90,
+  "price_eur": 20
+ },
+ {
+  "city": "torino",
+  "local_name": "Palazzo Reale",
+  "name": {
+   "fr": "Palais royal",
+   "en": "Royal Palace",
+   "pl": "Pałac Królewski",
+   "es": "Palacio Real",
+   "ro": "Palatul Regal"
+  },
+  "category": "history",
+  "duration_min": 90,
+  "price_eur": 15
+ },
+ {
+  "city": "torino",
+  "local_name": "Duomo e Sindone",
+  "name": {
+   "fr": "Cathédrale et Saint-Suaire",
+   "en": "Cathedral and the Shroud",
+   "pl": "Katedra i Całun",
+   "es": "Catedral y Sábana Santa",
+   "ro": "Catedrala și Giulgiul"
+  },
+  "category": "church",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "torino",
+  "local_name": "Bicerin e caffè storici",
+  "name": {
+   "fr": "Bicerin et cafés historiques",
+   "en": "Bicerin and historic cafés",
+   "pl": "Bicerin i zabytkowe kawiarnie",
+   "es": "Bicerin y cafés históricos",
+   "ro": "Bicerin și cafenele istorice"
+  },
+  "category": "food",
+  "duration_min": 45,
+  "price_eur": 6
+ },
+ {
+  "city": "pisa",
+  "local_name": "Torre di Pisa",
+  "name": {
+   "fr": "Tour penchée",
+   "en": "Leaning Tower",
+   "pl": "Krzywa Wieża",
+   "es": "Torre inclinada",
+   "ro": "Turnul înclinat"
+  },
+  "category": "panorama",
+  "duration_min": 60,
+  "price_eur": 20
+ },
+ {
+  "city": "pisa",
+  "local_name": "Battistero e Duomo",
+  "name": {
+   "fr": "Baptistère et cathédrale",
+   "en": "Baptistery and Cathedral",
+   "pl": "Baptysterium i katedra",
+   "es": "Baptisterio y catedral",
+   "ro": "Baptisteriul și catedrala"
+  },
+  "category": "church",
+  "duration_min": 60,
+  "price_eur": 7
+ },
+ {
+  "city": "pisa",
+  "local_name": "Lungarni",
+  "name": {
+   "fr": "Quais de l'Arno",
+   "en": "Arno riverside",
+   "pl": "Bulwary nad Arno",
+   "es": "Orillas del Arno",
+   "ro": "Malurile Arnoului"
+  },
+  "category": "panorama",
+  "duration_min": 40,
+  "price_eur": 0
+ },
+ {
+  "city": "pisa",
+  "local_name": "Borgo Stretto",
+  "name": {
+   "fr": "Borgo Stretto et marché",
+   "en": "Borgo Stretto and market",
+   "pl": "Borgo Stretto i targ",
+   "es": "Borgo Stretto y mercado",
+   "ro": "Borgo Stretto și piața"
+  },
+  "category": "food",
+  "duration_min": 45,
+  "price_eur": 0
+ }
+]

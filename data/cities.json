@@ -1,0 +1,98 @@
+[
+ {
+  "id": "roma",
+  "name": {
+   "fr": "Rome",
+   "en": "Rome",
+   "pl": "Rzym",
+   "es": "Roma",
+   "ro": "Roma"
+  },
+  "transit_operator": "ATAC · Roma",
+  "transit_url": "https://www.atac.roma.it/biglietti-e-abbonamenti"
+ },
+ {
+  "id": "milano",
+  "name": {
+   "fr": "Milan",
+   "en": "Milan",
+   "pl": "Mediolan",
+   "es": "Milán",
+   "ro": "Milano"
+  },
+  "transit_operator": "ATM · Milano",
+  "transit_url": "https://www.atm.it/it/ViaggiaConNoi/Biglietti/Pagine/Doveacquistare.aspx"
+ },
+ {
+  "id": "firenze",
+  "name": {
+   "fr": "Florence",
+   "en": "Florence",
+   "pl": "Florencja",
+   "es": "Florencia",
+   "ro": "Florența"
+  },
+  "transit_operator": "Autolinee Toscane · Firenze",
+  "transit_url": "https://www.at-bus.it/en/shop-tickets-ticket-bundles-and-passes"
+ },
+ {
+  "id": "venezia",
+  "name": {
+   "fr": "Venise",
+   "en": "Venice",
+   "pl": "Wenecja",
+   "es": "Venecia",
+   "ro": "Veneția"
+  },
+  "transit_operator": "ACTV · Venezia",
+  "transit_url": "https://www.veneziaunica.it/en/buy-tickets/public-trasport-in-venice"
+ },
+ {
+  "id": "napoli",
+  "name": {
+   "fr": "Naples",
+   "en": "Naples",
+   "pl": "Neapol",
+   "es": "Nápoles",
+   "ro": "Napoli"
+  },
+  "transit_operator": "ANM · Napoli",
+  "transit_url": "https://www.anm.it"
+ },
+ {
+  "id": "bologna",
+  "name": {
+   "fr": "Bologne",
+   "en": "Bologna",
+   "pl": "Bolonia",
+   "es": "Bolonia",
+   "ro": "Bologna"
+  },
+  "transit_operator": "TPER · Bologna",
+  "transit_url": "https://www.tper.it/tariffe"
+ },
+ {
+  "id": "torino",
+  "name": {
+   "fr": "Turin",
+   "en": "Turin",
+   "pl": "Turyn",
+   "es": "Turín",
+   "ro": "Torino"
+  },
+  "transit_operator": "GTT · Torino",
+  "transit_url": "https://www.gtt.to.it/cms/biglietti-abbonamenti/biglietti/biglietti-carnet"
+ },
+ {
+  "id": "pisa",
+  "name": {
+   "fr": "Pise",
+   "en": "Pisa",
+   "pl": "Piza",
+   "es": "Pisa",
+   "ro": "Pisa"
+  },
+  "transit_operator": "Autolinee Toscane · Pisa",
+  "transit_url": "https://www.at-bus.it/en/shop-tickets-ticket-bundles-and-passes"
+ }
+]

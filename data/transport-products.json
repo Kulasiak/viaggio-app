@@ -1,0 +1,429 @@
+[
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Métro, bus, tram · BIT",
+   "en": "Metro, bus, tram · BIT",
+   "pl": "Metro, autobus, tramwaj · BIT",
+   "es": "Metro, autobús, tranvía · BIT",
+   "ro": "Metrou, autobuz, tramvai · BIT"
+  },
+  "meta": {
+   "fr": "Valable 100 min · 1 seul passage en métro",
+   "en": "Valid 100 min · 1 metro ride",
+   "pl": "Ważny 100 min · 1 przejazd metrem",
+   "es": "Válido 100 min · 1 viaje en metro",
+   "ro": "Valabil 100 min · o singură călătorie cu metroul"
+  },
+  "price_eur": 1.5,
+  "official_url": "https://www.atac.roma.it/biglietti-e-abbonamenti",
+  "how": {
+   "fr": "Achat dans l'app ou au tabac (T). À valider dès la montée, sinon amende.",
+   "en": "Buy in the app or at a tobacconist (T). Validate on boarding or risk a fine.",
+   "pl": "Kup w aplikacji lub w trafice (T). Skasuj przy wejściu, inaczej mandat.",
+   "es": "Cómpralo en la app o en un estanco (T). Valídalo al subir o te arriesgas a una multa.",
+   "ro": "Cumpără în aplicație sau la tutungerie (T). Validează la urcare, altfel riști amendă."
+  }
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Pass 24 h",
+   "en": "24h pass",
+   "pl": "Bilet 24 h",
+   "es": "Bono 24 h",
+   "ro": "Abonament 24 h"
+  },
+  "meta": {
+   "fr": "Métro, bus et tram illimités",
+   "en": "Unlimited metro, bus and tram",
+   "pl": "Nielimitowane metro, autobus i tramwaj",
+   "es": "Metro, autobús y tranvía ilimitados",
+   "ro": "Metrou, autobuz și tramvai nelimitat"
+  },
+  "price_eur": 7,
+  "official_url": "https://www.atac.roma.it/biglietti-e-abbonamenti",
+  "how": {
+   "fr": "Validez-le une première fois : il court 24 h à partir de là.",
+   "en": "Validate it once: it runs for 24h from then.",
+   "pl": "Skasuj go raz: działa 24 h od tej chwili.",
+   "es": "Valídalo una vez: dura 24 h desde ese momento.",
+   "ro": "Validează-l o dată: e valabil 24 h din acel moment."
+  }
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Leonardo Express",
+   "en": "Leonardo Express",
+   "pl": "Leonardo Express",
+   "es": "Leonardo Express",
+   "ro": "Leonardo Express"
+  },
+  "meta": {
+   "fr": "Fiumicino ↔ Termini · 32 min",
+   "en": "Fiumicino ↔ Termini · 32 min",
+   "pl": "Fiumicino ↔ Termini · 32 min",
+   "es": "Fiumicino ↔ Termini · 32 min",
+   "ro": "Fiumicino ↔ Termini · 32 min"
+  },
+  "price_eur": 14,
+  "official_url": "https://www.trenitalia.com",
+  "how": {
+   "fr": "À valider sur le quai avant de monter si billet papier.",
+   "en": "Validate on the platform before boarding if paper ticket.",
+   "pl": "Skasuj na peronie przed wejściem, jeśli bilet papierowy.",
+   "es": "Valídalo en el andén antes de subir si es de papel.",
+   "ro": "Validează pe peron înainte de urcare, dacă biletul e pe hârtie."
+  }
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Taxi forfait aéroport",
+   "en": "Airport flat-fare taxi",
+   "pl": "Taksówka z lotniska, stała cena",
+   "es": "Taxi con tarifa fija al aeropuerto",
+   "ro": "Taxi aeroport cu tarif fix"
+  },
+  "meta": {
+   "fr": "Fiumicino → centre historique",
+   "en": "Fiumicino → historic centre",
+   "pl": "Fiumicino → centrum historyczne",
+   "es": "Fiumicino → centro histórico",
+   "ro": "Fiumicino → centrul istoric"
+  },
+  "price_eur": 55,
+  "official_url": null,
+  "how": {
+   "fr": "Uniquement les taxis blancs à la station officielle. Forfait affiché sur la portière.",
+   "en": "Only white taxis at the official rank. Flat fare shown on the door.",
+   "pl": "Tylko białe taksówki z oficjalnego postoju. Stała cena na drzwiach.",
+   "es": "Solo taxis blancos en la parada oficial. Tarifa fija indicada en la puerta.",
+   "ro": "Doar taxiuri albe de la stația oficială. Tariful fix e afișat pe portieră."
+  }
+ },
+ {
+  "city": "milano",
+  "name": {
+   "fr": "Billet urbain · 90 min",
+   "en": "Urban ticket · 90 min",
+   "pl": "Bilet miejski · 90 min",
+   "es": "Billete urbano · 90 min",
+   "ro": "Bilet urban · 90 min"
+  },
+  "meta": {
+   "fr": "Métro, bus et tram · 1 trajet en métro",
+   "en": "Metro, bus and tram · 1 metro ride",
+   "pl": "Metro, autobus i tramwaj · 1 przejazd metrem",
+   "es": "Metro, autobús y tranvía · 1 viaje en metro",
+   "ro": "Metrou, autobuz și tramvai · 1 călătorie cu metroul"
+  },
+  "price_eur": 2.2,
+  "official_url": "https://www.atm.it/it/ViaggiaConNoi/Biglietti/Pagine/Doveacquistare.aspx"
+ },
+ {
+  "city": "milano",
+  "name": {
+   "fr": "Pass 24 h",
+   "en": "24h pass",
+   "pl": "Bilet 24 h",
+   "es": "Bono 24 h",
+   "ro": "Abonament 24 h"
+  },
+  "meta": {
+   "fr": "Illimité sur tout le réseau",
+   "en": "Unlimited on the whole network",
+   "pl": "Bez limitu w całej sieci",
+   "es": "Ilimitado en toda la red",
+   "ro": "Nelimitat în toată rețeaua"
+  },
+  "price_eur": 7.6,
+  "official_url": "https://www.atm.it/it/ViaggiaConNoi/Biglietti/Pagine/Doveacquistare.aspx"
+ },
+ {
+  "city": "milano",
+  "name": {
+   "fr": "Malpensa Express",
+   "en": "Malpensa Express",
+   "pl": "Malpensa Express",
+   "es": "Malpensa Express",
+   "ro": "Malpensa Express"
+  },
+  "meta": {
+   "fr": "Malpensa ↔ Milano Cadorna · 52 min",
+   "en": "Malpensa ↔ Milano Cadorna · 52 min",
+   "pl": "Malpensa ↔ Milano Cadorna · 52 min",
+   "es": "Malpensa ↔ Milano Cadorna · 52 min",
+   "ro": "Malpensa ↔ Milano Cadorna · 52 min"
+  },
+  "price_eur": 13,
+  "official_url": "https://www.malpensaexpress.it/en/tickets/"
+ },
+ {
+  "city": "firenze",
+  "name": {
+   "fr": "Billet urbain · 90 min",
+   "en": "Urban ticket · 90 min",
+   "pl": "Bilet miejski · 90 min",
+   "es": "Billete urbano · 90 min",
+   "ro": "Bilet urban · 90 min"
+  },
+  "meta": {
+   "fr": "Bus et tramway T1, T2",
+   "en": "Bus and tram T1, T2",
+   "pl": "Autobus i tramwaj T1, T2",
+   "es": "Autobús y tranvía T1, T2",
+   "ro": "Autobuz și tramvai T1, T2"
+  },
+  "price_eur": 1.7,
+  "official_url": "https://www.at-bus.it/en/shop-tickets-ticket-bundles-and-passes"
+ },
+ {
+  "city": "firenze",
+  "name": {
+   "fr": "Tramway T2 · aéroport",
+   "en": "Tram T2 · airport",
+   "pl": "Tramwaj T2 · lotnisko",
+   "es": "Tranvía T2 · aeropuerto",
+   "ro": "Tramvai T2 · aeroport"
+  },
+  "meta": {
+   "fr": "Peretola ↔ Unità · 22 min",
+   "en": "Peretola ↔ Unità · 22 min",
+   "pl": "Peretola ↔ Unità · 22 min",
+   "es": "Peretola ↔ Unità · 22 min",
+   "ro": "Peretola ↔ Unità · 22 min"
+  },
+  "price_eur": 1.7,
+  "official_url": "https://www.at-bus.it/en/shop-tickets-ticket-bundles-and-passes"
+ },
+ {
+  "city": "venezia",
+  "name": {
+   "fr": "Vaporetto · 75 min",
+   "en": "Vaporetto · 75 min",
+   "pl": "Vaporetto · 75 min",
+   "es": "Vaporetto · 75 min",
+   "ro": "Vaporetto · 75 min"
+  },
+  "meta": {
+   "fr": "Toutes les lignes ACTV",
+   "en": "All ACTV lines",
+   "pl": "Wszystkie linie ACTV",
+   "es": "Todas las líneas ACTV",
+   "ro": "Toate liniile ACTV"
+  },
+  "price_eur": 9.5,
+  "official_url": "https://www.veneziaunica.it/en/buy-tickets/public-trasport-in-venice"
+ },
+ {
+  "city": "venezia",
+  "name": {
+   "fr": "Pass 24 h",
+   "en": "24h pass",
+   "pl": "Bilet 24 h",
+   "es": "Bono 24 h",
+   "ro": "Abonament 24 h"
+  },
+  "meta": {
+   "fr": "Vaporetto et bus illimités",
+   "en": "Unlimited vaporetto and bus",
+   "pl": "Vaporetto i autobusy bez limitu",
+   "es": "Vaporetto y autobús ilimitados",
+   "ro": "Vaporetto și autobuz nelimitat"
+  },
+  "price_eur": 25,
+  "official_url": "https://www.veneziaunica.it/en/buy-tickets/public-trasport-in-venice"
+ },
+ {
+  "city": "venezia",
+  "name": {
+   "fr": "Alilaguna",
+   "en": "Alilaguna",
+   "pl": "Alilaguna",
+   "es": "Alilaguna",
+   "ro": "Alilaguna"
+  },
+  "meta": {
+   "fr": "Aéroport ↔ San Marco · 75 min",
+   "en": "Airport ↔ San Marco · 75 min",
+   "pl": "Lotnisko ↔ San Marco · 75 min",
+   "es": "Aeropuerto ↔ San Marco · 75 min",
+   "ro": "Aeroport ↔ San Marco · 75 min"
+  },
+  "price_eur": 15,
+  "official_url": "https://www.alilaguna.it/biglietti/tariffe"
+ },
+ {
+  "city": "napoli",
+  "name": {
+   "fr": "Billet urbain · 90 min",
+   "en": "Urban ticket · 90 min",
+   "pl": "Bilet miejski · 90 min",
+   "es": "Billete urbano · 90 min",
+   "ro": "Bilet urban · 90 min"
+  },
+  "meta": {
+   "fr": "Métro, funiculaires, bus",
+   "en": "Metro, funiculars, buses",
+   "pl": "Metro, kolejki linowo-terenowe, autobusy",
+   "es": "Metro, funiculares, autobuses",
+   "ro": "Metrou, funiculare, autobuze"
+  },
+  "price_eur": 1.8,
+  "official_url": "https://www.anm.it"
+ },
+ {
+  "city": "napoli",
+  "name": {
+   "fr": "Pass 24 h",
+   "en": "24h pass",
+   "pl": "Bilet 24 h",
+   "es": "Bono 24 h",
+   "ro": "Abonament 24 h"
+  },
+  "meta": {
+   "fr": "Illimité sur tout le réseau",
+   "en": "Unlimited on the whole network",
+   "pl": "Bez limitu w całej sieci",
+   "es": "Ilimitado en toda la red",
+   "ro": "Nelimitat în toată rețeaua"
+  },
+  "price_eur": 4.5,
+  "official_url": "https://www.anm.it"
+ },
+ {
+  "city": "napoli",
+  "name": {
+   "fr": "Alibus",
+   "en": "Alibus",
+   "pl": "Alibus",
+   "es": "Alibus",
+   "ro": "Alibus"
+  },
+  "meta": {
+   "fr": "Aéroport ↔ gare et port · 20 min",
+   "en": "Airport ↔ station and port · 20 min",
+   "pl": "Lotnisko ↔ dworzec i port · 20 min",
+   "es": "Aeropuerto ↔ estación y puerto · 20 min",
+   "ro": "Aeroport ↔ gară și port · 20 min"
+  },
+  "price_eur": 5,
+  "official_url": "https://www.anm.it"
+ },
+ {
+  "city": "bologna",
+  "name": {
+   "fr": "Billet urbain · 75 min",
+   "en": "Urban ticket · 75 min",
+   "pl": "Bilet miejski · 75 min",
+   "es": "Billete urbano · 75 min",
+   "ro": "Bilet urban · 75 min"
+  },
+  "meta": {
+   "fr": "Bus urbains",
+   "en": "City buses",
+   "pl": "Autobusy miejskie",
+   "es": "Autobuses urbanos",
+   "ro": "Autobuze urbane"
+  },
+  "price_eur": 2.3,
+  "official_url": "https://www.tper.it/tariffe"
+ },
+ {
+  "city": "bologna",
+  "name": {
+   "fr": "Marconi Express",
+   "en": "Marconi Express",
+   "pl": "Marconi Express",
+   "es": "Marconi Express",
+   "ro": "Marconi Express"
+  },
+  "meta": {
+   "fr": "Aeroporto ↔ Bologna Centrale · 7 min",
+   "en": "Aeroporto ↔ Bologna Centrale · 7 min",
+   "pl": "Aeroporto ↔ Bologna Centrale · 7 min",
+   "es": "Aeroporto ↔ Bologna Centrale · 7 min",
+   "ro": "Aeroporto ↔ Bologna Centrale · 7 min"
+  },
+  "price_eur": 12.8,
+  "official_url": "https://www.marconiexpress.it/en/"
+ },
+ {
+  "city": "torino",
+  "name": {
+   "fr": "Billet urbain · 120 min",
+   "en": "Urban ticket · 120 min",
+   "pl": "Bilet miejski · 120 min",
+   "es": "Billete urbano · 120 min",
+   "ro": "Bilet urban · 120 min"
+  },
+  "meta": {
+   "fr": "Métro, bus et tram",
+   "en": "Metro, bus and tram",
+   "pl": "Metro, autobus i tramwaj",
+   "es": "Metro, autobús y tranvía",
+   "ro": "Metrou, autobuz și tramvai"
+  },
+  "price_eur": 1.9,
+  "official_url": "https://www.gtt.to.it/cms/biglietti-abbonamenti/biglietti/biglietti-carnet"
+ },
+ {
+  "city": "torino",
+  "name": {
+   "fr": "Pass 24 h",
+   "en": "24h pass",
+   "pl": "Bilet 24 h",
+   "es": "Bono 24 h",
+   "ro": "Abonament 24 h"
+  },
+  "meta": {
+   "fr": "Illimité sur tout le réseau",
+   "en": "Unlimited on the whole network",
+   "pl": "Bez limitu w całej sieci",
+   "es": "Ilimitado en toda la red",
+   "ro": "Nelimitat în toată rețeaua"
+  },
+  "price_eur": 4,
+  "official_url": "https://www.gtt.to.it/cms/biglietti-abbonamenti/biglietti/biglietti-carnet"
+ },
+ {
+  "city": "pisa",
+  "name": {
+   "fr": "Billet urbain · 70 min",
+   "en": "Urban ticket · 70 min",
+   "pl": "Bilet miejski · 70 min",
+   "es": "Billete urbano · 70 min",
+   "ro": "Bilet urban · 70 min"
+  },
+  "meta": {
+   "fr": "Bus urbains",
+   "en": "City buses",
+   "pl": "Autobusy miejskie",
+   "es": "Autobuses urbanos",
+   "ro": "Autobuze urbane"
+  },
+  "price_eur": 1.7,
+  "official_url": "https://www.at-bus.it/en/shop-tickets-ticket-bundles-and-passes"
+ },
+ {
+  "city": "pisa",
+  "name": {
+   "fr": "PisaMover",
+   "en": "PisaMover",
+   "pl": "PisaMover",
+   "es": "PisaMover",
+   "ro": "PisaMover"
+  },
+  "meta": {
+   "fr": "Aéroport ↔ gare centrale · 5 min",
+   "en": "Airport ↔ central station · 5 min",
+   "pl": "Lotnisko ↔ dworzec centralny · 5 min",
+   "es": "Aeropuerto ↔ estación central · 5 min",
+   "ro": "Aeroport ↔ gara centrală · 5 min"
+  },
+  "price_eur": 5.4,
+  "official_url": "https://pisa-mover.com/en/shuttle-service/"
+ }
+]

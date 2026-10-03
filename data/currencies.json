@@ -1,0 +1,72 @@
+{
+ "CAD": {
+  "rate_per_eur": 1.61,
+  "name": {
+   "fr": "Dollar canadien",
+   "en": "Canadian dollar",
+   "pl": "Dolar kanadyjski",
+   "es": "Dólar canadiense",
+   "ro": "Dolar canadian"
+  }
+ },
+ "USD": {
+  "rate_per_eur": 1.17,
+  "name": {
+   "fr": "Dollar américain",
+   "en": "US dollar",
+   "pl": "Dolar amerykański",
+   "es": "Dólar estadounidense",
+   "ro": "Dolar american"
+  }
+ },
+ "GBP": {
+  "rate_per_eur": 0.87,
+  "name": {
+   "fr": "Livre sterling",
+   "en": "Pound sterling",
+   "pl": "Funt szterling",
+   "es": "Libra esterlina",
+   "ro": "Liră sterlină"
+  }
+ },
+ "CHF": {
+  "rate_per_eur": 0.94,
+  "name": {
+   "fr": "Franc suisse",
+   "en": "Swiss franc",
+   "pl": "Frank szwajcarski",
+   "es": "Franco suizo",
+   "ro": "Franc elvețian"
+  }
+ },
+ "JPY": {
+  "rate_per_eur": 172,
+  "name": {
+   "fr": "Yen",
+   "en": "Yen",
+   "pl": "Jen",
+   "es": "Yen",
+   "ro": "Yen"
+  }
+ },
+ "BRL": {
+  "rate_per_eur": 6.3,
+  "name": {
+   "fr": "Réal brésilien",
+   "en": "Brazilian real",
+   "pl": "Real brazylijski",
+   "es": "Real brasileño",
+   "ro": "Real brazilian"
+  }
+ },
+ "CNY": {
+  "rate_per_eur": 8.4,
+  "name": {
+   "fr": "Yuan",
+   "en": "Yuan",
+   "pl": "Juan",
+   "es": "Yuan",
+   "ro": "Yuan"
+  }
+ }
+}

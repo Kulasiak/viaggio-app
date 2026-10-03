@@ -1,0 +1,455 @@
+[
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Colisée & Palatin",
+   "en": "Colosseum & Palatine",
+   "pl": "Koloseum i Palatyn",
+   "es": "Coliseo y Palatino",
+   "ro": "Colosseumul și Palatinul"
+  },
+  "local_name": "Colosseo e Palatino",
+  "hours": {
+   "fr": "8:30–19:00",
+   "en": "8:30–19:00",
+   "pl": "8:30–19:00",
+   "es": "8:30–19:00",
+   "ro": "8:30–19:00"
+  },
+  "price_eur": 18,
+  "note": {
+   "fr": "Billet nominatif, créneau horaire.",
+   "en": "Named ticket, timed entry.",
+   "pl": "Bilet imienny, wejście o określonej godzinie.",
+   "es": "Entrada nominativa, con hora.",
+   "ro": "Bilet nominal, intrare cu oră fixă."
+  },
+  "official_url": "https://ticketing.colosseo.it"
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Musées du Vatican",
+   "en": "Vatican Museums",
+   "pl": "Muzea Watykańskie",
+   "es": "Museos Vaticanos",
+   "ro": "Muzeele Vaticanului"
+  },
+  "local_name": "Musei Vaticani",
+  "hours": {
+   "fr": "Lun–Sam 8:00–19:00",
+   "en": "Mon–Sat 8:00–19:00",
+   "pl": "Pon–Sob 8:00–19:00",
+   "es": "Lun–Sáb 8:00–19:00",
+   "ro": "Lun–Sâm 8:00–19:00"
+  },
+  "price_eur": 25,
+  "note": {
+   "fr": "+5 € de réservation en ligne. Tenue couverte.",
+   "en": "+€5 online booking. Covered clothing.",
+   "pl": "+5 € za rezerwację online. Zakryty strój.",
+   "es": "+5 € de reserva online. Ropa que cubra.",
+   "ro": "+5 € rezervare online. Ținută decentă."
+  },
+  "official_url": "https://tickets.museivaticani.va"
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Galerie Borghèse",
+   "en": "Borghese Gallery",
+   "pl": "Galeria Borghese",
+   "es": "Galería Borghese",
+   "ro": "Galeria Borghese"
+  },
+  "local_name": "Galleria Borghese",
+  "hours": {
+   "fr": "Mar–Dim 9:00–19:00",
+   "en": "Tue–Sun 9:00–19:00",
+   "pl": "Wt–Nd 9:00–19:00",
+   "es": "Mar–Dom 9:00–19:00",
+   "ro": "Mar–Dum 9:00–19:00"
+  },
+  "price_eur": 17,
+  "note": {
+   "fr": "Réservation obligatoire, entrées toutes les 2 h.",
+   "en": "Booking required, entry every 2 hours.",
+   "pl": "Rezerwacja obowiązkowa, wejścia co 2 godziny.",
+   "es": "Reserva obligatoria, entradas cada 2 horas.",
+   "ro": "Rezervare obligatorie, intrări la fiecare 2 ore."
+  },
+  "official_url": "https://galleriaborghese.cultura.gov.it/visita/info-biglietti/"
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Panthéon",
+   "en": "Pantheon",
+   "pl": "Panteon",
+   "es": "Panteón",
+   "ro": "Panteonul"
+  },
+  "local_name": "Pantheon",
+  "hours": {
+   "fr": "9:00–19:00",
+   "en": "9:00–19:00",
+   "pl": "9:00–19:00",
+   "es": "9:00–19:00",
+   "ro": "9:00–19:00"
+  },
+  "price_eur": 5,
+  "note": null,
+  "official_url": "https://portale.museiitaliani.it/b2c/buyTicketless/33f77159-0acd-40c4-8524-701f33aae108"
+ },
+ {
+  "city": "roma",
+  "name": {
+   "fr": "Château Saint-Ange",
+   "en": "Castel Sant'Angelo",
+   "pl": "Zamek Świętego Anioła",
+   "es": "Castillo de Sant'Angelo",
+   "ro": "Castelul Sant'Angelo"
+  },
+  "local_name": "Castel Sant'Angelo",
+  "hours": {
+   "fr": "Mar–Dim 9:00–19:30",
+   "en": "Tue–Sun 9:00–19:30",
+   "pl": "Wt–Nd 9:00–19:30",
+   "es": "Mar–Dom 9:00–19:30",
+   "ro": "Mar–Dum 9:00–19:30"
+  },
+  "price_eur": 16,
+  "note": null,
+  "official_url": "https://www.museiitaliani.it/musei/8a0b28e3-bbd8-4b9f-9914-d1a994c93746"
+ },
+ {
+  "city": "milano",
+  "name": {
+   "fr": "La Cène de Léonard",
+   "en": "Leonardo's Last Supper",
+   "pl": "Ostatnia Wieczerza Leonarda",
+   "es": "La Última Cena de Leonardo",
+   "ro": "Cina cea de Taină a lui Leonardo"
+  },
+  "local_name": "Cenacolo Vinciano",
+  "hours_days": "tuesun",
+  "hours": "8:15–19:00",
+  "price_eur": 17,
+  "note": {
+   "fr": "Réservation obligatoire, visite de 15 min.",
+   "en": "Booking required, 15-minute visit.",
+   "pl": "Rezerwacja obowiązkowa, 15 min zwiedzania.",
+   "es": "Reserva obligatoria, visita de 15 min.",
+   "ro": "Rezervare obligatorie, vizită de 15 min."
+  },
+  "official_url": "https://cenacolovinciano.org"
+ },
+ {
+  "city": "milano",
+  "name": {
+   "fr": "Duomo et terrasses",
+   "en": "Duomo and rooftop terraces",
+   "pl": "Katedra i tarasy",
+   "es": "Duomo y terrazas",
+   "ro": "Domul și terasele"
+  },
+  "local_name": "Duomo di Milano",
+  "hours_days": "daily",
+  "hours": "9:00–19:00",
+  "price_eur": 16,
+  "note": null,
+  "official_url": "https://ticket.duomomilano.it"
+ },
+ {
+  "city": "milano",
+  "name": {
+   "fr": "Pinacothèque de Brera",
+   "en": "Brera Art Gallery",
+   "pl": "Pinakoteka Brera",
+   "es": "Pinacoteca de Brera",
+   "ro": "Pinacoteca Brera"
+  },
+  "local_name": "Pinacoteca di Brera",
+  "hours_days": "tuesun",
+  "hours": "8:30–19:15",
+  "price_eur": 15,
+  "note": null,
+  "official_url": "https://pinacotecabrera.org"
+ },
+ {
+  "city": "firenze",
+  "name": {
+   "fr": "Galerie des Offices",
+   "en": "Uffizi Gallery",
+   "pl": "Galeria Uffizi",
+   "es": "Galería Uffizi",
+   "ro": "Galeria Uffizi"
+  },
+  "local_name": "Galleria degli Uffizi",
+  "hours_days": "tuesun",
+  "hours": "8:15–18:30",
+  "price_eur": 29,
+  "note": {
+   "fr": "Prix haute saison. Réservez un créneau.",
+   "en": "High-season price. Book a time slot.",
+   "pl": "Cena w sezonie. Zarezerwuj godzinę wejścia.",
+   "es": "Precio de temporada alta. Reserva un horario.",
+   "ro": "Preț de sezon. Rezervă un interval orar."
+  },
+  "official_url": "https://www.uffizi.it/en/tickets"
+ },
+ {
+  "city": "firenze",
+  "name": {
+   "fr": "Galerie de l'Académie (David)",
+   "en": "Accademia Gallery (David)",
+   "pl": "Galeria Akademii (Dawid)",
+   "es": "Galería de la Academia (David)",
+   "ro": "Galeria Accademia (David)"
+  },
+  "local_name": "Galleria dell'Accademia",
+  "hours_days": "tuesun",
+  "hours": "8:15–18:50",
+  "price_eur": 20,
+  "note": null,
+  "official_url": "https://www.galleriaaccademiafirenze.it/en/tickets/"
+ },
+ {
+  "city": "firenze",
+  "name": {
+   "fr": "Coupole de Brunelleschi",
+   "en": "Brunelleschi's Dome",
+   "pl": "Kopuła Brunelleschiego",
+   "es": "Cúpula de Brunelleschi",
+   "ro": "Cupola lui Brunelleschi"
+  },
+  "local_name": "Cupola del Brunelleschi",
+  "hours_days": "daily",
+  "hours": "8:15–19:30",
+  "price_eur": 30,
+  "note": {
+   "fr": "463 marches, créneau obligatoire.",
+   "en": "463 steps, timed entry required.",
+   "pl": "463 stopnie, wejście o wyznaczonej godzinie.",
+   "es": "463 escalones, entrada con horario.",
+   "ro": "463 de trepte, intrare cu oră fixă."
+  },
+  "official_url": "https://tickets.duomo.firenze.it"
+ },
+ {
+  "city": "venezia",
+  "name": {
+   "fr": "Palais des Doges",
+   "en": "Doge's Palace",
+   "pl": "Pałac Dożów",
+   "es": "Palacio Ducal",
+   "ro": "Palatul Dogilor"
+  },
+  "local_name": "Palazzo Ducale",
+  "hours_days": "daily",
+  "hours": "9:00–18:00",
+  "price_eur": 30,
+  "note": null,
+  "official_url": "https://www.visitmuve.it/visita/biglietti/"
+ },
+ {
+  "city": "venezia",
+  "name": {
+   "fr": "Basilique Saint-Marc",
+   "en": "St Mark's Basilica",
+   "pl": "Bazylika św. Marka",
+   "es": "Basílica de San Marcos",
+   "ro": "Bazilica San Marco"
+  },
+  "local_name": "Basilica di San Marco",
+  "hours_days": "monsat",
+  "hours": "9:30–17:15",
+  "price_eur": 6,
+  "note": {
+   "fr": "Pas de grand sac. Épaules couvertes.",
+   "en": "No large bags. Shoulders covered.",
+   "pl": "Bez dużych toreb. Zakryte ramiona.",
+   "es": "Sin bolsos grandes. Hombros cubiertos.",
+   "ro": "Fără genți mari. Umeri acoperiți."
+  },
+  "official_url": "https://tickets.basilicasanmarco.it"
+ },
+ {
+  "city": "venezia",
+  "name": {
+   "fr": "Galeries de l'Académie",
+   "en": "Accademia Galleries",
+   "pl": "Galerie Akademii",
+   "es": "Galerías de la Academia",
+   "ro": "Galeriile Accademia"
+  },
+  "local_name": "Gallerie dell'Accademia",
+  "hours_days": "tuesun",
+  "hours": "8:15–19:15",
+  "price_eur": 15,
+  "note": null,
+  "official_url": "https://www.gallerieaccademia.it/biglietti"
+ },
+ {
+  "city": "napoli",
+  "name": {
+   "fr": "Musée archéologique national",
+   "en": "National Archaeological Museum",
+   "pl": "Narodowe Muzeum Archeologiczne",
+   "es": "Museo Arqueológico Nacional",
+   "ro": "Muzeul Național de Arheologie"
+  },
+  "local_name": "MANN",
+  "hours_days": "wedmon",
+  "hours": "9:00–19:30",
+  "price_eur": 22,
+  "note": null,
+  "official_url": "https://www.museoarcheologiconapoli.it/en/timetables-and-fares/"
+ },
+ {
+  "city": "napoli",
+  "name": {
+   "fr": "Pompéi · parc archéologique",
+   "en": "Pompeii · archaeological park",
+   "pl": "Pompeje · park archeologiczny",
+   "es": "Pompeya · parque arqueológico",
+   "ro": "Pompei · parc arheologic"
+  },
+  "local_name": "Parco archeologico di Pompei",
+  "hours_days": "tuesun",
+  "hours": "9:00–19:00",
+  "price_eur": 22,
+  "note": {
+   "fr": "Train Circumvesuviana depuis Naples, 35 min.",
+   "en": "Circumvesuviana train from Naples, 35 min.",
+   "pl": "Pociąg Circumvesuviana z Neapolu, 35 min.",
+   "es": "Tren Circumvesuviana desde Nápoles, 35 min.",
+   "ro": "Tren Circumvesuviana din Napoli, 35 min."
+  },
+  "official_url": "https://pompeiisites.org/en/buy-tickets/"
+ },
+ {
+  "city": "napoli",
+  "name": {
+   "fr": "Chapelle Sansevero (Christ voilé)",
+   "en": "Sansevero Chapel (Veiled Christ)",
+   "pl": "Kaplica Sansevero (Chrystus w całunie)",
+   "es": "Capilla Sansevero (Cristo velado)",
+   "ro": "Capela Sansevero (Hristosul acoperit)"
+  },
+  "local_name": "Cappella Sansevero",
+  "hours_days": "wedmon",
+  "hours": "9:00–19:00",
+  "price_eur": 12,
+  "note": null,
+  "official_url": "https://ticket.museosansevero.it"
+ },
+ {
+  "city": "bologna",
+  "name": {
+   "fr": "Archiginnasio · théâtre anatomique",
+   "en": "Archiginnasio · anatomical theatre",
+   "pl": "Archiginnasio · teatr anatomiczny",
+   "es": "Archiginnasio · teatro anatómico",
+   "ro": "Archiginnasio · teatrul anatomic"
+  },
+  "local_name": "Archiginnasio",
+  "hours_days": "monsat",
+  "hours": "10:00–18:00",
+  "price_eur": 3,
+  "note": null,
+  "official_url": "https://www.archiginnasio.it"
+ },
+ {
+  "city": "bologna",
+  "name": {
+   "fr": "Pinacothèque nationale",
+   "en": "National Art Gallery",
+   "pl": "Pinakoteka Narodowa",
+   "es": "Pinacoteca Nacional",
+   "ro": "Pinacoteca Națională"
+  },
+  "local_name": "Pinacoteca Nazionale",
+  "hours_days": "tuesun",
+  "hours": "9:00–19:00",
+  "price_eur": 8,
+  "note": null,
+  "official_url": "https://pinacotecabologna.beniculturali.it/it/content_page/item/3043-acquisto-biglietti"
+ },
+ {
+  "city": "torino",
+  "name": {
+   "fr": "Musée égyptien",
+   "en": "Egyptian Museum",
+   "pl": "Muzeum Egipskie",
+   "es": "Museo Egipcio",
+   "ro": "Muzeul Egiptean"
+  },
+  "local_name": "Museo Egizio",
+  "hours_days": "daily",
+  "hours": "9:00–18:30",
+  "price_eur": 18,
+  "note": null,
+  "official_url": "https://www.museoegizio.it/tickets-shop"
+ },
+ {
+  "city": "torino",
+  "name": {
+   "fr": "Mole Antonelliana · musée du cinéma",
+   "en": "Mole Antonelliana · Cinema Museum",
+   "pl": "Mole Antonelliana · Muzeum Kina",
+   "es": "Mole Antonelliana · Museo del Cine",
+   "ro": "Mole Antonelliana · Muzeul Cinematografiei"
+  },
+  "local_name": "Museo Nazionale del Cinema",
+  "hours_days": "wedmon",
+  "hours": "9:00–19:00",
+  "price_eur": 20,
+  "note": {
+   "fr": "Avec l'ascenseur panoramique.",
+   "en": "Includes the panoramic lift.",
+   "pl": "Z windą widokową.",
+   "es": "Incluye el ascensor panorámico.",
+   "ro": "Include liftul panoramic."
+  },
+  "official_url": "https://www.museocinema.it/en/buy-tickets"
+ },
+ {
+  "city": "pisa",
+  "name": {
+   "fr": "Tour penchée",
+   "en": "Leaning Tower",
+   "pl": "Krzywa Wieża",
+   "es": "Torre inclinada",
+   "ro": "Turnul înclinat"
+  },
+  "local_name": "Torre di Pisa",
+  "hours_days": "daily",
+  "hours": "9:00–20:00",
+  "price_eur": 20,
+  "note": {
+   "fr": "Dès 8 ans. Créneau de 30 min.",
+   "en": "Age 8+. 30-minute slot.",
+   "pl": "Od 8 lat. Wejście na 30 min.",
+   "es": "A partir de 8 años. Turno de 30 min.",
+   "ro": "De la 8 ani. Interval de 30 min."
+  },
+  "official_url": "https://www.opapisa.it/en/scegli-la-data/"
+ },
+ {
+  "city": "pisa",
+  "name": {
+   "fr": "Baptistère et cathédrale",
+   "en": "Baptistery and Cathedral",
+   "pl": "Baptysterium i katedra",
+   "es": "Baptisterio y catedral",
+   "ro": "Baptisteriul și catedrala"
+  },
+  "local_name": "Battistero e Duomo",
+  "hours_days": "daily",
+  "hours": "9:00–19:00",
+  "price_eur": 7,
+  "note": null,
+  "official_url": "https://www.opapisa.it/en/scegli-la-data/"
+ }
+]
