@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E7E9E6;font-family:'Inter',system-ui,sans-serif;color:#1F2A44;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#0E7C86}a:hover{color:#0A5E66}
+button{font-family:inherit;cursor:pointer}
+input,textarea{font-family:inherit}
+@keyframes vpulse{0%{transform:scale(.6);opacity:.6}100%{transform:scale(2.8);opacity:0}}
+@keyframes vscan{0%{top:6%}50%{top:90%}100%{top:6%}}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-wrap:wrap;gap:56px;justify-content:center;align-items:flex-start;padding:48px 32px">
+
+<sc-if value="{{ showPanel }}" hint-placeholder-val="{{ true }}">
+<div style="width:280px;display:flex;flex-direction:column;gap:22px;padding-top:24px">
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:34px;font-weight:800;letter-spacing:-.02em;color:#0E7C86">Viaggio</div>
+    <div style="font-size:14px;color:#5B6475;line-height:1.5;text-wrap:pretty">Prototype interactif · Rome. Prix en euros, affichés aussi dans la devise du voyageur.</div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5B6475">Rôle</div>
+    <div style="display:flex;gap:6px"><sc-for list="{{ panelRoles }}" as="r" hint-placeholder-count="2"><button onClick="{{ r.on }}" style="flex:1;padding:11px;border-radius:12px;border:1px solid #D5D8D2;background:{{ r.bg }};color:{{ r.color }};font-size:14px;font-weight:600">{{ r.label }}</button></sc-for></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5B6475">Langue</div>
+    <div style="display:flex;gap:6px"><sc-for list="{{ panelLangs }}" as="r" hint-placeholder-count="2"><button onClick="{{ r.on }}" style="flex:1;padding:11px;border-radius:12px;border:1px solid #D5D8D2;background:{{ r.bg }};color:{{ r.color }};font-size:14px;font-weight:600">{{ r.label }}</button></sc-for></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5B6475">Devise du voyageur</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ panelCur }}" as="r" hint-placeholder-count="6"><button onClick="{{ r.on }}" style="padding:8px 11px;border-radius:10px;border:1px solid #D5D8D2;background:{{ r.bg }};color:{{ r.color }};font-size:13px;font-weight:700">{{ r.label }}</button></sc-for></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5B6475">Simuler</div>
+    <div style="display:flex;flex-direction:column;gap:6px"><sc-for list="{{ panelSims }}" as="s" hint-placeholder-count="5"><button onClick="{{ s.on }}" style="text-align:left;padding:11px 14px;border-radius:12px;border:1px solid #D5D8D2;background:{{ s.bg }};color:{{ s.color }};font-size:14px;font-weight:600">{{ s.label }}</button></sc-for></div>
+  </div>
+  <div style="font-size:12px;color:#5B6475;line-height:1.5;text-wrap:pretty">Tarifs, taux de change et règles de détaxe sont indicatifs (2026), à vérifier avant publication. Le rôle Administrateur (back-office web) est hors de ce prototype mobile.</div>
+</div>
+</sc-if>
+
+<div style="width:390px;height:844px;flex:none;border-radius:58px;background:#11161F;padding:11px;box-shadow:0 50px 90px -40px rgba(20,40,60,.5),0 0 0 1px rgba(0,0,0,.25)">
+<div style="position:relative;width:368px;height:822px;border-radius:47px;overflow:hidden;background:#F8F7F4;display:flex;flex-direction:column">
+
+  <div style="flex:none;height:52px;display:flex;align-items:center;justify-content:space-between;padding:8px 30px 0 36px;font-size:15px;font-weight:600;color:{{ sbColor }};background:{{ sbBg }};position:relative;z-index:25">
+    <span>10:40</span>
+    <div style="position:absolute;left:50%;top:11px;transform:translateX(-50%);width:118px;height:34px;border-radius:20px;background:#05070A"></div>
+    <div style="display:flex;align-items:center;gap:6px"><span style="font-size:13px">{{ netLabel }}</span><div style="width:24px;height:12px;border-radius:4px;border:1.5px solid {{ sbColor }};padding:1.5px"><div style="width:62%;height:100%;border-radius:2px;background:{{ sbColor }}"></div></div></div>
+  </div>
+  <sc-if value="{{ showOffline }}">
+    <div style="flex:none;display:flex;justify-content:space-between;gap:8px;padding:8px 20px;background:#1F2A44;color:#fff;font-size:12px;font-weight:600;position:relative;z-index:24"><span>{{ t.offline }}</span><span>{{ t.lastSync }}</span></div>
+  </sc-if>
+
+  <sc-if value="{{ isWelcome }}" hint-placeholder-val="{{ true }}">
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:14px 28px 46px;background:#0E7C86;color:#fff">
+    <div style="font-weight:800;font-size:22px;letter-spacing:-.01em">Viaggio</div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:.12em">ROMA · 41°53′N 12°29′E</div>
+      <div style="font-size:44px;font-weight:800;line-height:1.02;letter-spacing:-.025em;text-wrap:balance">{{ t.tagline }}</div>
+      <div style="font-size:17px;line-height:1.45;text-wrap:pretty">{{ t.welcomeBody }}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase">{{ t.language }}</span>
+        <div style="display:flex;gap:4px;background:rgba(0,0,0,.18);padding:4px;border-radius:999px"><sc-for list="{{ langOptsDark }}" as="l" hint-placeholder-count="2"><button onClick="{{ l.on }}" style="border:none;border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;background:{{ l.bg }};color:{{ l.color }}">{{ l.label }}</button></sc-for></div>
+      </div>
+      <button onClick="{{ goRole }}" style="height:56px;border:none;border-radius:16px;background:#fff;color:#0E7C86;font-size:17px;font-weight:700">{{ t.start }}</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isRole }}">
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:18px;padding:10px 22px 40px;overflow-y:auto;scrollbar-width:none">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.step1 }}</span>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05">{{ t.roleTitle }}</div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ roleCards }}" as="r" hint-placeholder-count="2">
+        <button onClick="{{ r.on }}" style="text-align:left;display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:18px;border:2px solid {{ r.border }};background:#fff;color:#1F2A44">
+          <div style="flex:none;width:22px;height:22px;border-radius:50%;border:2px solid {{ r.border }};display:grid;place-items:center;margin-top:1px"><div style="width:10px;height:10px;border-radius:50%;background:{{ r.fill }}"></div></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:17px;font-weight:700">{{ r.title }}</div><div style="font-size:14px;line-height:1.4;color:#5B6475;text-wrap:pretty">{{ r.desc }}</div></div>
+        </button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ isTourist }}">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <label style="font-size:13px;font-weight:600;color:#5B6475">{{ t.inviteCode }}</label>
+        <input value="{{ code }}" onChange="{{ onCode }}" style="height:52px;border-radius:14px;border:1.5px solid #D5D8D2;background:#fff;padding:0 16px;font-family:ui-monospace,Menlo,monospace;font-size:17px;letter-spacing:.1em;color:#1F2A44;outline:none">
+        <button onClick="{{ scanQrToast }}" style="align-self:flex-start;border:none;background:transparent;padding:4px 0;color:#0E7C86;font-size:14px;font-weight:700">{{ t.orQr }}</button>
+        <div style="padding:12px 14px;border-radius:14px;background:#DDF1EE;font-size:14px;line-height:1.45;color:#17544D"><div style="font-weight:700">{{ t.groupFound }}</div><div>{{ t.groupFoundD }}</div></div>
+      </div>
+    </sc-if>
+    <div style="flex:1"></div>
+    <button onClick="{{ afterRole }}" style="flex:none;height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:17px;font-weight:700">{{ t.continue }}</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isConsent }}">
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:14px;padding:10px 22px 40px;overflow-y:auto;scrollbar-width:none">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.step2 }}</span>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05">{{ t.consentTitle }}</div>
+    <div style="font-size:15px;line-height:1.45;color:#5B6475">{{ t.consentBody }}</div>
+    <sc-for list="{{ consents }}" as="c" hint-placeholder-count="3">
+      <button onClick="{{ c.on }}" style="display:flex;gap:14px;align-items:flex-start;text-align:left;padding:16px;border-radius:18px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44">
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:700">{{ c.title }}</span><span style="font-size:13px;line-height:1.4;color:#5B6475;text-wrap:pretty">{{ c.desc }}</span></div>
+        <div style="flex:none;width:50px;height:30px;border-radius:15px;background:{{ c.bg }};padding:3px;display:flex;justify-content:{{ c.jc }}"><div style="width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div></div>
+      </button>
+    </sc-for>
+    <div style="font-size:12px;color:#5B6475;line-height:1.45">{{ t.consentLegal }}</div>
+    <div style="flex:1"></div>
+    <button onClick="{{ goScan }}" style="flex:none;height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:17px;font-weight:700">{{ t.continue }}</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isScan }}">
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:16px;padding:10px 22px 36px">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.step3 }}</span>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05">{{ t.scanTitle }}</div>
+    <div style="font-size:15px;line-height:1.45;color:#5B6475;text-wrap:pretty">{{ t.scanBody }}</div>
+    <div style="position:relative;height:236px;border-radius:22px;background:#11161F;overflow:hidden;display:grid;place-items:center">
+      <div style="width:272px;height:176px;border-radius:10px;background:#E6E9EF;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:12px"><div style="width:60px;height:76px;border-radius:6px;background:#C9CFDA"></div><div style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><div style="width:120px;height:7px;border-radius:4px;background:#C4CAD4"></div><div style="width:86px;height:7px;border-radius:4px;background:#C4CAD4"></div><div style="width:108px;height:7px;border-radius:4px;background:#C4CAD4"></div></div></div>
+        <div style="margin-top:auto;font-family:ui-monospace,Menlo,monospace;font-size:9.5px;letter-spacing:.05em;color:#1F2A44;line-height:1.55;white-space:nowrap;overflow:hidden;background:{{ mrzBg }};border-radius:4px;padding:2px 3px">P&lt;CANMARTIN&lt;&lt;CLAIRE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>GK4827105CAN9104123F3208154&lt;&lt;&lt;&lt;&lt;</div>
+      </div>
+      <div style="position:absolute;left:16px;top:16px;width:30px;height:30px;border-left:3px solid #fff;border-top:3px solid #fff;border-radius:8px 0 0 0"></div>
+      <div style="position:absolute;right:16px;top:16px;width:30px;height:30px;border-right:3px solid #fff;border-top:3px solid #fff;border-radius:0 8px 0 0"></div>
+      <div style="position:absolute;left:16px;bottom:16px;width:30px;height:30px;border-left:3px solid #fff;border-bottom:3px solid #fff;border-radius:0 0 0 8px"></div>
+      <div style="position:absolute;right:16px;bottom:16px;width:30px;height:30px;border-right:3px solid #fff;border-bottom:3px solid #fff;border-radius:0 0 8px 0"></div>
+      {{ scanLine }}
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#5B6475"><span>{{ scanStatus }}</span><span>{{ scanPctLabel }}</span></div>
+      <div style="height:6px;border-radius:3px;background:#E4E2DC;overflow:hidden"><div style="height:100%;width:{{ scanPctCss }};background:#0E7C86"></div></div>
+    </div>
+    <div style="flex:1"></div>
+    <button onClick="{{ startScan }}" style="flex:none;height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:17px;font-weight:700">{{ scanBtn }}</button>
+    <button onClick="{{ enterApp }}" style="flex:none;height:44px;border:none;background:transparent;color:#5B6475;font-size:15px;font-weight:600">{{ t.later }}</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isDone }}">
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;gap:16px;padding:18px 22px 40px">
+    <div style="width:68px;height:68px;border-radius:50%;background:#2A9D8F;color:#fff;display:grid;place-items:center;font-size:32px;font-weight:700">✓</div>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.05">{{ t.savedTitle }}</div>
+    <div style="font-size:15px;color:#17544D;font-weight:600">{{ t.savedBody }}</div>
+    <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <sc-for list="{{ passportFields }}" as="f" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:12px;color:#5B6475;font-weight:600">{{ f.k }}</span><span style="font-size:16px;font-weight:700">{{ f.v }}</span></div></sc-for>
+    </div>
+    <div style="padding:12px 14px;border-radius:14px;background:#E3F1F2;font-size:14px;line-height:1.45">{{ currencySet }}</div>
+    <div style="font-size:13px;color:#5B6475;line-height:1.45">{{ t.guideNoAccess }}</div>
+    <div style="flex:1"></div>
+    <button onClick="{{ enterApp }}" style="flex:none;height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:17px;font-weight:700">{{ t.enter }}</button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isApp }}">
+  <div ref="{{ scrollRef }}" style="flex:1;min-height:0;overflow-y:auto;scrollbar-width:none">
+
+    <sc-if value="{{ showToday }}">
+    <div style="padding:6px 20px 100px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#5B6475">{{ t.dateLine }}</span>
+        <div style="display:flex;gap:2px;border:1px solid #E4E2DC;padding:3px;border-radius:999px"><sc-for list="{{ langOpts }}" as="l" hint-placeholder-count="2"><button onClick="{{ l.on }}" style="border:none;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;background:{{ l.bg }};color:{{ l.color }}">{{ l.label }}</button></sc-for></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:30px;font-weight:800;letter-spacing:-.02em">{{ hello }}</div><div style="font-size:15px;color:#5B6475">{{ t.dayOf }}</div></div>
+
+      <sc-if value="{{ isGuide }}">
+      <div style="background:#fff;border:1px solid #E4E2DC;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.rollCall }}</span><button onClick="{{ goGroup }}" style="border:none;background:transparent;padding:0;color:#0E7C86;font-size:14px;font-weight:700">{{ t.seeGroup }}</button></div>
+        <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1">{{ presentLabel }}</span><span style="font-size:15px;color:#5B6475">{{ t.present }}</span></div>
+        <div style="height:8px;border-radius:4px;background:#E4E2DC;overflow:hidden"><div style="height:100%;width:{{ presentPct }};background:#2A9D8F"></div></div>
+        <div style="font-size:14px;color:#5B6475;line-height:1.4">{{ absentLine }}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <button onClick="{{ doRollCall }}" style="height:46px;border-radius:12px;border:none;background:#0E7C86;color:#fff;font-size:14px;font-weight:700">{{ t.doRoll }}</button>
+          <button onClick="{{ openCompose }}" style="height:46px;border-radius:12px;border:1.5px solid #1F2A44;background:transparent;color:#1F2A44;font-size:14px;font-weight:700">{{ t.alertGroup }}</button>
+        </div>
+        <sc-if value="{{ hasSent }}"><div style="font-size:13px;font-weight:600;color:#17544D;background:#DDF1EE;padding:10px 12px;border-radius:10px">{{ sentLine }}</div></sc-if>
+      </div>
+      </sc-if>
+
+      <div style="background:#F4A261;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:10px;color:#1F2A44">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase">{{ t.nextRdv }}</span><span style="font-size:13px;font-weight:700;background:rgba(255,255,255,.6);padding:3px 8px;border-radius:999px">{{ rdvIn }}</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span style="font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1">{{ rdvTime }}</span><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700">{{ p1.name }}</span><span style="font-size:14px;font-style:italic">{{ p1.local }}</span></div></div>
+        <div style="font-size:14px;font-weight:600">{{ t.walk3 }}</div>
+        <sc-if value="{{ rdvAsk }}">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button onClick="{{ rdvComing }}" style="height:46px;border-radius:12px;border:none;background:#1F2A44;color:#fff;font-size:15px;font-weight:700">{{ t.coming }}</button>
+            <button onClick="{{ rdvLate }}" style="height:46px;border-radius:12px;border:1.5px solid #1F2A44;background:transparent;color:#1F2A44;font-size:15px;font-weight:700">{{ t.late }}</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ rdvAnswered }}"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;background:rgba(255,255,255,.6);padding:10px 12px;border-radius:12px;font-size:14px;font-weight:700"><span>{{ rdvAnswer }}</span><button onClick="{{ rdvReset }}" style="border:none;background:transparent;padding:0;color:#1F2A44;font-size:13px;font-weight:700;text-decoration:underline">{{ t.change }}</button></div></sc-if>
+        <sc-if value="{{ isGuide }}"><div style="background:rgba(255,255,255,.6);padding:10px 12px;border-radius:12px;font-size:14px;font-weight:700">{{ t.rdvReplies }}</div></sc-if>
+      </div>
+
+      <button onClick="{{ openChat }}" style="text-align:left;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:20px;border:none;background:#E3F1F2;color:#1F2A44">
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0A5E66">{{ t.pinned }}</span>
+        <span style="font-size:15px;line-height:1.45;text-wrap:pretty">{{ pinnedText }}</span>
+      </button>
+
+      <sc-if value="{{ isTourist }}">
+      <button onClick="{{ goLost }}" style="height:50px;border-radius:14px;border:1.5px solid #1F2A44;background:#fff;color:#1F2A44;font-size:15px;font-weight:700">{{ t.imLost }}</button>
+      </sc-if>
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding-top:6px"><span style="font-size:22px;font-weight:800;letter-spacing:-.01em">{{ t.planToday }}</span>
+        <sc-if value="{{ isGuide }}"><button onClick="{{ openEditor }}" style="border:none;background:transparent;padding:0;color:#0E7C86;font-size:14px;font-weight:700">{{ t.edit }}</button></sc-if>
+        <sc-if value="{{ isTourist }}"><button onClick="{{ goMap }}" style="border:none;background:transparent;padding:0;color:#0E7C86;font-size:14px;font-weight:700">{{ t.onMap }}</button></sc-if>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="6">
+        <div style="display:flex;flex-direction:column">
+          <sc-if value="{{ s.hasLeg }}">
+          <div style="display:grid;grid-template-columns:48px 20px minmax(0,1fr);gap:10px;min-height:40px">
+            <div></div>
+            <div style="display:flex;justify-content:center"><div style="width:2px;background-image:linear-gradient(#C3C7CF 55%,transparent 55%);background-size:2px 7px"></div></div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 0;flex-wrap:wrap"><span style="font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;background:{{ s.legSoft }};color:{{ s.legC }}">{{ s.legLabel }}</span><span style="font-size:13px;color:#5B6475">{{ s.legText }}</span></div>
+          </div>
+          </sc-if>
+          <div style="display:grid;grid-template-columns:48px 20px minmax(0,1fr);gap:10px;align-items:start">
+            <div style="display:flex;flex-direction:column;padding-top:12px;font-variant-numeric:tabular-nums"><span style="font-size:15px;font-weight:700;color:{{ s.timeC }}">{{ s.start }}</span><span style="font-size:12px;color:#5B6475">{{ s.end }}</span></div>
+            <div style="display:flex;justify-content:center;padding-top:15px"><div style="width:16px;height:16px;border-radius:50%;background:{{ s.dotBg }};border:2px solid {{ s.dotBorder }}"></div></div>
+            <div style="background:#fff;border:1px solid {{ s.cardBorder }};border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;opacity:{{ s.op }}">
+              <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><div style="font-size:16px;font-weight:700;line-height:1.25">{{ s.name }}</div><sc-if value="{{ s.isNow }}"><span style="flex:none;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#1F2A44;background:#F4A261;padding:3px 7px;border-radius:6px">{{ t.now }}</span></sc-if></div>
+              <span style="font-size:13px;font-style:italic;color:#5B6475">{{ s.local }}</span>
+              <sc-if value="{{ s.hasPrice }}"><span style="font-size:13px;font-weight:600">{{ s.price }}</span></sc-if>
+              <sc-if value="{{ s.hasRdv }}"><span style="align-self:flex-start;margin-top:4px;font-size:12px;font-weight:700;color:#0A5E66;background:#E3F1F2;padding:4px 8px;border-radius:8px">{{ s.rdv }}</span></sc-if>
+              <sc-if value="{{ s.hasTip }}"><span style="font-size:13px;color:#5B6475;line-height:1.4;padding-top:2px;text-wrap:pretty">{{ s.tip }}</span></sc-if>
+            </div>
+          </div>
+        </div>
+        </sc-for>
+      </div>
+      <button onClick="{{ openTips }}" style="text-align:left;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:20px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44">
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.tipDay }}</span>
+        <span style="font-size:15px;line-height:1.45;text-wrap:pretty">{{ tipOfDay }}</span>
+        <span style="font-size:14px;font-weight:700;color:#0E7C86">{{ t.allTips }}</span>
+      </button>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ showMap }}">
+    <div style="display:flex;flex-direction:column">
+      <div style="position:relative;width:368px;height:440px;overflow:hidden;background:#EEF0EC">
+        <svg width="368" height="440" style="position:absolute;left:0;top:0;display:block">
+          <ellipse cx="302" cy="46" rx="64" ry="38" style="fill:#DCE6D3"></ellipse>
+          <ellipse cx="52" cy="262" rx="32" ry="62" style="fill:#DCE6D3"></ellipse>
+          <ellipse cx="264" cy="310" rx="20" ry="15" style="fill:#DCE6D3"></ellipse>
+          <path d="M150 0 C160 50,118 95,135 150 S150 215,140 258 S104 300,148 352 S190 402,172 440" style="fill:none;stroke:#BFD9E0;stroke-width:14px;stroke-linecap:round"></path>
+          <line x1="178" y1="44" x2="210" y2="256" style="stroke:#fff;stroke-width:5px"></line>
+          <line x1="210" y1="256" x2="338" y2="176" style="stroke:#fff;stroke-width:5px"></line>
+          <line x1="210" y1="256" x2="294" y2="294" style="stroke:#fff;stroke-width:5px"></line>
+          <line x1="330" y1="186" x2="256" y2="270" style="stroke:#fff;stroke-width:4px"></line>
+          <line x1="58" y1="178" x2="112" y2="152" style="stroke:#fff;stroke-width:5px"></line>
+          <line x1="205" y1="160" x2="305" y2="148" style="stroke:#fff;stroke-width:4px"></line>
+          <line x1="210" y1="256" x2="150" y2="226" style="stroke:#fff;stroke-width:4px"></line>
+          <line x1="150" y1="226" x2="112" y2="152" style="stroke:#fff;stroke-width:4px"></line>
+          <line x1="88" y1="322" x2="80" y2="440" style="stroke:#fff;stroke-width:5px"></line>
+          <line x1="294" y1="294" x2="345" y2="335" style="stroke:#fff;stroke-width:4px"></line>
+          <polyline points="338,176 318,215 294,294 240,338 215,400" style="fill:none;stroke:#3A63A8;stroke-width:3px;opacity:.55"></polyline>
+          <polyline points="338,176 310,150 270,140 242,112 178,44" style="fill:none;stroke:#C9803F;stroke-width:3px;opacity:.55"></polyline>
+          <sc-if value="{{ showRisk }}">
+            <sc-for list="{{ riskZones }}" as="z" hint-placeholder-count="4"><circle cx="{{ z.x }}" cy="{{ z.y }}" r="{{ z.r }}" style="fill:rgba(244,162,97,.2);stroke:#C9803F;stroke-width:1.5px;stroke-dasharray:3 3"></circle></sc-for>
+          </sc-if>
+          <sc-for list="{{ segs }}" as="g" hint-placeholder-count="6"><line x1="{{ g.x1 }}" y1="{{ g.y1 }}" x2="{{ g.x2 }}" y2="{{ g.y2 }}" style="stroke:{{ g.c }};stroke-width:{{ g.w }};stroke-dasharray:{{ g.dash }};stroke-linecap:round;opacity:{{ g.op }}"></line></sc-for>
+          <sc-if value="{{ showGroupLayer }}">
+            <circle cx="{{ zone.x }}" cy="{{ zone.y }}" r="30" style="fill:rgba(42,157,143,.14);stroke:#2A9D8F;stroke-width:1.5px;stroke-dasharray:5 4"></circle>
+            <sc-for list="{{ groupDots }}" as="d" hint-placeholder-count="10"><circle cx="{{ d.x }}" cy="{{ d.y }}" r="3.5" style="fill:#2A9D8F;stroke:#fff;stroke-width:1.5px"></circle></sc-for>
+          </sc-if>
+          <sc-if value="{{ lost }}">
+            <line x1="{{ me.x }}" y1="{{ me.y }}" x2="{{ p1.x }}" y2="{{ p1.y }}" style="stroke:#0E7C86;stroke-width:4px;stroke-dasharray:2 7;stroke-linecap:round"></line>
+          </sc-if>
+        </svg>
+        {{ meDot }}
+        <sc-for list="{{ stepMarks }}" as="m" hint-placeholder-count="6">
+          <div style="position:absolute;left:{{ m.left }};top:{{ m.top }};width:{{ m.size }};height:{{ m.size }};border-radius:50%;background:{{ m.bg }};color:{{ m.color }};border:2px solid #fff;display:grid;place-items:center;font-size:10px;font-weight:800;box-shadow:0 1px 3px rgba(0,0,0,.25);pointer-events:none">{{ m.label }}</div>
+        </sc-for>
+        <sc-for list="{{ pointMarks }}" as="m" hint-placeholder-count="4">
+          <button onClick="{{ m.on }}" style="position:absolute;left:{{ m.left }};top:{{ m.top }};display:flex;align-items:center;gap:4px;padding:0;border:none;background:transparent;flex-direction:{{ m.dir }};transform:{{ m.tf }}">
+            <span style="flex:none;width:22px;height:22px;border-radius:7px;background:{{ m.bg }};color:#fff;border:2px solid #fff;display:grid;place-items:center;font-size:11px;font-weight:800;box-shadow:0 1px 4px rgba(0,0,0,.3)">{{ m.label }}</span>
+            <span style="font-size:10px;font-weight:700;color:#1F2A44;white-space:nowrap;background:rgba(255,255,255,.9);padding:2px 5px;border-radius:5px">{{ m.name }}</span>
+          </button>
+        </sc-for>
+        <sc-if value="{{ showGroupLayer }}">
+          <sc-for list="{{ absentMarks }}" as="m" hint-placeholder-count="2">
+            <div style="position:absolute;left:{{ m.left }};top:{{ m.top }};display:flex;align-items:center;gap:4px;pointer-events:none"><span style="width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #1F2A44"></span><span style="font-size:10px;font-weight:700;color:#fff;background:#1F2A44;padding:2px 5px;border-radius:5px;white-space:nowrap">{{ m.name }}</span></div>
+          </sc-for>
+        </sc-if>
+        <button onClick="{{ openHotel }}" style="position:absolute;left:{{ hotelMark.left }};top:{{ hotelMark.top }};display:flex;flex-direction:row-reverse;align-items:center;gap:4px;padding:0;border:none;background:transparent;transform:translateX(-100%)">
+          <span style="width:22px;height:22px;border-radius:7px;background:#1F2A44;color:#fff;border:2px solid #fff;display:grid;place-items:center;font-size:11px;font-weight:800">H</span>
+          <span style="font-size:10px;font-weight:700;color:#1F2A44;background:rgba(255,255,255,.9);padding:2px 5px;border-radius:5px">Hotel</span>
+        </button>
+        <div style="position:absolute;top:12px;left:12px;right:12px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none">
+          <sc-for list="{{ cityChips }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.on }}" style="flex:none;padding:8px 12px;border-radius:999px;border:none;background:{{ c.bg }};color:{{ c.color }};font-size:13px;font-weight:700;box-shadow:0 2px 8px rgba(31,42,68,.14)">{{ c.label }}</button></sc-for>
+        </div>
+        <button onClick="{{ toggleRisk }}" style="position:absolute;right:12px;bottom:36px;padding:8px 12px;border-radius:999px;border:none;background:{{ riskBtn.bg }};color:{{ riskBtn.color }};font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(31,42,68,.14)">{{ t.vigilance }}</button>
+      </div>
+      <div style="margin-top:-24px;position:relative;background:#F8F7F4;border-radius:24px 24px 0 0;padding:10px 20px 100px;display:flex;flex-direction:column;gap:14px">
+        <div style="align-self:center;width:40px;height:5px;border-radius:3px;background:#D5D8D2"></div>
+        <sc-if value="{{ lost }}">
+        <div style="background:#fff;border:2px solid #0E7C86;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:13px;font-weight:700;color:#17544D">✓ {{ t.posSent }}</span>
+          <span style="font-size:20px;font-weight:800;letter-spacing:-.01em;line-height:1.2">{{ t.goToPoint }} {{ p1.name }}</span>
+          <span style="font-size:14px;color:#5B6475">{{ t.lostRoute }}</span>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.4">
+            <sc-for list="{{ lostSteps }}" as="d" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:22px 1fr;gap:8px"><span style="font-weight:800;color:#0E7C86">{{ d.n }}</span><span>{{ d.x }}</span></div></sc-for>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button onClick="{{ callGuide }}" style="height:46px;border-radius:12px;border:none;background:#0E7C86;color:#fff;font-size:14px;font-weight:700">{{ t.callGuide }}</button>
+            <button onClick="{{ foundGroup }}" style="height:46px;border-radius:12px;border:1.5px solid #1F2A44;background:transparent;color:#1F2A44;font-size:14px;font-weight:700">{{ t.foundGroup }}</button>
+          </div>
+        </div>
+        </sc-if>
+        <sc-if value="{{ showLostBtn }}"><button onClick="{{ goLost }}" style="height:50px;border-radius:14px;border:1.5px solid #1F2A44;background:#fff;color:#1F2A44;font-size:15px;font-weight:700">{{ t.imLost }}</button></sc-if>
+        <sc-if value="{{ isGuide }}">
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.groupOnMap }}</span>
+          <span style="font-size:18px;font-weight:800">{{ presentLabel }} {{ t.inZone }}</span>
+          <sc-for list="{{ absents }}" as="a" hint-placeholder-count="2"><div style="display:flex;justify-content:space-between;gap:10px;font-size:14px;padding-top:4px"><span style="font-weight:700">{{ a.n }}</span><span style="color:#5B6475;text-align:right">{{ a.last }}</span></div></sc-for>
+        </div>
+        </sc-if>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:20px;overflow:hidden;display:flex;flex-direction:column">
+          <div style="height:110px;background:repeating-linear-gradient(135deg,#E4E7E2 0 10px,#EEF0EC 10px 20px);display:grid;place-items:center"><span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#5B6475;background:#fff;padding:4px 8px;border-radius:6px">photo · {{ selPoint.local }}</span></div>
+          <div style="padding:14px 16px;display:flex;flex-direction:column;gap:4px">
+            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0A5E66">{{ t.meetPoint }} {{ selPoint.label }}</span>
+            <span style="font-size:18px;font-weight:800;line-height:1.2">{{ selPoint.name }}</span>
+            <span style="font-size:15px;font-style:italic">{{ selPoint.local }}</span>
+            <span style="font-size:13px;color:#5B6475;padding-top:2px">{{ selPoint.link }} · {{ selPoint.dist }}</span>
+          </div>
+        </div>
+        <button onClick="{{ openHotel }}" style="display:flex;align-items:center;gap:12px;text-align:left;padding:14px 16px;border-radius:20px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44">
+          <span style="flex:none;width:44px;height:44px;border-radius:12px;background:#1F2A44;color:#fff;display:grid;place-items:center;font-weight:800">H</span>
+          <span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:700">{{ t.myHotel }}</span><span style="font-size:13px;color:#5B6475">Via Cavour 128 · {{ t.hotelDist }}</span></span><span>→</span>
+        </button>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12px;color:#5B6475;font-weight:600">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:18px;border-top:3px dotted #0E7C86"></span>{{ t.walk }}</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:18px;height:4px;background:#1F2A44;border-radius:2px"></span>Metro</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:4px;background:#0E7C86"></span>{{ t.meetPoints }}</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:50%;background:rgba(244,162,97,.3);border:1.5px dashed #C9803F"></span>{{ t.vigilance }}</span>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ showBook }}">
+    <div style="padding:6px 20px 100px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:8px"><div style="font-size:30px;font-weight:800;letter-spacing:-.02em">{{ t.tBook }}</div><span style="font-size:11px;font-weight:800;padding:3px 7px;border-radius:6px;background:#FDEBDC;color:#1F2A44">V2</span></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#ECEBE6;padding:4px;border-radius:14px">
+        <sc-for list="{{ bookSegs }}" as="b" hint-placeholder-count="3"><button onClick="{{ b.on }}" style="padding:10px 4px;border-radius:11px;border:none;background:{{ b.bg }};color:#1F2A44;font-size:14px;font-weight:700;box-shadow:{{ b.sh }}">{{ b.label }}</button></sc-for>
+      </div>
+      <sc-if value="{{ segTransport }}">
+        <sc-for list="{{ transports }}" as="o" hint-placeholder-count="4">
+          <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:700">{{ o.name }}</span><span style="font-size:13px;color:#5B6475">{{ o.meta }}</span></div><div style="flex:none;display:flex;flex-direction:column;align-items:flex-end"><span style="font-size:20px;font-weight:800">{{ o.eur }}</span><span style="font-size:12px;font-weight:600;color:#5B6475">{{ o.home }}</span></div></div>
+            <span style="font-size:13px;line-height:1.4;color:#1F2A44;background:#F3F2EE;padding:10px 12px;border-radius:10px">{{ o.how }}</span>
+            <sc-if value="{{ o.buy }}"><button onClick="{{ o.onBuy }}" style="height:44px;border-radius:12px;border:none;background:#0E7C86;color:#fff;font-size:14px;font-weight:700">{{ t.buyInApp }}</button></sc-if>
+          </div>
+        </sc-for>
+      </sc-if>
+      <sc-if value="{{ segMuseum }}">
+        <sc-for list="{{ museums }}" as="m" hint-placeholder-count="5">
+          <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:700">{{ m.name }}</span><span style="font-size:13px;font-style:italic;color:#5B6475">{{ m.local }}</span><span style="font-size:13px;color:#5B6475">{{ m.hours }}</span></div><div style="flex:none;display:flex;flex-direction:column;align-items:flex-end"><span style="font-size:20px;font-weight:800">{{ m.eur }}</span><span style="font-size:12px;font-weight:600;color:#5B6475">{{ m.home }}</span></div></div>
+            <sc-if value="{{ m.hasNote }}"><span style="font-size:13px;line-height:1.4;color:#5B6475">{{ m.note }}</span></sc-if>
+            <button onClick="{{ m.onBuy }}" style="height:44px;border-radius:12px;border:1.5px solid #0E7C86;background:transparent;color:#0A5E66;font-size:14px;font-weight:700">{{ m.cta }}</button>
+          </div>
+        </sc-for>
+        <span style="font-size:12px;color:#5B6475;line-height:1.45">{{ t.officialNote }}</span>
+      </sc-if>
+      <sc-if value="{{ segTickets }}">
+        <sc-if value="{{ noTickets }}"><div style="padding:30px 10px;text-align:center;font-size:15px;color:#5B6475;line-height:1.45">{{ t.noTickets }}</div></sc-if>
+        <sc-for list="{{ tickets }}" as="k" hint-placeholder-count="0">
+          <div style="display:flex;gap:12px;align-items:center;background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:14px 16px">
+            <span style="flex:none;width:44px;height:44px;border-radius:12px;background:#E3F1F2;color:#0A5E66;display:grid;place-items:center;font-size:12px;font-weight:800">QR</span>
+            <span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:700">{{ k.name }}</span><span style="font-size:13px;color:#5B6475">{{ k.meta }}</span></span>
+            <span style="font-size:12px;font-weight:700;color:#17544D">{{ t.inDocs }}</span>
+          </div>
+        </sc-for>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ showDocs }}">
+    <div style="padding:6px 20px 100px;display:flex;flex-direction:column;gap:14px">
+      <sc-if value="{{ docsLocked }}">
+      <div style="min-height:580px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:0 10px">
+        <div style="width:92px;height:92px;border-radius:50%;background:#E3F1F2;display:grid;place-items:center"><div style="position:relative;width:34px;height:40px"><div style="position:absolute;left:6px;top:0;width:22px;height:22px;border:4px solid #0E7C86;border-bottom:none;border-radius:12px 12px 0 0"></div><div style="position:absolute;left:0;bottom:0;width:34px;height:24px;border-radius:6px;background:#0E7C86"></div></div></div>
+        <div style="font-size:28px;font-weight:800;letter-spacing:-.02em">{{ t.tDocs }}</div>
+        <div style="font-size:15px;line-height:1.45;color:#5B6475;text-wrap:pretty">{{ t.lockedD }}</div>
+        <button onClick="{{ unlock }}" style="margin-top:8px;width:100%;height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:17px;font-weight:700">{{ unlockLabel }}</button>
+      </div>
+      </sc-if>
+      <sc-if value="{{ docsOpen }}">
+        <div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:30px;font-weight:800;letter-spacing:-.02em">{{ t.tDocs }}</div><span style="font-size:12px;font-weight:700;color:#17544D;background:#DDF1EE;padding:5px 10px;border-radius:999px">{{ t.encOff }}</span></div>
+        <div style="background:#1F2A44;color:#fff;border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase"><span>{{ passportTitle }}</span><span style="font-family:ui-monospace,Menlo,monospace">{{ passportCode }}</span></div>
+          <div style="font-size:26px;font-weight:800;letter-spacing:-.01em">{{ fullName }}</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;color:#C9D1DE">{{ t.fNum }}</span><span style="font-size:15px;font-weight:600">•••• 7105</span></div>
+            <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;color:#C9D1DE">{{ t.fExp }}</span><span style="font-size:15px;font-weight:600">08/2032</span></div>
+          </div>
+          <div style="font-size:13px;color:#E1E6EE;line-height:1.4;border-top:1px solid rgba(255,255,255,.18);padding-top:12px">{{ t.mrzOk }}</div>
+        </div>
+        <button onClick="{{ openExport }}" style="height:52px;border-radius:14px;border:none;background:#0E7C86;color:#fff;font-size:15px;font-weight:700">{{ t.exportPdf }}</button>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 16px">
+          <sc-for list="{{ docs }}" as="d" hint-placeholder-count="4">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #EFEEEA">
+              <div style="flex:none;width:40px;height:40px;border-radius:12px;background:#ECEBE6;display:grid;place-items:center;font-size:12px;font-weight:800">{{ d.k }}</div>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:700">{{ d.n }}</span><span style="font-size:13px;color:#5B6475">{{ d.s }}</span></div>
+              <span style="font-size:12px;font-weight:700;color:#17544D">{{ t.offlineShort }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <button onClick="{{ scanNewToast }}" style="height:52px;border-radius:14px;border:1.5px dashed #C3C7CF;background:transparent;color:#1F2A44;font-size:15px;font-weight:700">+ {{ t.scanNew }}</button>
+        <div style="font-size:13px;color:#5B6475;line-height:1.45">{{ t.guideNoAccess }}</div>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ showGroup }}">
+    <div style="padding:6px 20px 100px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:30px;font-weight:800;letter-spacing:-.02em">{{ t.tGroup }}</div><div style="font-size:14px;color:#5B6475">{{ t.groupMeta }}</div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <button onClick="{{ doRollCall }}" style="height:64px;border-radius:14px;border:none;background:#0E7C86;color:#fff;font-size:13px;font-weight:700;line-height:1.2">{{ t.doRoll }}</button>
+        <button onClick="{{ openCompose }}" style="height:64px;border-radius:14px;border:1.5px solid #1F2A44;background:#fff;color:#1F2A44;font-size:13px;font-weight:700;line-height:1.2">{{ t.alertGroup }}</button>
+        <button onClick="{{ openInvite }}" style="height:64px;border-radius:14px;border:1.5px solid #1F2A44;background:#fff;color:#1F2A44;font-size:13px;font-weight:700;line-height:1.2">{{ t.invite }}</button>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:28px;font-weight:800">{{ presentLabel }}</span><span style="font-size:14px;color:#5B6475">{{ t.present }} · {{ t.tapToMark }}</span></div>
+      <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 14px">
+        <sc-for list="{{ members }}" as="m" hint-placeholder-count="8">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #EFEEEA">
+            <button onClick="{{ m.onToggle }}" style="flex:none;width:40px;height:40px;border-radius:50%;border:none;background:{{ m.avBg }};color:{{ m.avC }};font-size:12px;font-weight:800">{{ m.i }}</button>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:center;gap:6px"><span style="font-size:15px;font-weight:700">{{ m.n }}</span><sc-if value="{{ m.hasHealth }}"><button onClick="{{ m.onHealth }}" style="border:none;padding:2px 6px;border-radius:6px;background:#E3F1F2;color:#0A5E66;font-size:11px;font-weight:800">+ {{ t.health }}</button></sc-if></div>
+              <span style="font-size:12px;color:{{ m.stC }};font-weight:600">{{ m.status }}</span>
+            </div>
+            <button onClick="{{ m.onCall }}" style="flex:none;width:44px;height:44px;border-radius:50%;border:none;background:#ECEBE6;color:#1F2A44;font-size:12px;font-weight:700">{{ t.call }}</button>
+          </div>
+        </sc-for>
+        <div style="padding:12px 0;font-size:13px;color:#5B6475">{{ t.others }}</div>
+      </div>
+      <button onClick="{{ openPoints }}" style="display:flex;align-items:center;justify-content:space-between;padding:16px;border-radius:18px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44;font-size:15px;font-weight:700"><span>{{ t.managePoints }}</span><span>→</span></button>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ showMore }}">
+    <div style="padding:6px 20px 100px;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:30px;font-weight:800;letter-spacing:-.02em">{{ t.tMore }}</div>
+      <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 16px">
+        <sc-for list="{{ moreRows }}" as="r" hint-placeholder-count="7">
+          <button onClick="{{ r.on }}" style="width:100%;display:flex;align-items:center;gap:10px;text-align:left;padding:15px 0;border:none;border-bottom:1px solid #EFEEEA;background:transparent;color:#1F2A44">
+            <span style="flex:1;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:700">{{ r.label }}</span><span style="font-size:13px;color:#5B6475">{{ r.sub }}</span></span>
+            <sc-if value="{{ r.hasBadge }}"><span style="font-size:12px;font-weight:800;color:#fff;background:#0E7C86;padding:2px 8px;border-radius:999px">{{ r.badge }}</span></sc-if>
+            <span style="color:#5B6475">→</span>
+          </button>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:18px;background:#fff;border:1px solid #E4E2DC"><span style="font-size:15px;font-weight:700">{{ t.language }}</span><div style="display:flex;gap:2px;border:1px solid #E4E2DC;padding:3px;border-radius:999px"><sc-for list="{{ langOpts }}" as="l" hint-placeholder-count="2"><button onClick="{{ l.on }}" style="border:none;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700;background:{{ l.bg }};color:{{ l.color }}">{{ l.label }}</button></sc-for></div></div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ hasSub }}">
+    <div style="padding:6px 20px 100px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:12px"><button onClick="{{ back }}" style="flex:none;width:44px;height:44px;border-radius:50%;border:none;background:#ECEBE6;color:#1F2A44;font-size:18px">←</button><span style="font-size:22px;font-weight:800;letter-spacing:-.01em;line-height:1.15">{{ subTitle }}</span></div>
+
+      <sc-if value="{{ subHotel }}">
+        <div style="background:#1F2A44;color:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C9D1DE">{{ t.showDriver }}</span>
+          <span style="font-size:34px;font-weight:800;line-height:1.1;letter-spacing:-.01em">Hotel Travertino<br>Via Cavour, 128<br>00184 Roma</span>
+          <span style="font-size:18px;font-style:italic;line-height:1.35;color:#E1E6EE">«Per favore, mi porti a questo indirizzo.»</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <button onClick="{{ callHotel }}" style="height:52px;border-radius:14px;border:none;background:#0E7C86;color:#fff;font-size:15px;font-weight:700">{{ t.callHotel }}</button>
+          <button onClick="{{ routeHotel }}" style="height:52px;border-radius:14px;border:1.5px solid #1F2A44;background:transparent;color:#1F2A44;font-size:15px;font-weight:700">{{ t.route }}</button>
+        </div>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 16px">
+          <sc-for list="{{ hotelRows }}" as="r" hint-placeholder-count="3"><div style="display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #EFEEEA;font-size:14px"><span style="color:#5B6475">{{ r.k }}</span><span style="font-weight:700;text-align:right">{{ r.v }}</span></div></sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ subChat }}">
+        <div style="background:#E3F1F2;border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0A5E66">{{ t.pinned }}</span><span style="font-size:14px;line-height:1.4">{{ pinnedText }}</span></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ chat }}" as="c" hint-placeholder-count="4">
+            <div style="display:flex;flex-direction:column;align-items:{{ c.align }};gap:3px">
+              <span style="font-size:11px;font-weight:700;color:#5B6475">{{ c.who }}</span>
+              <div style="max-width:78%;padding:10px 13px;border-radius:16px;background:{{ c.bg }};color:{{ c.color }};font-size:14px;line-height:1.4">{{ c.text }}</div>
+              <sc-if value="{{ c.pending }}"><span style="font-size:11px;font-weight:600;color:#5B6475">{{ t.pending }}</span></sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;padding-top:6px">
+          <button onClick="{{ sharePosChat }}" style="flex:none;height:44px;padding:0 12px;border-radius:12px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44;font-size:13px;font-weight:700">{{ t.position }}</button>
+          <input value="{{ draft }}" onChange="{{ onDraft }}" placeholder="{{ t.writeMsg }}" style="flex:1;min-width:0;height:44px;border-radius:12px;border:1px solid #E4E2DC;background:#fff;padding:0 12px;font-size:14px;color:#1F2A44;outline:none">
+          <button onClick="{{ sendMsg }}" style="flex:none;width:44px;height:44px;border-radius:12px;border:none;background:#0E7C86;color:#fff;font-size:18px;font-weight:700">↑</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ subTips }}">
+        <div style="display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px"><sc-for list="{{ tipCats }}" as="c" hint-placeholder-count="5"><button onClick="{{ c.on }}" style="flex:none;padding:8px 14px;border-radius:999px;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.color }};font-size:14px;font-weight:600">{{ c.label }}</button></sc-for></div>
+        <sc-for list="{{ tipList }}" as="p" hint-placeholder-count="4"><div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0A5E66">{{ p.cat }}</span><span style="font-size:16px;font-weight:700;line-height:1.3">{{ p.title }}</span><span style="font-size:14px;line-height:1.45;color:#3A4459;text-wrap:pretty">{{ p.body }}</span></div></sc-for>
+        <span style="font-size:12px;color:#5B6475">{{ t.tipsOffline }}</span>
+      </sc-if>
+
+      <sc-if value="{{ subConverter }}">
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;color:#5B6475">{{ conv.fromLabel }}</span><input value="{{ conv.amount }}" onChange="{{ onAmount }}" inputmode="decimal" style="height:60px;border-radius:14px;border:1.5px solid #D5D8D2;padding:0 16px;font-size:28px;font-weight:800;color:#1F2A44;outline:none;background:#F8F7F4"></div>
+          <button onClick="{{ swapConv }}" style="align-self:center;width:44px;height:44px;border-radius:50%;border:none;background:#E3F1F2;color:#0A5E66;font-size:18px;font-weight:800">⇅</button>
+          <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;color:#5B6475">{{ conv.toLabel }}</span><span style="font-size:36px;font-weight:800;letter-spacing:-.02em">{{ conv.result }}</span></div>
+          <span style="font-size:13px;color:#5B6475">{{ conv.rateLine }}</span>
+        </div>
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.myCurrency }}</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ curChips }}" as="c" hint-placeholder-count="7"><button onClick="{{ c.on }}" style="padding:9px 13px;border-radius:12px;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.color }};font-size:14px;font-weight:700">{{ c.label }}</button></sc-for></div>
+      </sc-if>
+
+      <sc-if value="{{ subTaxfree }}">
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.tfRules }}</span>
+          <sc-for list="{{ tfRules }}" as="r" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:14px;line-height:1.45"><span style="font-weight:800;color:#0E7C86">{{ r.n }}</span><span>{{ r.x }}</span></div></sc-for>
+        </div>
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.tfMine }}</span>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 16px">
+          <sc-for list="{{ purchases }}" as="p" hint-placeholder-count="3"><div style="display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #EFEEEA"><span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:700">{{ p.n }}</span><span style="font-size:12px;font-weight:700;color:{{ p.c }}">{{ p.st }}</span></span><span style="display:flex;flex-direction:column;align-items:flex-end"><span style="font-size:15px;font-weight:800">{{ p.eur }}</span><span style="font-size:12px;color:#5B6475">{{ p.home }}</span></span></div></sc-for>
+          <div style="display:flex;justify-content:space-between;padding:14px 0;font-size:15px"><span style="font-weight:700">{{ t.tfEstimate }}</span><span style="font-weight:800;color:#17544D">{{ tfTotal }}</span></div>
+        </div>
+        <span style="font-size:12px;color:#5B6475">{{ t.tfNote }}</span>
+      </sc-if>
+
+      <sc-if value="{{ subHealth }}">
+        <button onClick="{{ toggleShareHealth }}" style="display:flex;gap:14px;align-items:center;text-align:left;padding:16px;border-radius:18px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44">
+          <span style="flex:1;display:flex;flex-direction:column;gap:3px"><span style="font-size:16px;font-weight:700">{{ t.shareGuide }}</span><span style="font-size:13px;color:#5B6475;line-height:1.4">{{ t.shareGuideD }}</span></span>
+          <span style="flex:none;width:50px;height:30px;border-radius:15px;background:{{ shareHealth.bg }};padding:3px;display:flex;justify-content:{{ shareHealth.jc }}"><span style="width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2)"></span></span>
+        </button>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 16px">
+          <sc-for list="{{ healthRows }}" as="r" hint-placeholder-count="4"><div style="display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #EFEEEA;font-size:14px"><span style="color:#5B6475">{{ r.k }}</span><span style="font-weight:700;text-align:right">{{ r.v }}</span></div></sc-for>
+        </div>
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.emergencyContact }}</span>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:700">Luc Martin</span><span style="font-size:13px;color:#5B6475">{{ t.brother }} · +1 514 555 0148</span></span><button onClick="{{ editToast }}" style="border:none;background:transparent;color:#0E7C86;font-size:14px;font-weight:700">{{ t.edit }}</button></div>
+        <span style="font-size:12px;color:#5B6475;line-height:1.45">{{ t.healthLegal }}</span>
+      </sc-if>
+
+      <sc-if value="{{ subLocation }}">
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475">{{ t.locShare }}</span>
+        <sc-for list="{{ locOpts }}" as="o" hint-placeholder-count="3">
+          <button onClick="{{ o.on }}" style="display:flex;gap:12px;align-items:flex-start;text-align:left;padding:15px;border-radius:16px;border:2px solid {{ o.border }};background:#fff;color:#1F2A44">
+            <span style="flex:none;width:22px;height:22px;border-radius:50%;border:2px solid {{ o.border }};display:grid;place-items:center"><span style="width:10px;height:10px;border-radius:50%;background:{{ o.fill }}"></span></span>
+            <span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:700">{{ o.label }}</span><span style="font-size:13px;color:#5B6475;line-height:1.4">{{ o.desc }}</span></span>
+          </button>
+        </sc-for>
+        <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475;padding-top:6px">{{ t.rdvReminders }}</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ remindChips }}" as="c" hint-placeholder-count="4"><button onClick="{{ c.on }}" style="padding:9px 14px;border-radius:12px;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.color }};font-size:14px;font-weight:700">{{ c.label }}</button></sc-for></div>
+        <span style="font-size:13px;color:#5B6475;line-height:1.45">{{ t.batteryNote }}</span>
+      </sc-if>
+
+      <sc-if value="{{ subEditor }}">
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 12px">
+          <sc-for list="{{ edSteps }}" as="s" hint-placeholder-count="6">
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #EFEEEA">
+              <button onClick="{{ s.onTime }}" style="flex:none;width:92px;height:36px;border-radius:10px;border:1px solid #E4E2DC;background:#F8F7F4;color:#1F2A44;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums">{{ s.range }}</button>
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:700;line-height:1.25">{{ s.name }}</span><sc-if value="{{ s.hasRdv }}"><span style="font-size:11px;font-weight:700;color:#0A5E66">{{ s.rdv }}</span></sc-if></span>
+              <sc-if value="{{ s.canDel }}"><button onClick="{{ s.onDel }}" style="flex:none;width:36px;height:36px;border-radius:50%;border:none;background:#ECEBE6;color:#5B6475;font-size:16px">×</button></sc-if>
+            </div>
+          </sc-for>
+          <button onClick="{{ addStop }}" style="width:100%;height:48px;border:none;background:transparent;color:#0E7C86;font-size:15px;font-weight:700">+ {{ t.addStop }}</button>
+        </div>
+        <span style="font-size:12px;color:#5B6475">{{ t.edHint }}</span>
+        <button onClick="{{ toggleTemplate }}" style="display:flex;gap:14px;align-items:center;text-align:left;padding:16px;border-radius:18px;border:1px solid #E4E2DC;background:#fff;color:#1F2A44">
+          <span style="flex:1;display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:700">{{ t.saveTemplate }}</span><span style="font-size:13px;color:#5B6475">{{ t.saveTemplateD }}</span></span>
+          <span style="flex:none;width:50px;height:30px;border-radius:15px;background:{{ tplToggle.bg }};padding:3px;display:flex;justify-content:{{ tplToggle.jc }}"><span style="width:24px;height:24px;border-radius:50%;background:#fff"></span></span>
+        </button>
+        <button onClick="{{ publish }}" style="height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:16px;font-weight:700">{{ t.publish }}</button>
+      </sc-if>
+
+      <sc-if value="{{ subPoints }}">
+        <sc-for list="{{ pointsList }}" as="p" hint-placeholder-count="4">
+          <div style="display:flex;gap:12px;background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:12px">
+            <div style="flex:none;width:64px;height:64px;border-radius:12px;background:repeating-linear-gradient(135deg,#E4E7E2 0 8px,#EEF0EC 8px 16px)"></div>
+            <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;font-weight:800;color:#0A5E66">{{ p.label }}</span><span style="font-size:15px;font-weight:700;line-height:1.25">{{ p.name }}</span><span style="font-size:13px;font-style:italic;color:#5B6475">{{ p.local }}</span><span style="font-size:12px;color:#5B6475">{{ p.link }}</span></div>
+          </div>
+        </sc-for>
+        <button onClick="{{ addPoint }}" style="height:52px;border-radius:14px;border:1.5px dashed #0E7C86;background:transparent;color:#0A5E66;font-size:15px;font-weight:700">+ {{ t.dropPoint }}</button>
+      </sc-if>
+
+      <sc-if value="{{ subCompose }}">
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ presets }}" as="c" hint-placeholder-count="3"><button onClick="{{ c.on }}" style="padding:9px 13px;border-radius:12px;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.color }};font-size:14px;font-weight:700">{{ c.label }}</button></sc-for></div>
+        <textarea value="{{ composeText }}" onChange="{{ onCompose }}" style="min-height:120px;border-radius:14px;border:1.5px solid #D5D8D2;background:#fff;padding:14px;font-size:15px;line-height:1.45;color:#1F2A44;outline:none;resize:none"></textarea>
+        <span style="font-size:13px;color:#5B6475;line-height:1.45">{{ t.priorityNote }}</span>
+        <button onClick="{{ sendAlert }}" style="height:56px;border:none;border-radius:16px;background:#0E7C86;color:#fff;font-size:16px;font-weight:700">{{ t.sendPriority }}</button>
+      </sc-if>
+
+      <sc-if value="{{ subInvite }}">
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:22px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:14px">
+          <div style="display:grid;grid-template-columns:repeat(25,7px);grid-auto-rows:7px;padding:10px;border:1px solid #EFEEEA;border-radius:10px"><sc-for list="{{ qr }}" as="q" hint-placeholder-count="0"><div style="background:{{ q.c }}"></div></sc-for></div>
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:22px;font-weight:700;letter-spacing:.12em">ROMA-2026</span>
+          <span style="font-size:14px;color:#5B6475">viaggio.app/j/ROMA-2026</span>
+        </div>
+        <button onClick="{{ shareLink }}" style="height:52px;border-radius:14px;border:none;background:#0E7C86;color:#fff;font-size:15px;font-weight:700">{{ t.shareLink }}</button>
+        <span style="font-size:13px;color:#5B6475;line-height:1.45">{{ t.inviteNote }}</span>
+      </sc-if>
+
+      <sc-if value="{{ subMember }}">
+        <div style="display:flex;align-items:center;gap:14px"><div style="width:60px;height:60px;border-radius:50%;background:#E3F1F2;color:#0A5E66;display:grid;place-items:center;font-size:18px;font-weight:800">{{ mem.i }}</div><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:20px;font-weight:800">{{ mem.n }}</span><span style="font-size:13px;color:#17544D;font-weight:600">{{ t.sharedWithYou }}</span></div></div>
+        <div style="background:#fff;border:1px solid #E4E2DC;border-radius:18px;padding:4px 16px"><sc-for list="{{ mem.rows }}" as="r" hint-placeholder-count="4"><div style="display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid #EFEEEA;font-size:14px"><span style="color:#5B6475">{{ r.k }}</span><span style="font-weight:700;text-align:right">{{ r.v }}</span></div></sc-for></div>
+        <button onClick="{{ mem.onCall }}" style="height:52px;border-radius:14px;border:none;background:#0E7C86;color:#fff;font-size:15px;font-weight:700">{{ t.call }} {{ mem.first }}</button>
+        <span style="font-size:12px;color:#5B6475;line-height:1.45">{{ t.healthLegalGuide }}</span>
+      </sc-if>
+    </div>
+    </sc-if>
+
+  </div>
+  <button onClick="{{ openSos }}" style="position:absolute;right:16px;bottom:100px;width:62px;height:62px;border-radius:50%;border:3px solid #fff;background:#D62828;color:#fff;font-size:15px;font-weight:800;letter-spacing:.02em;box-shadow:0 8px 20px rgba(214,40,40,.4);z-index:15">SOS</button>
+  <div style="flex:none;height:86px;padding:8px 6px 28px;background:#0E7C86;display:grid;grid-template-columns:repeat({{ tabCount }},1fr);gap:2px">
+    <sc-for list="{{ tabs }}" as="b" hint-placeholder-count="5">
+      <button onClick="{{ b.on }}" style="border:none;border-radius:12px;background:{{ b.bg }};color:{{ b.color }};font-size:12px;font-weight:700;padding:0 2px">{{ b.label }}</button>
+    </sc-for>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasNotif }}">
+  <div style="position:absolute;left:10px;right:10px;top:54px;z-index:35;background:rgba(255,255,255,.97);border-radius:22px;padding:14px;box-shadow:0 14px 40px rgba(17,22,31,.28);display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:22px;height:22px;border-radius:6px;background:#0E7C86;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800">V</span><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#5B6475">VIAGGIO · {{ t.nowShort }}</span></div>
+    <div style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:800">{{ notif.title }}</span><span style="font-size:14px;line-height:1.4">{{ notif.body }}</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <button onClick="{{ notif.onA }}" style="height:42px;border-radius:12px;border:none;background:#0E7C86;color:#fff;font-size:14px;font-weight:700">{{ notif.a }}</button>
+      <button onClick="{{ notif.onB }}" style="height:42px;border-radius:12px;border:1px solid #D5D8D2;background:#fff;color:#1F2A44;font-size:14px;font-weight:700">{{ notif.b }}</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasSheet }}">
+  <div style="position:absolute;inset:0;background:rgba(17,22,31,.5);display:flex;flex-direction:column;justify-content:flex-end;z-index:30">
+    <div style="background:#F8F7F4;border-radius:28px 28px 0 0;padding:22px 20px 40px;display:flex;flex-direction:column;gap:14px">
+      <sc-if value="{{ sheetSosType }}">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:24px;font-weight:800;color:#D62828">{{ t.sosTitle }}</span><button onClick="{{ closeSheet }}" style="border:none;background:transparent;color:#5B6475;font-size:15px;font-weight:600">{{ t.cancel }}</button></div>
+        <span style="font-size:15px;color:#3A4459">{{ t.sosAsk }}</span>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <sc-for list="{{ sosTypes }}" as="s" hint-placeholder-count="5"><button onClick="{{ s.on }}" style="min-height:64px;text-align:left;padding:12px 14px;border-radius:16px;border:1.5px solid #E4E2DC;background:#fff;color:#1F2A44;display:flex;flex-direction:column;gap:2px;grid-column:{{ s.col }}"><span style="font-size:15px;font-weight:800">{{ s.label }}</span><span style="font-size:12px;color:#5B6475">{{ s.desc }}</span></button></sc-for>
+        </div>
+        <button onClick="{{ call112 }}" style="height:56px;border-radius:16px;border:none;background:#D62828;color:#fff;font-size:17px;font-weight:800">{{ t.call112 }}</button>
+      </sc-if>
+      <sc-if value="{{ sheetExport }}">
+        <span style="font-size:22px;font-weight:800">{{ t.exportPdf }}</span>
+        <span style="font-size:14px;color:#5B6475;line-height:1.45">{{ t.exportD }}</span>
+        <sc-for list="{{ exportOpts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.on }}" style="height:52px;border-radius:14px;border:1.5px solid #E4E2DC;background:#fff;color:#1F2A44;font-size:15px;font-weight:700;text-align:left;padding:0 16px">{{ o.label }}</button></sc-for>
+        <button onClick="{{ closeSheet }}" style="height:44px;border:none;background:transparent;color:#5B6475;font-size:15px;font-weight:600">{{ t.cancel }}</button>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasSosActive }}">
+  <div style="position:absolute;inset:0;z-index:32;background:#F8F7F4;display:flex;flex-direction:column;overflow-y:auto;scrollbar-width:none">
+    <div style="background:#D62828;color:#fff;padding:64px 20px 22px;display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase">SOS · {{ sos.type }}</span>
+      <span style="font-size:28px;font-weight:800;line-height:1.1;letter-spacing:-.01em">{{ t.sosSent }}</span>
+      <span style="font-size:14px;line-height:1.4">{{ t.sosSentD }}</span>
+    </div>
+    <div style="padding:18px 20px 40px;display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ sosNumbers }}" as="n" hint-placeholder-count="2">
+        <button onClick="{{ n.on }}" style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:16px;border:none;background:{{ n.bg }};color:{{ n.color }};text-align:left"><span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:800">{{ n.label }}</span><span style="font-size:13px">{{ n.sub }}</span></span><span style="font-size:22px;font-weight:800">{{ n.num }}</span></button>
+      </sc-for>
+      <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6475;padding-top:6px">{{ t.whatToDo }}</span>
+      <sc-for list="{{ sos.steps }}" as="s" hint-placeholder-count="3">
+        <div style="display:flex;gap:12px;padding:14px;border-radius:16px;background:#fff;border:1px solid #E4E2DC"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#1F2A44;color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800">{{ s.n }}</span><span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:700">{{ s.t }}</span><span style="font-size:13px;color:#5B6475;line-height:1.4">{{ s.d }}</span></span></div>
+      </sc-for>
+      <sc-if value="{{ sos.hasExport }}"><button onClick="{{ openExport }}" style="height:50px;border-radius:14px;border:none;background:#0E7C86;color:#fff;font-size:15px;font-weight:700">{{ t.exportPdf }}</button></sc-if>
+      <button onClick="{{ cancelSos }}" style="height:50px;border-radius:14px;border:1.5px solid #1F2A44;background:transparent;color:#1F2A44;font-size:15px;font-weight:700">{{ t.cancelSos }}</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasGuideSos }}">
+  <div style="position:absolute;inset:0;z-index:36;background:#D62828;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:70px 22px 44px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase">{{ t.sosReceived }}</span>
+      <span style="font-size:40px;font-weight:800;line-height:1.02;letter-spacing:-.02em">Marc Dubois</span>
+      <span style="font-size:18px;font-weight:700">{{ t.sosMedical }}</span>
+      <div style="background:rgba(255,255,255,.14);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.4"><span>{{ t.sosPos }}</span><span>{{ t.sosHealthShared }}</span></div>
+      <span style="font-size:13px">{{ t.silentNote }}</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <button onClick="{{ guideCallMarc }}" style="height:56px;border-radius:16px;border:none;background:#fff;color:#B01F1F;font-size:17px;font-weight:800">{{ t.callMarc }}</button>
+      <button onClick="{{ guideSeeMap }}" style="height:52px;border-radius:16px;border:2px solid #fff;background:transparent;color:#fff;font-size:16px;font-weight:700">{{ t.seeMap }}</button>
+      <button onClick="{{ guideCall112 }}" style="height:44px;border:none;background:transparent;color:#fff;font-size:15px;font-weight:700;text-decoration:underline">{{ t.call112 }}</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasToast }}">
+  <div style="position:absolute;left:20px;right:20px;bottom:178px;display:flex;justify-content:center;z-index:40;pointer-events:none"><div style="background:#1F2A44;color:#fff;padding:12px 18px;border-radius:14px;font-size:14px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.25);text-align:center">{{ toast }}</div></div>
+  </sc-if>
+
+  <div style="position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:{{ homeInd }};z-index:45"></div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;role&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;tourist&quot;,&quot;guide&quot;],&quot;default&quot;:&quot;tourist&quot;,&quot;tsType&quot;:&quot;'tourist'|'guide'&quot;},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;fr&quot;,&quot;en&quot;],&quot;default&quot;:&quot;fr&quot;,&quot;tsType&quot;:&quot;'fr'|'en'&quot;},&quot;homeCurrency&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;CAD&quot;,&quot;USD&quot;,&quot;GBP&quot;,&quot;CHF&quot;,&quot;JPY&quot;,&quot;BRL&quot;,&quot;CNY&quot;],&quot;default&quot;:&quot;CAD&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;startAt&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;onboarding&quot;,&quot;app&quot;],&quot;default&quot;:&quot;onboarding&quot;,&quot;tsType&quot;:&quot;'onboarding'|'app'&quot;},&quot;showPanel&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const B = (fr, en) => ({fr, en: en == null ? fr : en});
+const L = (o, l) => o == null ? '' : (typeof o === 'string' ? o : o[l]);
+const T = {
+fr: {
+tagline:"Voyagez en groupe, en toute sécurité.", welcomeBody:"Votre parcours du jour, vos rendez-vous, vos documents et l'aide d'urgence, même sans réseau.",
+language:"Langue", start:"Commencer", continue:"Continuer", later:"Plus tard", enter:"Entrer dans l'app",
+step1:"Étape 1 sur 3", step2:"Étape 2 sur 3", step3:"Étape 3 sur 3", roleTitle:"Vous êtes…",
+roleT:"Touriste", roleTD:"Je suis le parcours de mon groupe, ou je me déplace en solo.",
+roleG:"Guide", roleGD:"Je crée les parcours, fixe les rendez-vous et pilote mon groupe.",
+inviteCode:"Code d'invitation du groupe", orQr:"ou scanner le QR code du guide",
+groupFound:"✓ Rome Éternelle · guide Julien Moreau", groupFoundD:"20 voyageurs · du 24 au 30 septembre",
+consentTitle:"Vos données, vos choix", consentBody:"Trois consentements séparés. Vous pouvez les changer à tout moment dans Plus.",
+cPos:"Position", cPosD:"Partagée avec votre guide pendant les activités du groupe. Toujours envoyée en cas de SOS.",
+cDocs:"Documents", cDocsD:"Chiffrés sur votre téléphone et sur le serveur. Votre guide n'y a jamais accès.",
+cHealth:"Santé", cHealthD:"Données sensibles. Partagées avec votre guide seulement si vous l'activez.",
+consentLegal:"Données du voyage supprimées après votre retour. Export et suppression du compte depuis l'app.",
+scanTitle:"Scannez votre passeport", scanBody:"Lecture automatique de la bande MRZ. Copie chiffrée, consultable hors-ligne.",
+scanHint:"Cadrez la page avec la photo", scanning:"Lecture de la bande MRZ…", scanBtn:"Scanner",
+savedTitle:"Passeport protégé", savedBody:"Chiffré · Disponible hors-ligne", fName:"Nom", fNat:"Nationalité", fNum:"Numéro", fExp:"Expiration",
+guideNoAccess:"Votre guide n'a jamais accès à vos documents. Ouverture par Face ID, empreinte ou code.",
+dateLine:"VEN 25 SEPT · ROME · 24°", dayOf:"Jour 2 sur 7 · Rome Éternelle",
+nextRdv:"Prochain rendez-vous", walk3:"3 min à pied depuis votre position", coming:"J'arrive", late:"En retard", change:"Modifier",
+rdvReplies:"Réponses : 12 J'arrive · 2 En retard · 6 sans réponse",
+pinned:"Épinglé · Julien, guide", imLost:"Je ne vois plus le groupe", planToday:"Programme du jour", edit:"Modifier", onMap:"Sur la carte", now:"En cours",
+tipDay:"Conseil du jour", allTips:"Tous les conseils de Rome →",
+rollCall:"Appel", seeGroup:"Voir le groupe", present:"présents", doRoll:"Faire l'appel", alertGroup:"Alerter le groupe",
+tToday:"Aujourd'hui", tMap:"Carte", tBook:"Réserver", tDocs:"Documents", tMore:"Plus", tGroup:"Groupe",
+walk:"À pied", meetPoint:"Point de rencontre", meetPoints:"Points de rencontre", vigilance:"Zones de vigilance",
+posSent:"Position envoyée à Julien", goToPoint:"Rejoignez", lostRoute:"Point de rencontre le plus proche · 4 min à pied · carte hors-ligne",
+callGuide:"Appeler Julien", foundGroup:"J'ai retrouvé le groupe", groupOnMap:"Le groupe", inZone:"dans la zone",
+myHotel:"Mon hôtel", hotelDist:"1,1 km", showDriver:"Montrez cet écran au chauffeur", callHotel:"Appeler l'hôtel", route:"Itinéraire",
+bTransport:"Transports", bMuseum:"Musées", bTickets:"Mes billets", buyInApp:"Acheter dans l'app",
+officialNote:"Achat via la billetterie officielle. Le billet est rangé dans Mes documents. Tarifs indicatifs 2026.",
+noTickets:"Aucun billet pour l'instant. Vos achats apparaîtront ici et dans Documents.", inDocs:"Dans Documents",
+lockedD:"Vos documents sont chiffrés. Vous seul pouvez les ouvrir, même sans réseau.", unlock:"Déverrouiller avec Face ID", unlocking:"Vérification…",
+encOff:"Chiffré · Hors-ligne", mrzOk:"Lu via MRZ · copie valable pour la police et l'ambassade", exportPdf:"Exporter en PDF", offlineShort:"Hors-ligne", scanNew:"Scanner un document",
+exportD:"Un PDF de vos documents, prêt à envoyer ou à montrer.", exPolice:"Pour la police", exEmbassy:"Pour l'ambassade", exShare:"Partager…",
+groupMeta:"Rome Éternelle · 20 voyageurs · 24–30 sept", invite:"Inviter", tapToMark:"touchez un avatar pour cocher", health:"Santé", call:"Appeler",
+others:"+ 12 autres voyageurs présents", managePoints:"Points de rencontre du parcours", presentSt:"Présent", absentSt:"Absent",
+rowChat:"Groupe", rowChatD:"Chat avec Julien et le groupe", rowTips:"Conseils & astuces", rowTipsD:"Usages, arnaques, pourboires, églises",
+rowConv:"Convertisseur de devises", rowTax:"Détaxe (Tax Free)", rowTaxD:"Remboursement de TVA · Italie",
+rowHealth:"Profil santé & contact d'urgence", rowHealthD:"Partage avec le guide", rowLoc:"Partage de position & notifications",
+rowTpl:"Bibliothèque de parcours", rowTplD:"3 modèles enregistrés", rowPhone:"Numéro joignable par le groupe", rowPhoneD:"+39 333 204 1187",
+subHotel:"Mon hôtel", subChat:"Groupe · Rome Éternelle", subTips:"Conseils & astuces · Rome", subConv:"Convertisseur", subTax:"Détaxe · Italie",
+subHealth:"Profil santé", subLoc:"Position & notifications", subEditor:"Parcours du jour", subPoints:"Points de rencontre", subCompose:"Alerte au groupe",
+subInvite:"Inviter des voyageurs", subMember:"Fiche santé",
+pending:"En attente de réseau", position:"Position", writeMsg:"Écrire un message…",
+tipsOffline:"Tous les conseils sont lisibles hors-ligne.", myCurrency:"Ma devise",
+tfRules:"Les règles en Italie", tfMine:"Mes achats", tfEstimate:"Remboursement estimé", tfNote:"Règles indicatives, à vérifier auprès des douanes italiennes.",
+shareGuide:"Partager avec mon guide", shareGuideD:"Julien voit ces informations uniquement pendant le voyage.", emergencyContact:"Contact d'urgence", brother:"Frère",
+healthLegal:"Donnée sensible (RGPD, art. 9) : chiffrée, accès limité au guide du groupe, supprimée après le voyage.",
+locShare:"Partage de position", rdvReminders:"Rappels avant les rendez-vous",
+batteryNote:"Suivi continu uniquement pendant un SOS ou « Je ne vois plus le groupe », pour préserver la batterie.",
+addStop:"Ajouter une étape", edHint:"Touchez un horaire pour le décaler de 15 min.", saveTemplate:"Enregistrer comme modèle", saveTemplateD:"Réutilisable pour un autre groupe",
+publish:"Envoyer la modification aux 20 voyageurs", dropPoint:"Poser un point sur la carte",
+priorityNote:"Message prioritaire : notification sonore pour tous, avec accusé de lecture par personne.", sendPriority:"Envoyer à tout le groupe",
+shareLink:"Partager le lien", inviteNote:"Les voyageurs scannent ce QR code ou saisissent le code à l'inscription.",
+sharedWithYou:"Partagée avec vous", healthLegalGuide:"Consultation seulement. Visible car le voyageur l'a autorisé.",
+sosTitle:"SOS", sosAsk:"Que se passe-t-il ? Votre guide sera prévenu avec votre position.", cancel:"Annuler", call112:"Appeler le 112",
+sMed:"Médical", sMedD:"Malaise, blessure", sTheft:"Vol", sTheftD:"Sac, téléphone, carte", sDoc:"Perte de document", sDocD:"Passeport, billet",
+sLost:"Perdu du groupe", sLostD:"Je ne vois plus personne", sOther:"Autre", sOtherD:"Autre urgence",
+sosSent:"Julien est prévenu", sosSentD:"Votre position est partagée en continu jusqu'à la fin de l'alerte.", whatToDo:"Que faire maintenant",
+cancelSos:"Mettre fin à l'alerte", n112:"Numéro unique d'urgence", n112D:"Police, ambulance, pompiers · répond en anglais",
+nEmb:"Ambassade du Canada", nEmbD:"Via Zara 30 · 2,6 km", nGuide:"Julien, votre guide", nGuideD:"Prévenu · position partagée",
+sosReceived:"SOS reçu · il y a 20 s", sosMedical:"Urgence médicale", sosPos:"Forum romain, Via Sacra · 180 m de vous", sosHealthShared:"Fiche santé partagée : allergie aux arachides, stylo d'adrénaline dans son sac.",
+silentNote:"Alerte sonore même en mode silencieux.", callMarc:"Appeler Marc", seeMap:"Voir sur la carte",
+offline:"Hors-ligne · messages envoyés au retour du réseau", lastSync:"Synchro 10:12", nowShort:"MAINTENANT",
+nRdvT:"Rendez-vous dans 10 min", nRdvB:"Arc de Constantin · 11:00 · 3 min à pied", nMsgT:"Message prioritaire · Julien", nMsgB:"Changement : rendez-vous à 11:15 au lieu de 11:00, même lieu.",
+read:"Lu", open:"Ouvrir", currencySet:"", in20:"dans 20 min",
+tRoll:"Demande d'appel envoyée aux 20 voyageurs", tQr:"Caméra prête pour le QR code", tCall:"Appel en cours (démo)", tRoute:"Itinéraire lancé",
+tBought:"Billet acheté · rangé dans Documents", tPdf:"PDF prêt · partagé", tSent:"Modification envoyée · 20 notifications", tPoint:"Point ajouté : Piazza Venezia",
+tLink:"Lien copié", tEdit:"Modification (démo)", tFound:"Retour au groupe confirmé · Julien est prévenu", tCity:"Carte hors-ligne à télécharger (démo)",
+tCancelSos:"Alerte terminée · Julien est prévenu", tScan:"Caméra prête"
+},
+en: {
+tagline:"Travel as a group, safely.", welcomeBody:"Your daily route, meeting times, documents and emergency help, even without signal.",
+language:"Language", start:"Get started", continue:"Continue", later:"Later", enter:"Enter the app",
+step1:"Step 1 of 3", step2:"Step 2 of 3", step3:"Step 3 of 3", roleTitle:"You are…",
+roleT:"Traveller", roleTD:"I follow my group's route, or explore on my own.",
+roleG:"Guide", roleGD:"I build routes, set meeting points and run my group.",
+inviteCode:"Group invite code", orQr:"or scan your guide's QR code",
+groupFound:"✓ Eternal Rome · guide Julien Moreau", groupFoundD:"20 travellers · 24 to 30 September",
+consentTitle:"Your data, your choice", consentBody:"Three separate consents. Change them anytime in More.",
+cPos:"Location", cPosD:"Shared with your guide during group activities. Always sent during an SOS.",
+cDocs:"Documents", cDocsD:"Encrypted on your phone and on the server. Your guide never has access.",
+cHealth:"Health", cHealthD:"Sensitive data. Shared with your guide only if you turn it on.",
+consentLegal:"Trip data is deleted after you return. Export or delete your account from the app.",
+scanTitle:"Scan your passport", scanBody:"The MRZ strip is read automatically. Encrypted copy, available offline.",
+scanHint:"Frame the photo page", scanning:"Reading the MRZ strip…", scanBtn:"Scan",
+savedTitle:"Passport protected", savedBody:"Encrypted · Available offline", fName:"Name", fNat:"Nationality", fNum:"Number", fExp:"Expiry",
+guideNoAccess:"Your guide never has access to your documents. Opens with Face ID, fingerprint or passcode.",
+dateLine:"FRI 25 SEPT · ROME · 24°", dayOf:"Day 2 of 7 · Eternal Rome",
+nextRdv:"Next meeting", walk3:"3 min walk from where you are", coming:"On my way", late:"Running late", change:"Change",
+rdvReplies:"Replies: 12 on their way · 2 late · 6 no reply",
+pinned:"Pinned · Julien, guide", imLost:"I can't see the group", planToday:"Today's plan", edit:"Edit", onMap:"On the map", now:"Now",
+tipDay:"Tip of the day", allTips:"All Rome tips →",
+rollCall:"Roll call", seeGroup:"See group", present:"present", doRoll:"Take roll call", alertGroup:"Alert the group",
+tToday:"Today", tMap:"Map", tBook:"Book", tDocs:"Documents", tMore:"More", tGroup:"Group",
+walk:"Walk", meetPoint:"Meeting point", meetPoints:"Meeting points", vigilance:"Caution zones",
+posSent:"Location sent to Julien", goToPoint:"Head to", lostRoute:"Nearest meeting point · 4 min walk · offline map",
+callGuide:"Call Julien", foundGroup:"I found the group", groupOnMap:"The group", inZone:"in the zone",
+myHotel:"My hotel", hotelDist:"1.1 km", showDriver:"Show this screen to the driver", callHotel:"Call the hotel", route:"Directions",
+bTransport:"Transport", bMuseum:"Museums", bTickets:"My tickets", buyInApp:"Buy in the app",
+officialNote:"Bought through the official ticket office. Your ticket is stored in Documents. Indicative 2026 prices.",
+noTickets:"No tickets yet. Your purchases will appear here and in Documents.", inDocs:"In Documents",
+lockedD:"Your documents are encrypted. Only you can open them, even offline.", unlock:"Unlock with Face ID", unlocking:"Checking…",
+encOff:"Encrypted · Offline", mrzOk:"Read via MRZ · valid copy for police and embassy", exportPdf:"Export as PDF", offlineShort:"Offline", scanNew:"Scan a document",
+exportD:"A PDF of your documents, ready to send or show.", exPolice:"For the police", exEmbassy:"For the embassy", exShare:"Share…",
+groupMeta:"Eternal Rome · 20 travellers · 24–30 Sept", invite:"Invite", tapToMark:"tap an avatar to mark", health:"Health", call:"Call",
+others:"+ 12 other travellers present", managePoints:"Route meeting points", presentSt:"Present", absentSt:"Absent",
+rowChat:"Group", rowChatD:"Chat with Julien and the group", rowTips:"Tips & advice", rowTipsD:"Customs, scams, tipping, churches",
+rowConv:"Currency converter", rowTax:"Tax Free", rowTaxD:"VAT refund · Italy",
+rowHealth:"Health profile & emergency contact", rowHealthD:"Shared with guide", rowLoc:"Location sharing & notifications",
+rowTpl:"Route library", rowTplD:"3 saved templates", rowPhone:"Number for the group", rowPhoneD:"+39 333 204 1187",
+subHotel:"My hotel", subChat:"Group · Eternal Rome", subTips:"Tips & advice · Rome", subConv:"Converter", subTax:"Tax Free · Italy",
+subHealth:"Health profile", subLoc:"Location & notifications", subEditor:"Today's route", subPoints:"Meeting points", subCompose:"Group alert",
+subInvite:"Invite travellers", subMember:"Health card",
+pending:"Waiting for signal", position:"Location", writeMsg:"Write a message…",
+tipsOffline:"All tips are readable offline.", myCurrency:"My currency",
+tfRules:"The rules in Italy", tfMine:"My purchases", tfEstimate:"Estimated refund", tfNote:"Indicative rules, check with Italian customs.",
+shareGuide:"Share with my guide", shareGuideD:"Julien sees this only during the trip.", emergencyContact:"Emergency contact", brother:"Brother",
+healthLegal:"Sensitive data (GDPR art. 9): encrypted, access limited to your group guide, deleted after the trip.",
+locShare:"Location sharing", rdvReminders:"Reminders before meetings",
+batteryNote:"Continuous tracking only during an SOS or \"I can't see the group\", to save battery.",
+addStop:"Add a stop", edHint:"Tap a time to shift it by 15 min.", saveTemplate:"Save as template", saveTemplateD:"Reuse it for another group",
+publish:"Send the change to 20 travellers", dropPoint:"Drop a point on the map",
+priorityNote:"Priority message: sound alert for everyone, with read receipts per person.", sendPriority:"Send to the whole group",
+shareLink:"Share the link", inviteNote:"Travellers scan this QR code or enter the code when they sign up.",
+sharedWithYou:"Shared with you", healthLegalGuide:"View only. Visible because the traveller allowed it.",
+sosTitle:"SOS", sosAsk:"What's happening? Your guide will be alerted with your location.", cancel:"Cancel", call112:"Call 112",
+sMed:"Medical", sMedD:"Feeling unwell, injury", sTheft:"Theft", sTheftD:"Bag, phone, card", sDoc:"Lost document", sDocD:"Passport, ticket",
+sLost:"Lost from group", sLostD:"I can't see anyone", sOther:"Other", sOtherD:"Another emergency",
+sosSent:"Julien has been alerted", sosSentD:"Your location is shared continuously until the alert ends.", whatToDo:"What to do now",
+cancelSos:"End the alert", n112:"Emergency number", n112D:"Police, ambulance, fire · English spoken",
+nEmb:"Embassy of Canada", nEmbD:"Via Zara 30 · 2.6 km", nGuide:"Julien, your guide", nGuideD:"Alerted · location shared",
+sosReceived:"SOS received · 20 s ago", sosMedical:"Medical emergency", sosPos:"Roman Forum, Via Sacra · 180 m from you", sosHealthShared:"Shared health card: peanut allergy, adrenaline pen in his bag.",
+silentNote:"Sound alert even in silent mode.", callMarc:"Call Marc", seeMap:"See on map",
+offline:"Offline · messages send when signal returns", lastSync:"Synced 10:12", nowShort:"NOW",
+nRdvT:"Meeting in 10 min", nRdvB:"Arch of Constantine · 11:00 · 3 min walk", nMsgT:"Priority message · Julien", nMsgB:"Change: meeting at 11:15 instead of 11:00, same place.",
+read:"Read", open:"Open", currencySet:"", in20:"in 20 min",
+tRoll:"Roll call sent to 20 travellers", tQr:"Camera ready for the QR code", tCall:"Calling (demo)", tRoute:"Directions started",
+tBought:"Ticket bought · stored in Documents", tPdf:"PDF ready · shared", tSent:"Change sent · 20 notifications", tPoint:"Point added: Piazza Venezia",
+tLink:"Link copied", tEdit:"Edit (demo)", tFound:"Back with the group · Julien notified", tCity:"Offline map to download (demo)",
+tCancelSos:"Alert ended · Julien notified", tScan:"Camera ready"
+}};
+const CUR = {CAD:{r:1.61,n:B('Dollar canadien','Canadian dollar'),d:0}, USD:{r:1.17,n:B('Dollar américain','US dollar'),d:0}, GBP:{r:0.87,n:B('Livre sterling','Pound sterling'),d:0},
+  CHF:{r:0.94,n:B('Franc suisse','Swiss franc'),d:0}, JPY:{r:172,n:B('Yen','Yen'),d:0}, BRL:{r:6.3,n:B('Réal brésilien','Brazilian real'),d:0}, CNY:{r:8.4,n:B('Yuan','Yuan'),d:0}};
+const P = {
+hotel:{n:B('Hôtel Travertino','Hotel Travertino'),it:'Hotel Travertino',x:300,y:225},
+colosseo:{n:B('Colisée & Palatin','Colosseum & Palatine'),it:'Colosseo e Palatino',x:294,y:294},
+foro:{n:B('Forum romain','Roman Forum'),it:'Foro Romano',x:252,y:274},
+monti:{n:B('Déjeuner à Monti','Lunch in Monti'),it:'Rione Monti',x:292,y:250},
+trevi:{n:B('Fontaine de Trevi','Trevi Fountain'),it:'Fontana di Trevi',x:234,y:166},
+pantheon:{n:B('Panthéon','Pantheon'),it:'Pantheon',x:196,y:204},
+navona:{n:B('Piazza Navona'),it:'Piazza Navona',x:163,y:196},
+vaticani:{n:B('Musées du Vatican','Vatican Museums'),it:'Musei Vaticani',x:40,y:120},
+borghese:{n:B('Galerie Borghèse','Borghese Gallery'),it:'Galleria Borghese',x:285,y:42},
+castel:{n:B('Château Saint-Ange',"Castel Sant'Angelo"),it:"Castel Sant'Angelo",x:112,y:152},
+venezia:{n:B('Piazza Venezia'),it:'Piazza Venezia',x:210,y:250}
+};
+const POINTS0 = [
+{k:'P1',n:B('Arc de Constantin','Arch of Constantine'),it:'Arco di Costantino',x:262,y:324,link:B('Colisée · 11:00','Colosseum · 11:00')},
+{k:'P2',n:B('Place du Capitole','Capitol Square'),it:'Piazza del Campidoglio',x:216,y:268,link:B('Forum romain · 12:30','Roman Forum · 12:30')},
+{k:'P3',n:B('Trevi, côté Via delle Muratte','Trevi, Via delle Muratte side'),it:'Fontana di Trevi – Via delle Muratte',short:'Fontana di Trevi',x:226,y:182,link:B('Trevi · 15:15','Trevi · 15:15')},
+{k:'P4',n:B('Fontaine des Quatre-Fleuves','Fountain of the Four Rivers'),it:'Fontana dei Quattro Fiumi',x:160,y:210,link:B('Navona · 17:30','Navona · 17:30')}
+];
+const MODES = {walk:{c:'#0E7C86',soft:'#E3F1F2',dash:'2 7',w:3.5,n:B('À pied','Walk')}, metro:{c:'#1F2A44',soft:'#E6E9EF',dash:'none',w:4,n:B('Métro','Metro')}, bus:{c:'#1F2A44',soft:'#FDEBDC',dash:'none',w:4,n:B('Bus')}};
+const S = (s, e, p, mode, min, leg, eur, rdv, tip) => ({s, e, p, mode, min, leg, eur, rdv, tip});
+const PLAN0 = [
+S('08:15','08:30','hotel'),
+S('08:45','10:50','colosseo','metro',8,B('Ligne B · Cavour → Colosseo','Line B · Cavour → Colosseo'),18,'P1',B('Billet nominatif : gardez votre passeport dans Documents.','Named ticket: keep your passport in Documents.')),
+S('11:00','12:30','foro','walk',5,B('Via Sacra'),B('Inclus','Included'),'P2'),
+S('12:45','14:00','monti','walk',10,B('Via Cavour'),20),
+S('14:30','15:15','trevi','walk',20,B('Via Nazionale → Via della Dataria'),null,'P3',B('Zone très fréquentée : sac fermé, devant vous.','Very crowded: bag zipped, in front of you.')),
+S('15:30','16:15','pantheon','walk',8,B('Via delle Muratte → Via del Seminario'),5),
+S('16:30','17:30','navona','walk',5,B('Via Giustiniani'),null,'P4'),
+S('18:00','','hotel','bus',25,B('Bus 70 · Senato → Nazionale'),1.5)
+];
+const RISK = [{x:338,y:176,r:26},{x:294,y:294,r:22},{x:234,y:166,r:16}];
+const MEMBERS0 = [
+{n:'Claire Martin',i:'CM',p:true,h:true,rows:[[B('Diabète','Diabetes'),B('Type 1')],[B('Traitement','Treatment'),B('Insuline (stylo)','Insulin (pen)')],[B('Allergies'),B('Aucune','None')],[B('Groupe sanguin','Blood type'),'O+'],[B("Contact d'urgence",'Emergency contact'),'Luc Martin · +1 514 555 0148']]},
+{n:'Marc Dubois',i:'MD',p:false,last:B('Forum romain · il y a 4 min','Roman Forum · 4 min ago'),h:true,rows:[[B('Allergies'),B('Arachides (sévère)','Peanuts (severe)')],[B('Traitement','Treatment'),B("Stylo d'adrénaline",'Adrenaline pen')],[B('Groupe sanguin','Blood type'),'A+'],[B("Contact d'urgence",'Emergency contact'),'Anne Dubois · +33 6 12 45 78 90']]},
+{n:'Sophie Laurent',i:'SL',p:false,last:B('Via dei Fori Imperiali · il y a 9 min','Via dei Fori Imperiali · 9 min ago')},
+{n:'Paul Girard',i:'PG',p:true},{n:'Émilie Roux',i:'ÉR',p:true,h:true,rows:[[B('Asthme','Asthma'),B('Oui (inhalateur)','Yes (inhaler)')],[B('Groupe sanguin','Blood type'),'B+']]},
+{n:'Hugo Petit',i:'HP',p:true},{n:'Nadia Benali',i:'NB',p:true},{n:'Thomas Leroy',i:'TL',p:true}
+];
+const TIPS = [
+['usages',B('Le café se boit au comptoir','Coffee is drunk at the bar'),B("Au comptoir, un expresso coûte environ 1,20 €. Assis en terrasse près des monuments, il peut coûter trois fois plus.","At the counter an espresso costs about €1.20. Seated on a terrace near the sights it can cost three times as much.")],
+['usages',B('Le « coperto » est normal','The "coperto" is normal'),B("Un couvert de 2 à 4 € par personne est courant au restaurant. Il doit être écrit sur le menu.","A cover charge of €2–4 per person is common. It must be printed on the menu.")],
+['arnaques',B('Faux centurions et bracelets « offerts »','Fake centurions and "free" bracelets'),B("Une photo ou un bracelet, puis on vous réclame 10 à 20 €. Refusez poliment et continuez à marcher.","A photo or a bracelet, then they ask for €10–20. Politely refuse and keep walking.")],
+['arnaques',B('Pickpockets : Termini, Trevi, bus 64','Pickpockets: Termini, Trevi, bus 64'),B("Sac fermé porté devant, téléphone dans une poche intérieure. Méfiez-vous de l'aide non demandée aux distributeurs de billets.","Bag zipped and worn in front, phone in an inside pocket. Beware of unrequested help at ticket machines.")],
+['pourboires',B('Pourboire : pas obligatoire','Tipping: not required'),B("Le service est compris. On arrondit ou on laisse 1 à 2 € ; 5 à 10 % pour un service exceptionnel.","Service is included. Round up or leave €1–2; 5–10% for outstanding service.")],
+['eglises',B('Épaules et genoux couverts','Shoulders and knees covered'),B("Obligatoire au Vatican et dans les basiliques. Un foulard léger dans le sac suffit.","Required at the Vatican and in basilicas. A light scarf in your bag is enough.")],
+['usages',B('Eau gratuite aux « nasoni »','Free water at the "nasoni"'),B("Les fontaines de rue de Rome donnent une eau potable et fraîche. Remplissez votre gourde.","Rome's street fountains give fresh drinking water. Refill your bottle.")]
+];
+const TIPCATS = [['all',B('Tous','All')],['usages',B('Usages','Customs')],['arnaques',B('Arnaques','Scams')],['pourboires',B('Pourboires','Tipping')],['eglises',B('Églises','Churches')]];
+const TRANSPORT = [
+{n:B('Métro, bus, tram · BIT','Metro, bus, tram · BIT'),m:B('Valable 100 min · 1 seul passage en métro','Valid 100 min · 1 metro ride'),eur:1.5,buy:true,how:B("Achat dans l'app ou au tabac (T). À valider dès la montée, sinon amende.","Buy in the app or at a tobacconist (T). Validate on boarding or risk a fine.")},
+{n:B('Pass 24 h','24h pass'),m:B('Métro, bus et tram illimités','Unlimited metro, bus and tram'),eur:7,buy:true,how:B("Validez-le une première fois : il court 24 h à partir de là.","Validate it once: it runs for 24h from then.")},
+{n:'Leonardo Express',m:B('Fiumicino ↔ Termini · 32 min','Fiumicino ↔ Termini · 32 min'),eur:14,buy:true,how:B("À valider sur le quai avant de monter si billet papier.","Validate on the platform before boarding if paper ticket.")},
+{n:B('Taxi forfait aéroport','Airport flat-fare taxi'),m:B('Fiumicino → centre historique','Fiumicino → historic centre'),eur:55,buy:false,how:B("Uniquement les taxis blancs à la station officielle. Forfait affiché sur la portière.","Only white taxis at the official rank. Flat fare shown on the door.")}
+];
+const MUSEUMS = [
+{p:'colosseo',eur:18,h:B('8:30–19:00'),note:B('Billet nominatif, créneau horaire.','Named ticket, timed entry.')},
+{p:'vaticani',eur:20,extra:5,h:B('Lun–Sam 8:00–19:00','Mon–Sat 8:00–19:00'),note:B('+5 € de réservation en ligne. Tenue couverte.','+€5 online booking. Covered clothing.')},
+{p:'borghese',eur:15,extra:2,h:B('Mar–Dim 9:00–19:00','Tue–Sun 9:00–19:00'),note:B('Réservation obligatoire, entrées toutes les 2 h.','Booking required, entry every 2 hours.')},
+{p:'pantheon',eur:5,h:B('9:00–19:00')},
+{p:'castel',eur:16,h:B('Mar–Dim 9:00–19:30','Tue–Sun 9:00–19:30')}
+];
+const addMin = (t, m) => { if (!t) return t; const [h, mm] = t.split(':').map(Number); const x = h * 60 + mm + m; return String(Math.floor(x / 60) % 24).padStart(2, '0') + ':' + String(x % 60).padStart(2, '0'); };
+const QR = (() => { const n = 25, out = []; let s = 11; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const f = (r, c, R, C) => { const y = r - R, x = c - C; if (y < 0 || x < 0 || y > 6 || x > 6) return null; return y === 0 || y === 6 || x === 0 || x === 6 || (y >= 2 && y <= 4 && x >= 2 && x <= 4); };
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) { let v = f(r, c, 0, 0); if (v === null) v = f(r, c, 0, 18); if (v === null) v = f(r, c, 18, 0);
+    if (v === null) v = (r === 7 || c === 7 || (r === 17 && c < 8) || (c === 17 && r < 8)) ? false : rnd() > 0.52; out.push({c: v ? '#1F2A44' : '#fff'}); }
+  return out; })();
+
+class Component extends DCLogic {
+  state = {
+    screen: (this.props.startAt ?? 'onboarding') === 'app' ? 'app' : 'welcome',
+    lang: this.props.lang ?? 'fr', role: this.props.role ?? 'tourist', cur: this.props.homeCurrency ?? 'CAD',
+    code: 'ROMA-2026', consents: {pos: true, docs: true, health: false}, scan: 0, scanning: false,
+    tab: 'today', sub: null, rdv: null, lost: false, notif: null, sheet: null, sos: null, guideSos: false, offline: false,
+    unlocked: false, unlocking: false, bookSeg: 'transport', tickets: [], tipCat: 'all', tipIdx: 0,
+    amount: '50', dir: 'eur', shareHealth: true, locMode: 'activities', remind: {30: true, 15: false, 10: true, 5: false},
+    plan: PLAN0.map(s => ({...s})), tpl: true, points: POINTS0.slice(), selPoint: 'P1', members: MEMBERS0.map(m => ({...m})), memberSel: 'Marc Dubois',
+    preset: 0, composeText: '', sent: null, reads: 0, pinned: null,
+    chat: [{who: 'Julien', me: false, text: B('Bonjour à tous ! Rendez-vous à 11:00 devant l\'Arc de Constantin, à la sortie du Colisée.','Morning all! Meet at 11:00 at the Arch of Constantine, by the Colosseum exit.')},
+      {who: 'Paul', me: false, text: B('Merci ! On peut prendre un café avant ?','Thanks! Time for a coffee before?')},
+      {who: 'Julien', me: false, text: B('Oui, bar Oppio en face, 10 minutes max.','Yes, Bar Oppio opposite, 10 minutes max.')}],
+    draft: '', toast: null
+  };
+  scrollRef = React.createRef();
+  timers = [];
+  componentDidUpdate(pp) {
+    const p = this.props, u = {};
+    if (pp.role !== p.role && p.role) u.role = p.role;
+    if (pp.lang !== p.lang && p.lang) u.lang = p.lang;
+    if (pp.homeCurrency !== p.homeCurrency && p.homeCurrency) u.cur = p.homeCurrency;
+    if (pp.startAt !== p.startAt && p.startAt) u.screen = p.startAt === 'app' ? 'app' : 'welcome';
+    if (Object.keys(u).length) this.setState(u);
+  }
+  componentWillUnmount() { this.timers.forEach(t => { clearInterval(t); clearTimeout(t); }); }
+  later(fn, ms) { const id = setTimeout(fn, ms); this.timers.push(id); return id; }
+  toast(k) { const m = T[this.state.lang][k] || k; this.setState({toast: m}); clearTimeout(this.tt); this.tt = this.later(() => this.setState({toast: null}), 2400); }
+  top() { this.later(() => { if (this.scrollRef.current) this.scrollRef.current.scrollTop = 0; }, 0); }
+  go(tab, sub = null, extra = {}) { this.setState({screen: 'app', tab, sub, ...extra}); this.top(); }
+  startScan = () => {
+    if (this.state.scanning) return;
+    this.setState({scanning: true, scan: 0});
+    const id = setInterval(() => { const n = Math.min(100, this.state.scan + 2.5); this.setState({scan: n});
+      if (n >= 100) { clearInterval(id); this.later(() => this.setState({screen: 'done', scanning: false}), 300); } }, 55);
+    this.timers.push(id);
+  };
+  sendAlert = () => {
+    const txt = this.state.composeText || L(this.presets()[this.state.preset], this.state.lang);
+    this.go('today', null, {sent: txt, reads: 3, pinned: txt});
+    const id = setInterval(() => { const r = this.state.reads + 3; if (r >= 18) { clearInterval(id); this.setState({reads: 18}); } else this.setState({reads: r}); }, 700);
+    this.timers.push(id);
+  };
+  presets() { return [B('Retard de 15 min : rendez-vous à 11:15, même lieu.','15 min delay: meet at 11:15, same place.'), B('Changement de lieu : rendez-vous Place du Capitole.','Change of place: meet at Capitol Square.'), B('Rendez-vous avancé à 10:50, merci de vous presser.','Meeting moved to 10:50, please hurry.')]; }
+  fmt(v, d) { const s = v.toFixed(d); return this.state.lang === 'fr' ? s.replace('.', ',') : s; }
+  eur(v) { if (v == null) return ''; return this.fmt(v, Number.isInteger(v) ? 0 : 2) + ' €'; }
+  home(v) { if (v == null) return ''; const c = CUR[this.state.cur]; const x = v * c.r; return '≈ ' + this.fmt(x, x < 20 && this.state.cur !== 'JPY' ? 2 : 0) + ' ' + this.state.cur; }
+  price(v) { if (v == null) return ''; if (typeof v === 'object') return L(v, this.state.lang); return this.eur(v) + ' · ' + this.home(v); }
+
+  renderVals() {
+    const st = this.state, lang = st.lang, t = T[lang], isGuide = st.role === 'guide', isTourist = !isGuide;
+    const nm = k => L(P[k].n, lang);
+    const onPaper = st.screen !== 'welcome';
+    const tog = on => ({bg: on ? '#0E7C86' : '#D5D8D2', jc: on ? 'flex-end' : 'flex-start'});
+    const chip = on => ({bg: on ? '#1F2A44' : '#fff', color: on ? '#fff' : '#1F2A44', border: on ? '#1F2A44' : '#E4E2DC'});
+    const langOpt = dark => ['fr', 'en'].map(l => ({label: l.toUpperCase(), on: () => this.setState({lang: l}),
+      bg: lang === l ? (dark ? '#fff' : '#1F2A44') : 'transparent', color: lang === l ? (dark ? '#0E7C86' : '#fff') : (dark ? '#fff' : '#1F2A44')}));
+    const now = 1, plan = st.plan;
+    const ptBy = k => st.points.find(p => p.k === k);
+    const pt = p => ({label: p.k, name: L(p.n, lang), local: p.it, link: L(p.link, lang), x: p.x, y: p.y});
+
+    const steps = plan.map((s, i) => { const md = s.mode ? MODES[s.mode] : null, done = i < now, isNow = i === now; const pr = this.price(s.eur);
+      return {start: s.s, end: s.e, name: nm(s.p), local: P[s.p].it, price: pr, hasPrice: !!pr, hasLeg: !!md,
+        legLabel: md ? L(md.n, lang) + ' · ' + s.min + ' min' : '', legText: L(s.leg, lang), legC: md ? md.c : '', legSoft: md ? md.soft : '',
+        hasRdv: !!s.rdv, rdv: s.rdv ? t.meetPoint + ' ' + s.rdv + ' · ' + s.e + ' · ' + L(ptBy(s.rdv)?.n, lang) : '',
+        tip: L(s.tip, lang), hasTip: !!s.tip, isNow, op: done ? 0.6 : 1,
+        timeC: isNow ? '#0A5E66' : '#1F2A44', dotBg: isNow ? '#F4A261' : done ? '#2A9D8F' : '#fff', dotBorder: isNow ? '#1F2A44' : done ? '#2A9D8F' : '#B5BAC4', cardBorder: isNow ? '#1F2A44' : '#E4E2DC'}; });
+
+    const g = P[plan[now].p];
+    const me = st.lost ? {x: 236, y: 346} : {x: g.x + 16, y: g.y - 18};
+    const meDot = React.createElement('div', {style: {position: 'absolute', left: me.x - 10, top: me.y - 10, width: 20, height: 20, pointerEvents: 'none', zIndex: 3}},
+      React.createElement('div', {style: {position: 'absolute', inset: 0, borderRadius: '50%', background: '#2F6FDB', animation: 'vpulse 2s ease-out infinite'}}),
+      React.createElement('div', {style: {position: 'absolute', inset: 2, borderRadius: '50%', background: '#2F6FDB', border: '3px solid #fff', boxShadow: '0 2px 6px rgba(0,0,0,.3)'}}));
+    const segs = plan.slice(1).map((s, j) => { const a = P[plan[j].p], b = P[s.p], md = MODES[s.mode]; return {x1: a.x, y1: a.y, x2: b.x, y2: b.y, c: md.c, w: md.w + 'px', dash: md.dash, op: j + 1 <= now ? 0.35 : 0.9}; });
+    const seen = {}; const stepMarks = [];
+    plan.forEach((s, i) => { if (s.p === 'hotel' || seen[s.p]) return; seen[s.p] = 1; const p = P[s.p], sz = i === now ? 22 : 18;
+      stepMarks.push({label: String(i), left: (p.x - sz / 2) + 'px', top: (p.y - sz / 2) + 'px', size: sz + 'px', bg: i === now ? '#F4A261' : '#1F2A44', color: i === now ? '#1F2A44' : '#fff'}); });
+    const pointMarks = st.points.map(p => { const right = p.x > 200; const on = st.selPoint === p.k;
+      return {label: p.k, name: p.short || p.it, left: (right ? p.x + 11 : p.x - 11) + 'px', top: (p.y - 11) + 'px', dir: right ? 'row-reverse' : 'row', tf: right ? 'translateX(-100%)' : 'none',
+        bg: on ? '#0A5E66' : '#0E7C86', on: () => this.setState({selPoint: p.k})}; });
+    const offs = [[-10,-6],[8,-12],[14,6],[-4,12],[-16,4],[6,16],[18,-4],[-12,-16],[2,-8],[-8,20]];
+    const groupDots = offs.map(([x, y]) => ({x: g.x + x * 0.9, y: g.y + y * 0.9}));
+    const absMembers = st.members.filter(m => !m.p);
+    const absPos = [{x: 232, y: 298}, {x: 300, y: 262}];
+    const absentMarks = absMembers.slice(0, 2).map((m, i) => ({name: m.n.split(' ')[0], left: (absPos[i].x - 6) + 'px', top: (absPos[i].y - 6) + 'px'}));
+    const presentN = 12 + st.members.filter(m => m.p).length;
+    const sp = ptBy(st.selPoint) || st.points[0];
+    const selPoint = {...pt(sp), dist: st.lost && sp.k === 'P1' ? '4 min' : (lang === 'fr' ? '3 min à pied' : '3 min walk')};
+
+    const tabDefs = isGuide ? [['today', t.tToday], ['map', t.tMap], ['group', t.tGroup], ['book', t.tBook], ['docs', t.tDocs], ['more', t.tMore]]
+      : [['today', t.tToday], ['map', t.tMap], ['book', t.tBook], ['docs', t.tDocs], ['more', t.tMore]];
+    const tabs = tabDefs.map(([k, lb]) => { const on = st.tab === k && !st.sub; return {label: lb, on: () => this.go(k), bg: on ? '#fff' : 'transparent', color: on ? '#0A5E66' : '#fff'}; });
+
+    const subTitles = {hotel: t.subHotel, chat: t.subChat, tips: t.subTips, converter: t.subConv, taxfree: t.subTax, health: t.subHealth, location: t.subLoc, editor: t.subEditor, points: t.subPoints, compose: t.subCompose, invite: t.subInvite, member: t.subMember};
+    const backTab = {editor: 'today', compose: st.tab, points: 'group', invite: 'group', member: 'group', hotel: 'map', chat: st.tab};
+
+    const docs = [...st.tickets.map(k => ({k: 'QR', n: k.name, s: k.meta})),
+      {k: 'CE', n: lang === 'fr' ? "Carte d'embarquement" : 'Boarding pass', s: 'AC 892 · YUL → FCO'},
+      {k: 'AS', n: lang === 'fr' ? 'Assurance voyage' : 'Travel insurance', s: lang === 'fr' ? 'Police n° 88213 · assistance 24 h/24' : 'Policy no. 88213 · 24/7 assistance'},
+      {k: 'HT', n: lang === 'fr' ? 'Réservation hôtel' : 'Hotel booking', s: 'Hotel Travertino · 24–30/09'}];
+
+    const moreRows = [{label: t.rowChat, sub: t.rowChatD, badge: '3', hasBadge: true, on: () => this.go('more', 'chat')},
+      {label: t.rowTips, sub: t.rowTipsD, on: () => this.go('more', 'tips')},
+      {label: t.rowConv, sub: 'EUR ↔ ' + st.cur + ' · ' + L(CUR[st.cur].n, lang), on: () => this.go('more', 'converter')},
+      ...(isTourist ? [{label: t.rowTax, sub: t.rowTaxD, on: () => this.go('more', 'taxfree')}, {label: t.rowHealth, sub: t.rowHealthD + ' : ' + (st.shareHealth ? (lang === 'fr' ? 'activé' : 'on') : (lang === 'fr' ? 'désactivé' : 'off')), on: () => this.go('more', 'health')},
+        {label: t.rowLoc, sub: L(this.locOpts().find(o => o.k === st.locMode).l, lang), on: () => this.go('more', 'location')}]
+        : [{label: t.rowTpl, sub: t.rowTplD, on: () => this.toast('tEdit')}, {label: t.rowPhone, sub: t.rowPhoneD, on: () => this.toast('tEdit')}])].map(r => ({hasBadge: false, ...r}));
+
+    const conv = (() => { const c = CUR[st.cur]; const a = parseFloat(String(st.amount).replace(',', '.')) || 0; const toEur = st.dir !== 'eur';
+      const res = toEur ? a / c.r : a * c.r;
+      return {amount: st.amount, fromLabel: toEur ? st.cur + ' · ' + L(c.n, lang) : 'EUR · Euro', toLabel: toEur ? 'EUR · Euro' : st.cur + ' · ' + L(c.n, lang),
+        result: this.fmt(res, res < 1000 ? 2 : 0) + ' ' + (toEur ? '€' : st.cur), rateLine: '1 € = ' + this.fmt(c.r, 2) + ' ' + st.cur + (lang === 'fr' ? ' · taux du 25/09 07:00 · gardé hors-ligne' : ' · rate of 25/09 07:00 · kept offline')}; })();
+    const curChips = Object.keys(CUR).map(k => ({label: k, on: () => this.setState({cur: k}), ...chip(st.cur === k)}));
+
+    const purchases = [[B('Sac en cuir · Via dei Coronari','Leather bag · Via dei Coronari'), 240], [B('Lunettes de soleil','Sunglasses'), 180], [B('Souvenirs','Souvenirs'), 45]]
+      .map(([n, v]) => { const ok = v > 70; return {n: L(n, lang), eur: this.eur(v), home: this.home(v), st: ok ? (lang === 'fr' ? 'Éligible · formulaire fait' : 'Eligible · form done') : (lang === 'fr' ? 'Sous le seuil de 70 €' : 'Below €70 threshold'), c: ok ? '#17544D' : '#5B6475'}; });
+    const refund = (240 + 180) * 0.12;
+
+    const members = st.members.map((m, i) => ({n: m.n, i: m.i, hasHealth: !!m.h, status: m.p ? t.presentSt : t.absentSt + ' · ' + L(m.last, lang), stC: m.p ? '#17544D' : '#1F2A44',
+      avBg: m.p ? '#2A9D8F' : '#fff', avC: m.p ? '#fff' : '#1F2A44',
+      onToggle: () => { const ms = st.members.map((x, j) => j === i ? {...x, p: !x.p} : x); this.setState({members: ms}); },
+      onHealth: () => this.go('group', 'member', {memberSel: m.n}), onCall: () => this.toast('tCall')}));
+    const mm = st.members.find(m => m.n === st.memberSel) || st.members[1];
+    const mem = {n: mm.n, i: mm.i, first: mm.n.split(' ')[0], rows: (mm.rows || []).map(([k, v]) => ({k: L(k, lang), v: L(v, lang)})), onCall: () => this.toast('tCall')};
+
+    const sosTypeDefs = [['med', t.sMed, t.sMedD], ['theft', t.sTheft, t.sTheftD], ['doc', t.sDoc, t.sDocD], ['lost', t.sLost, t.sLostD], ['other', t.sOther, t.sOtherD]];
+    const sosTypes = sosTypeDefs.map(([k, l, d], i) => ({label: l, desc: d, col: i === 4 ? '1 / -1' : 'auto', on: () => {
+      if (k === 'lost') { this.go('map', null, {sheet: null, lost: true}); return; }
+      this.setState({sheet: null, sos: k}); }}));
+    const SOSSTEPS = {
+      med: [[B('Appelez le 112','Call 112'), B('Dites « ambulanza » et donnez l\'adresse affichée par l\'app. L\'opérateur parle anglais.','Say "ambulanza" and give the address shown by the app. The operator speaks English.')],
+        [B('Votre fiche santé est prête','Your health card is ready'), B('Diabète type 1 · insuline. Partagée avec Julien selon votre choix.','Type 1 diabetes · insulin. Shared with Julien as you chose.')],
+        [B('Hôpital le plus proche','Nearest hospital'), B('Ospedale Fatebenefratelli, Isola Tiberina · 1,4 km · urgences 24 h/24.','Ospedale Fatebenefratelli, Tiber Island · 1.4 km · 24h emergency.')]],
+      theft: [[B('Faites opposition à votre carte','Block your card'), B('Appelez votre banque : le numéro est dans Documents › Assurance.','Call your bank: the number is in Documents › Insurance.')],
+        [B('Déclarez le vol','Report the theft'), B('Au commissariat ou chez les Carabinieri le plus proche. Le rapport (« denuncia ») est nécessaire pour l\'assurance.','At the nearest police or Carabinieri station. The report ("denuncia") is needed for insurance.')],
+        [B('Prévenez votre assurance','Tell your insurer'), B('Sous 48 h, avec la copie de la déclaration.','Within 48h, with a copy of the report.')]],
+      doc: [[B('Déclarez la perte','Report the loss'), B('Au commissariat le plus proche, avec la copie PDF de votre passeport.','At the nearest police station, with the PDF copy of your passport.')],
+        [B('Contactez l\'ambassade du Canada','Contact the Embassy of Canada'), B('Via Zara 30 · passeport temporaire sur présentation de la déclaration et d\'une photo.','Via Zara 30 · temporary passport with the report and a photo.')],
+        [B('Exportez votre copie de sécurité','Export your backup copy'), B('Elle prouve votre identité en attendant le nouveau document.','It proves your identity until the new document arrives.')]],
+      other: [[B('Appelez le 112 si nécessaire','Call 112 if needed'), B('Numéro unique pour toute urgence en Italie.','Single number for any emergency in Italy.')], [B('Restez où vous êtes','Stay where you are'), B('Julien voit votre position et vous rappelle.','Julien sees your location and will call you back.')]]
+    };
+    const sosLabel = {med: t.sMed, theft: t.sTheft, doc: t.sDoc, other: t.sOther};
+    const sos = {type: sosLabel[st.sos] || '', steps: (SOSSTEPS[st.sos] || []).map(([a, b], i) => ({n: i + 1, t: L(a, lang), d: L(b, lang)})), hasExport: st.sos === 'doc'};
+    const sosNumbers = [{label: t.n112, sub: t.n112D, num: '112', bg: '#D62828', color: '#fff', on: () => this.toast('tCall')},
+      {label: t.nGuide, sub: t.nGuideD, num: '✓', bg: '#DDF1EE', color: '#17544D', on: () => this.toast('tCall')},
+      {label: t.nEmb, sub: t.nEmbD, num: '→', bg: '#fff', color: '#1F2A44', on: () => this.toast('tRoute')}];
+
+    const notifs = {
+      rdv: {title: t.nRdvT, body: t.nRdvB, a: t.coming, b: t.late, onA: () => this.setState({notif: null, rdv: 'coming'}), onB: () => this.setState({notif: null, rdv: 'late'})},
+      msg: {title: t.nMsgT, body: t.nMsgB, a: t.read, b: t.open, onA: () => this.setState({notif: null, pinned: L(B('Changement : rendez-vous à 11:15 au lieu de 11:00, même lieu.','Change: meeting at 11:15 instead of 11:00, same place.'), lang)}),
+        onB: () => this.go('more', 'chat', {notif: null})}
+    };
+    const notif = notifs[st.notif] || notifs.rdv;
+
+    const locOpts = this.locOpts().map(o => ({label: L(o.l, lang), desc: L(o.d, lang), on: () => this.setState({locMode: o.k}), border: st.locMode === o.k ? '#0E7C86' : '#E4E2DC', fill: st.locMode === o.k ? '#0E7C86' : 'transparent'}));
+    const pinnedText = st.pinned || L(B('Tenue couverte pour le Vatican demain : épaules et genoux. Aujourd\'hui, chaussures confortables, on marche 9 km.','Covered clothing for the Vatican tomorrow: shoulders and knees. Today, comfy shoes, we walk 9 km.'), lang);
+    const tipList = TIPS.filter(x => st.tipCat === 'all' || x[0] === st.tipCat).map(([c, ti, b]) => ({cat: L(TIPCATS.find(k => k[0] === c)[1], lang), title: L(ti, lang), body: L(b, lang)}));
+
+    return {
+      t, showPanel: this.props.showPanel ?? true,
+      panelRoles: [['tourist', 'Touriste'], ['guide', 'Guide']].map(([k, l]) => ({label: l, on: () => this.setState({role: k, lost: false, sub: null, tab: 'today', guideSos: false}), bg: st.role === k ? '#1F2A44' : '#fff', color: st.role === k ? '#fff' : '#1F2A44'})),
+      panelLangs: [['fr', 'Français'], ['en', 'English']].map(([k, l]) => ({label: l, on: () => this.setState({lang: k}), bg: lang === k ? '#1F2A44' : '#fff', color: lang === k ? '#fff' : '#1F2A44'})),
+      panelCur: Object.keys(CUR).map(k => ({label: k, on: () => this.setState({cur: k}), bg: st.cur === k ? '#0E7C86' : '#fff', color: st.cur === k ? '#fff' : '#1F2A44'})),
+      panelSims: [
+        {label: 'Rappel RDV (10 min avant)', on: () => this.setState({screen: 'app', role: 'tourist', notif: 'rdv', rdv: null}), bg: '#F4A261', color: '#1F2A44'},
+        {label: 'Message prioritaire du guide', on: () => this.setState({screen: 'app', role: 'tourist', notif: 'msg'}), bg: '#fff', color: '#1F2A44'},
+        {label: 'SOS reçu (côté guide)', on: () => this.setState({screen: 'app', role: 'guide', guideSos: true, notif: null}), bg: '#D62828', color: '#fff'},
+        {label: st.offline ? 'Rétablir le réseau' : 'Couper le réseau (hors-ligne)', on: () => this.setState({offline: !st.offline}), bg: st.offline ? '#1F2A44' : '#fff', color: st.offline ? '#fff' : '#1F2A44'},
+        {label: "Recommencer l'onboarding", on: () => this.setState({screen: 'welcome', scan: 0, scanning: false, sub: null, tab: 'today', lost: false, sos: null, sheet: null, notif: null, guideSos: false, unlocked: false}), bg: 'transparent', color: '#1F2A44'}],
+      sbColor: onPaper ? '#1F2A44' : '#fff', sbBg: onPaper ? '#F8F7F4' : '#0E7C86', homeInd: onPaper ? '#1F2A44' : '#fff',
+      netLabel: st.offline ? '—' : '5G', showOffline: st.offline && st.screen === 'app',
+      isWelcome: st.screen === 'welcome', isRole: st.screen === 'role', isConsent: st.screen === 'consent', isScan: st.screen === 'scan', isDone: st.screen === 'done', isApp: st.screen === 'app',
+      langOpts: langOpt(false), langOptsDark: langOpt(true), goRole: () => this.setState({screen: 'role'}),
+      roleCards: [['tourist', t.roleT, t.roleTD], ['guide', t.roleG, t.roleGD]].map(([k, ti, d]) => ({title: ti, desc: d, on: () => this.setState({role: k}), border: st.role === k ? '#0E7C86' : '#E4E2DC', fill: st.role === k ? '#0E7C86' : 'transparent'})),
+      isTourist, isGuide, code: st.code, onCode: e => this.setState({code: e.target.value.toUpperCase()}), scanQrToast: () => this.toast('tQr'),
+      afterRole: () => isGuide ? this.go('today') : this.setState({screen: 'consent'}),
+      consents: [['pos', t.cPos, t.cPosD], ['docs', t.cDocs, t.cDocsD], ['health', t.cHealth, t.cHealthD]].map(([k, ti, d]) => ({title: ti, desc: d, ...tog(st.consents[k]), on: () => this.setState({consents: {...st.consents, [k]: !st.consents[k]}})})),
+      consentLegalText: t.consentLegal, goScan: () => this.setState({screen: 'scan', scan: 0}),
+      scanLine: st.scanning ? React.createElement('div', {style: {position: 'absolute', left: '7%', right: '7%', height: 3, background: '#7FD3D9', boxShadow: '0 0 18px 5px rgba(127,211,217,.5)', borderRadius: 2, animation: 'vscan 2.2s ease-in-out infinite'}}) : null,
+      mrzBg: st.scan > 60 ? 'rgba(42,157,143,.25)' : 'transparent',
+      scanStatus: st.scanning ? t.scanning : t.scanHint, scanPctLabel: Math.round(st.scan) + '%', scanPctCss: st.scan + '%', scanBtn: st.scanning ? t.scanning : t.scanBtn, startScan: this.startScan,
+      enterApp: () => this.go('today', null, {scanning: false}),
+      passportFields: [[t.fName, 'Claire Martin'], [t.fNat, lang === 'fr' ? 'Canadienne' : 'Canadian'], [t.fNum, '•••• 7105'], [t.fExp, '08/2032']].map(([k, v]) => ({k, v})),
+      currencySet: lang === 'fr' ? 'Devise détectée : ' + st.cur + '. Les prix en euros seront aussi affichés en ' + st.cur + ' (modifiable dans Plus).' : 'Currency detected: ' + st.cur + '. Euro prices will also show in ' + st.cur + ' (change it in More).',
+      scrollRef: this.scrollRef, tabs, tabCount: tabs.length,
+      showToday: !st.sub && st.tab === 'today', showMap: !st.sub && st.tab === 'map', showBook: !st.sub && st.tab === 'book', showDocs: !st.sub && st.tab === 'docs', showGroup: !st.sub && st.tab === 'group', showMore: !st.sub && st.tab === 'more',
+      hasSub: !!st.sub, subTitle: subTitles[st.sub] || '', back: () => this.go(backTab[st.sub] || st.tab),
+      subHotel: st.sub === 'hotel', subChat: st.sub === 'chat', subTips: st.sub === 'tips', subConverter: st.sub === 'converter', subTaxfree: st.sub === 'taxfree', subHealth: st.sub === 'health',
+      subLocation: st.sub === 'location', subEditor: st.sub === 'editor', subPoints: st.sub === 'points', subCompose: st.sub === 'compose', subInvite: st.sub === 'invite', subMember: st.sub === 'member',
+      hello: (lang === 'fr' ? 'Bonjour, ' : 'Hello, ') + (isGuide ? 'Julien' : 'Claire'),
+      presentLabel: presentN + '/20', presentPct: (presentN / 20 * 100) + '%',
+      absentLine: absMembers.length ? absMembers.map(m => m.n + ' · ' + L(m.last, lang)).join(' — ') : (lang === 'fr' ? 'Tout le monde est là.' : 'Everyone is here.'),
+      absents: absMembers.map(m => ({n: m.n, last: L(m.last, lang)})),
+      doRollCall: () => this.toast('tRoll'), openCompose: () => this.go(st.tab, 'compose', {composeText: L(this.presets()[st.preset], lang)}), goGroup: () => this.go('group'),
+      hasSent: !!st.sent, sentLine: (lang === 'fr' ? 'Alerte envoyée · lue par ' : 'Alert sent · read by ') + st.reads + '/20',
+      rdvIn: st.pinned && st.pinned.includes('11:15') ? (lang === 'fr' ? 'dans 35 min' : 'in 35 min') : t.in20, rdvTime: st.pinned && st.pinned.includes('11:15') ? '11:15' : '11:00',
+      p1: {...pt(ptBy('P1') || POINTS0[0])},
+      rdvAsk: isTourist && !st.rdv, rdvAnswered: isTourist && !!st.rdv,
+      rdvAnswer: (lang === 'fr' ? 'Envoyé à Julien : ' : 'Sent to Julien: ') + (st.rdv === 'late' ? t.late : t.coming) + ' ✓',
+      rdvComing: () => this.setState({rdv: 'coming'}), rdvLate: () => this.setState({rdv: 'late'}), rdvReset: () => this.setState({rdv: null}),
+      pinnedText, openChat: () => this.go(st.tab, 'chat'), goLost: () => this.go('map', null, {lost: true}), openEditor: () => this.go('today', 'editor'), goMap: () => this.go('map'),
+      steps, tipOfDay: L(TIPS[3][2], lang), openTips: () => this.go('more', 'tips'),
+      segs, meDot, stepMarks, pointMarks, groupDots, absentMarks, riskZones: RISK, zone: {x: g.x, y: g.y}, me, lost: st.lost && isTourist, showLostBtn: isTourist && !st.lost,
+      showGroupLayer: true, showRisk: st.showRisk !== false, toggleRisk: () => this.setState({showRisk: st.showRisk === false}),
+      riskBtn: st.showRisk !== false ? {bg: '#1F2A44', color: '#fff'} : {bg: '#fff', color: '#1F2A44'},
+      hotelMark: {left: (P.hotel.x + 11) + 'px', top: (P.hotel.y - 11) + 'px'},
+      cityChips: [['rome', 'Roma'], ['fi', 'Firenze'], ['ve', 'Venezia'], ['mi', 'Milano']].map(([k, l]) => ({label: l, on: () => k === 'rome' ? null : this.toast('tCity'), bg: k === 'rome' ? '#1F2A44' : '#fff', color: k === 'rome' ? '#fff' : '#1F2A44'})),
+      selPoint, lostSteps: [lang === 'fr' ? 'Descendez Via di San Gregorio vers le Colisée' : 'Walk up Via di San Gregorio towards the Colosseum', lang === 'fr' ? "L'Arc de Constantin est sur votre gauche" : 'The Arch of Constantine is on your left', lang === 'fr' ? 'Julien vous attend côté Colisée' : 'Julien is waiting on the Colosseum side'].map((x, i) => ({n: i + 1, x})),
+      callGuide: () => this.toast('tCall'), foundGroup: () => { this.setState({lost: false}); this.toast('tFound'); },
+      openHotel: () => this.go(st.tab === 'map' ? 'map' : st.tab, 'hotel'), callHotel: () => this.toast('tCall'), routeHotel: () => this.toast('tRoute'),
+      hotelRows: [[lang === 'fr' ? 'Téléphone' : 'Phone', '+39 06 4782 1150'], [lang === 'fr' ? 'À pied' : 'Walking', '14 min'], ['Taxi', '≈ 12 € · ' + this.home(12)]].map(([k, v]) => ({k, v})),
+      bookSegs: [['transport', t.bTransport], ['museum', t.bMuseum], ['tickets', t.bTickets]].map(([k, l]) => ({label: l, on: () => this.setState({bookSeg: k}), bg: st.bookSeg === k ? '#fff' : 'transparent', sh: st.bookSeg === k ? '0 1px 4px rgba(31,42,68,.12)' : 'none'})),
+      segTransport: st.bookSeg === 'transport', segMuseum: st.bookSeg === 'museum', segTickets: st.bookSeg === 'tickets',
+      transports: TRANSPORT.map(o => ({name: L(o.n, lang), meta: L(o.m, lang), eur: this.eur(o.eur), home: this.home(o.eur), how: L(o.how, lang), buy: o.buy,
+        onBuy: () => { this.setState({tickets: [...st.tickets, {name: L(o.n, lang), meta: this.eur(o.eur) + ' · ' + this.home(o.eur)}]}); this.toast('tBought'); }})),
+      museums: MUSEUMS.map(m => { const tot = m.eur + (m.extra || 0); return {name: nm(m.p), local: P[m.p].it, hours: L(m.h, lang), eur: this.eur(m.eur), home: this.home(tot), note: L(m.note, lang), hasNote: !!m.note,
+        cta: (lang === 'fr' ? 'Billetterie officielle · ' : 'Official tickets · ') + this.eur(tot),
+        onBuy: () => { this.setState({tickets: [...st.tickets, {name: nm(m.p), meta: this.eur(tot) + ' · ' + this.home(tot)}]}); this.toast('tBought'); }}; }),
+      tickets: st.tickets, noTickets: st.tickets.length === 0,
+      docsLocked: !st.unlocked, docsOpen: st.unlocked, unlockLabel: st.unlocking ? t.unlocking : t.unlock,
+      unlock: () => { this.setState({unlocking: true}); this.later(() => this.setState({unlocking: false, unlocked: true}), 900); },
+      passportTitle: lang === 'fr' ? 'Passeport · Canada' : 'Passport · Canada', passportCode: 'CAN', fullName: isGuide ? 'Julien Moreau' : 'Claire Martin',
+      docs, openExport: () => this.setState({sheet: 'export'}), scanNewToast: () => this.toast('tScan'),
+      exportOpts: [t.exPolice, t.exEmbassy, t.exShare].map(l => ({label: l, on: () => { this.setState({sheet: null}); this.toast('tPdf'); }})),
+      members, mem, openInvite: () => this.go('group', 'invite'), openPoints: () => this.go('group', 'points'), qr: QR, shareLink: () => this.toast('tLink'),
+      moreRows,
+      chat: st.chat.map(c => ({who: c.who, text: L(c.text, lang), align: c.me ? 'flex-end' : 'flex-start', bg: c.me ? '#0E7C86' : '#fff', color: c.me ? '#fff' : '#1F2A44', pending: !!c.pending})),
+      draft: st.draft, onDraft: e => this.setState({draft: e.target.value}),
+      sendMsg: () => { if (!st.draft.trim()) return; this.setState({chat: [...st.chat, {who: isGuide ? 'Julien' : 'Claire', me: true, text: st.draft, pending: st.offline}], draft: ''}); },
+      sharePosChat: () => this.setState({chat: [...st.chat, {who: isGuide ? 'Julien' : 'Claire', me: true, text: (lang === 'fr' ? 'Position partagée · ' : 'Location shared · ') + nm(plan[now].p), pending: st.offline}]}),
+      tipCats: TIPCATS.map(([k, l]) => ({label: L(l, lang), on: () => this.setState({tipCat: k}), ...chip(st.tipCat === k)})), tipList,
+      conv, onAmount: e => this.setState({amount: e.target.value}), swapConv: () => this.setState({dir: st.dir === 'eur' ? 'home' : 'eur'}), curChips,
+      tfRules: (lang === 'fr' ? ['Réservé aux résidents hors Union européenne, sur présentation du passeport.', "Au moins 70 € d'achat par ticket, dans le même magasin, le même jour.", 'Le magasin remplit le formulaire Tax Free au moment de l\'achat.', "À l'aéroport, faites valider à la douane avant l'enregistrement, articles non utilisés."]
+        : ['Only for non-EU residents, with your passport.', 'At least €70 per receipt, same shop, same day.', 'The shop fills in the Tax Free form when you buy.', 'At the airport, get it stamped at customs before check-in, items unused.']).map((x, i) => ({n: i + 1, x})),
+      purchases, tfTotal: this.eur(Math.round(refund)) + ' · ' + this.home(Math.round(refund)),
+      shareHealth: tog(st.shareHealth), toggleShareHealth: () => this.setState({shareHealth: !st.shareHealth}),
+      healthRows: MEMBERS0[0].rows.slice(0, 4).map(([k, v]) => ({k: L(k, lang), v: L(v, lang)})), editToast: () => this.toast('tEdit'),
+      locOpts, remindChips: [30, 15, 10, 5].map(m => ({label: m + ' min', on: () => this.setState({remind: {...st.remind, [m]: !st.remind[m]}}), ...chip(st.remind[m])})),
+      edSteps: plan.map((s, i) => ({range: s.s + (s.e ? '–' + s.e : ''), name: nm(s.p), hasRdv: !!s.rdv, rdv: s.rdv ? s.rdv + ' · ' + L(ptBy(s.rdv)?.n, lang) : '', canDel: i > 0 && i < plan.length - 1,
+        onTime: () => { const p2 = plan.map((x, j) => j === i ? {...x, s: addMin(x.s, 15), e: addMin(x.e, 15)} : x); this.setState({plan: p2}); },
+        onDel: () => this.setState({plan: plan.filter((_, j) => j !== i)})})),
+      addStop: () => { if (plan.some(s => s.p === 'venezia')) return; const p2 = plan.slice(); const prev = p2[p2.length - 2]; p2.splice(p2.length - 1, 0, S(addMin(prev.e || prev.s, 10), addMin(prev.e || prev.s, 40), 'venezia', 'walk', 10, B('Via del Corso'), null)); this.setState({plan: p2}); },
+      tplToggle: tog(st.tpl), toggleTemplate: () => this.setState({tpl: !st.tpl}), publish: () => { this.go('today'); this.toast('tSent'); },
+      pointsList: st.points.map(pt), addPoint: () => { if (st.points.some(p => p.k === 'P5')) return; this.setState({points: [...st.points, {k: 'P5', n: B('Piazza Venezia, côté Vittoriano','Piazza Venezia, Vittoriano side'), it: 'Piazza Venezia – Vittoriano', x: 206, y: 244, link: B('Nouvelle étape','New stop')}]}); this.toast('tPoint'); },
+      presets: this.presets().map((p, i) => ({label: [lang === 'fr' ? 'Retard' : 'Delay', lang === 'fr' ? 'Changement de lieu' : 'Change of place', lang === 'fr' ? 'RDV avancé' : 'Earlier meeting'][i], on: () => this.setState({preset: i, composeText: L(p, lang)}), ...chip(st.preset === i)})),
+      composeText: st.composeText, onCompose: e => this.setState({composeText: e.target.value}), sendAlert: this.sendAlert,
+      openSos: () => isGuide ? this.setState({guideSos: true}) : this.setState({sheet: 'sos'}),
+      hasSheet: !!st.sheet && st.screen === 'app', sheetSosType: st.sheet === 'sos', sheetExport: st.sheet === 'export', closeSheet: () => this.setState({sheet: null}),
+      sosTypes, call112: () => this.toast('tCall'),
+      hasSosActive: !!st.sos && st.screen === 'app', sos, sosNumbers, cancelSos: () => { this.setState({sos: null}); this.toast('tCancelSos'); },
+      hasGuideSos: st.guideSos && isGuide && st.screen === 'app', guideCallMarc: () => { this.setState({guideSos: false}); this.toast('tCall'); },
+      guideSeeMap: () => this.go('map', null, {guideSos: false}), guideCall112: () => this.toast('tCall'),
+      hasNotif: !!st.notif && st.screen === 'app', notif,
+      hasToast: !!st.toast, toast: st.toast
+    };
+  }
+  locOpts() { return [
+    {k: 'always', l: B('Toujours','Always'), d: B('Votre guide voit votre position en permanence.','Your guide always sees your location.')},
+    {k: 'activities', l: B('Pendant les activités du groupe','During group activities'), d: B('Uniquement aux horaires du programme.','Only during scheduled activities.')},
+    {k: 'never', l: B('Jamais (sauf SOS)','Never (except SOS)'), d: B('Votre position est envoyée seulement si vous déclenchez un SOS.','Only sent if you trigger an SOS.')}]; }
+}
+</script>
+</body>
+</html>
